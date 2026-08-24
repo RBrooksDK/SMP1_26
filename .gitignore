@@ -3,6 +3,10 @@ _site/
 
 # Python virtual environment
 .venv/
+.venv-manim/
+
+# Manim render output
+media/
 
 # Python cache
 __pycache__/

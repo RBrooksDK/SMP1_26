@@ -5,7 +5,10 @@
 </p>
 
 <p align="center">
-  <img src="figures/gaussian.png" width="500" alt="Normal distribution curve">
+  <a href="https://rbrooksdk.github.io/SMP1_26">
+    <video class="video-light custom-video" width="700" autoplay loop muted src="figures/smp_intro_light.mp4"></video>
+    <video class="video-dark custom-video" width="700" autoplay loop muted src="figures/smp_intro_dark.mp4"></video>
+  </a>
 </p>
 
 ## <i class="fas fa-circle-info" style="color:#6CA2C6"></i> Course Information
