@@ -358,3 +358,13 @@ body[data-md-color-scheme] .md-content ol {
 body[data-md-color-scheme] .md-content ol li {
   padding-left: 10px;
 }
+
+/* Center only the grade-distribution block on the course front page. */
+.md-typeset .center-table {
+  text-align: center;
+}
+
+.md-typeset .center-table table {
+  margin-left: auto;
+  margin-right: auto;
+}

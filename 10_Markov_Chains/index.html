@@ -15,17 +15,17 @@
         <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_26/10_Markov_Chains/">
       
       
-        <link rel="prev" href="../09_Introduction_to_Stochastic_Processes/">
+        <link rel="prev" href="../09_Autoregressive_Models_and_Forecasting/">
       
       
-        <link rel="next" href="../11_Recap_and_Exercises_Markov_Chains/">
+        <link rel="next" href="../11_Markov_Chains_and_Course_Recap/">
       
       
         
       
       
       <link rel="icon" href="../figures/vialogo_white.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -33,7 +33,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#topics" class="md-skip">
+        <a href="#10-markov-chains" class="md-skip">
           Skip to content
         </a>
       
@@ -517,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../00_Important_Recap/" class="md-nav__link">
+      <a href="../00_Prerequisites/" class="md-nav__link">
         
   
   
@@ -545,14 +545,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_Introduction_%2B_Recap_Probability_%2B_Stochastic_Variables/" class="md-nav__link">
+      <a href="../01_Probability_Foundations_and_Random_Variables/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    01 Introduction to Probability and Random Variables
+    01 Probability Foundations and Random Variables
   
 
     
@@ -629,14 +629,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../04_Multivariate_Random_Variables/" class="md-nav__link">
+      <a href="../04_Joint_Distributions/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    04 Normal and Exponential Distributions and Multivariate Random Variables
+    04 Joint Distributions
   
 
     
@@ -657,14 +657,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../05_MVR_part_2/" class="md-nav__link">
+      <a href="../05_Conditional_Distributions_and_Dependence/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    05 Multivariate Random Variables Part 2
+    05 Conditional Distributions and Dependence
   
 
     
@@ -685,14 +685,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../06_Statistical_Intervals/" class="md-nav__link">
+      <a href="../06_Random_Sampling_Monte_Carlo_and_Limit_Theorems/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    06 Point Estimation, Sampling, and Statistical Intervals
+    06 Random Sampling, Monte Carlo, and Limit Theorems
   
 
     
@@ -713,14 +713,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../07_Hypothesis_Testing/" class="md-nav__link">
+      <a href="../07_Stochastic_Processes_and_Poisson_Processes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    07 Hypothesis Testing
+    07 Stochastic Processes and Poisson Processes
   
 
     
@@ -741,14 +741,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../08_Regression/" class="md-nav__link">
+      <a href="../08_Time_Series_Fundamentals/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    08 Regression
+    08 Time-Series Fundamentals
   
 
     
@@ -769,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_Introduction_to_Stochastic_Processes/" class="md-nav__link">
+      <a href="../09_Autoregressive_Models_and_Forecasting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    09 Introduction to Stochastic Processes
+    09 Autoregressive Models and Forecasting
   
 
     
@@ -802,6 +802,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -845,6 +847,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -853,10 +857,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
+  <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Topics
+        Session preparation
       
     </span>
   </a>
@@ -864,63 +868,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems-to-be-worked-on-in-class" class="md-nav__link">
+  <a href="#session-focus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems to be worked on in class:
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Problems to be worked on in class:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exercise-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 1
+        Session focus
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-2" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercise 2
+        Exercises
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 3
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 4
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -940,14 +905,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../11_Recap_and_Exercises_Markov_Chains/" class="md-nav__link">
+      <a href="../11_Markov_Chains_and_Course_Recap/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    11 Recap and Exercises
+    11 Markov Chains and Course Recap
   
 
     
@@ -1066,6 +1031,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1074,10 +1041,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#topics" class="md-nav__link">
+  <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Topics
+        Session preparation
       
     </span>
   </a>
@@ -1085,63 +1052,24 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#problems-to-be-worked-on-in-class" class="md-nav__link">
+  <a href="#session-focus" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Problems to be worked on in class:
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Problems to be worked on in class:">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exercise-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 1
+        Session focus
       
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-2" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Exercise 2
+        Exercises
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 3
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 4
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1165,28 +1093,31 @@
   
 
 
-<h1 align="center">10 Markov Chains</h1>
-
-<p><strong>Material:</strong></p>
+<h1 id="10-markov-chains">10 — Markov Chains<a class="headerlink" href="#10-markov-chains" title="Permanent link">&para;</a></h1>
+<h2 id="session-preparation">Session preparation<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h2>
+<p>Review conditional probability, matrix multiplication, and the idea of a discrete-time process.</p>
+<p><strong>Syllabus and input</strong></p>
+<ul>
+<li><a href="https://www.probabilitycourse.com/chapter11/11_2_1_introduction.php">ProbabilityCourse 11.2.1: discrete-time Markov chains</a></li>
+<li><a href="https://www.probabilitycourse.com/chapter11/11_2_2_state_transition_matrix_and_diagram.php">State-transition matrix and diagram</a></li>
+<li><a href="https://www.probabilitycourse.com/chapter11/11_2_3_probability_distributions.php">State probability distributions</a></li>
+<li><a href="https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php">Classification of states</a></li>
+</ul>
+<p><strong>Existing course material</strong></p>
 <p><a href="https://drive.google.com/file/d/1GJYl8qMMGcRZ7FD0qTif7jJazdyUPuQr/view?usp=sharing">Recap notes</a></p>
 <p><a href="https://drive.google.com/file/d/1AyY6nKHnY9f9Tl9siholsRkop_BbB2Fv/view?usp=sharing">Session notes</a></p>
 <p><a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuqNIuAYAltDmfXlB9l-DpMBTP5g7G1XrHFCqcXim9OfNQ?e=IMjqf3">Session material</a></p>
-<h2 id="topics">Topics<a class="headerlink" href="#topics" title="Permanent link">&para;</a></h2>
-<p>Markov chains are a mathematical framework used to model systems that change over time, such as the weather or the stock market. The key feature of a Markov chain is that it assumes that the future state of the system depends only on its current state, and not on any previous states. This is known as the Markov property. Markov chains are defined by a set of states, a transition matrix that describes the probabilities of moving from one state to another, and an initial state. The long-term behavior of a Markov chain can be analyzed using techniques such as finding the stationary distribution or calculating expected values. Markov chains are used in a wide range of applications, including computer science, physics, finance, and biology, among others.</p>
-<ul>
-<li>Markov property: The assumption that the future state of a system depends only on its current state, and not on any previous states.</li>
-<li>State: A possible condition or configuration of the system being modeled.</li>
-<li>Transition matrix: A matrix that describes the probabilities of moving from one state to another.</li>
-<li>Stationary distribution: The long-term distribution of states that a Markov chain approaches over time.</li>
-<li>Expected value: The average value that a variable takes over many iterations of the Markov chain.</li>
-</ul>
-<h2 id="problems-to-be-worked-on-in-class">Problems to be worked on in class:<a class="headerlink" href="#problems-to-be-worked-on-in-class" title="Permanent link">&para;</a></h2>
-<p>Do Problems 10 and the Wiseflow exam cases covering the final topics.</p>
+<hr />
+<h2 id="session-focus">Session focus<a class="headerlink" href="#session-focus" title="Permanent link">&para;</a></h2>
+<p>Markov chains model state-based systems in which the next state is conditionally independent of the earlier past given the current state. We connect conditional probability, matrices, stochastic processes, and simulation.</p>
+<p>By the end of the session, you should be able to define a state space and transition matrix, calculate path and multi-step probabilities, identify communicating classes, and calculate and interpret a stationary distribution.</p>
+<hr />
+<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
 </style>
 
-<h3 id="exercise-1">Exercise 1<a class="headerlink" href="#exercise-1" title="Permanent link">&para;</a></h3>
+<h4 id="exercise-1-paths-and-transitions">Exercise 1 — Paths and transitions<a class="headerlink" href="#exercise-1-paths-and-transitions" title="Permanent link">&para;</a></h4>
 <p>Consider the Markov chain with three states, <span class="arithmatex">\(S=\{1,2,3\}\)</span>, that has the following transition matrix</p>
 <div class="arithmatex">\[
 P=\left[\begin{array}{ccc}
@@ -1206,7 +1137,7 @@ P=\left[\begin{array}{ccc}
     <li style> 1/12 </li>
 </ol></p>
 </details>
-<h3 id="exercise-2">Exercise 2<a class="headerlink" href="#exercise-2" title="Permanent link">&para;</a></h3>
+<h4 id="exercise-2">Exercise 2<a class="headerlink" href="#exercise-2" title="Permanent link">&para;</a></h4>
 <p>Consider the Markov chain in the figure below. There are two recurrent classes, <span class="arithmatex">\(R_1=\{1,2\}\)</span>, and <span class="arithmatex">\(R_2=\{5,6,7\}\)</span>.</p>
 <p><img src="src/Ex2_1.png"></p>
 <ol>
@@ -1220,7 +1151,7 @@ P=\left[\begin{array}{ccc}
 <li><span class="arithmatex">\(t_3=\frac{12}{7}\)</span></li>
 </ol>
 </details>
-<h3 id="exercise-3">Exercise 3<a class="headerlink" href="#exercise-3" title="Permanent link">&para;</a></h3>
+<h4 id="exercise-3">Exercise 3<a class="headerlink" href="#exercise-3" title="Permanent link">&para;</a></h4>
 <p>Consider the following Markov chain</p>
 <p><img src="src/Ex3_1.png"></p>
 <ol>
@@ -1238,7 +1169,7 @@ P=\left[\begin{array}{ccc}
 <li>yes</li>
 </ol>
 </details>
-<h3 id="exercise-4">Exercise 4<a class="headerlink" href="#exercise-4" title="Permanent link">&para;</a></h3>
+<h4 id="exercise-4">Exercise 4<a class="headerlink" href="#exercise-4" title="Permanent link">&para;</a></h4>
 <p>Consider the following Markov chain</p>
 <p><img src="src/Ex4_1.png"></p>
 <p>Assume <span class="arithmatex">\(X_0=1\)</span>, and let <span class="arithmatex">\(R\)</span> be the first time that the chain returns to state 1 . Find <span class="arithmatex">\(E\left[R \mid X_0=1\right]\)</span>.</p>
@@ -1246,6 +1177,49 @@ P=\left[\begin{array}{ccc}
 <summary>Answer</summary>
 <p><span class="arithmatex">\(\frac{8}{3}\)</span></p>
 </details>
+<h4 id="exercise-5-a-two-state-reliability-chain">Exercise 5 — A two-state reliability chain<a class="headerlink" href="#exercise-5-a-two-state-reliability-chain" title="Permanent link">&para;</a></h4>
+<p>A component is either Working or Failed. During each hour, a working component fails with probability 0.02, while a failed component is repaired with probability 0.30.</p>
+<ol>
+<li>Construct the transition matrix and diagram.</li>
+<li>Starting in Working, find the probability of being Failed after 2 and 10 hours.</li>
+<li>Find the stationary distribution.</li>
+<li>Interpret the stationary failure probability operationally.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<p>With state order <span class="arithmatex">\((W,F)\)</span>, <span class="arithmatex">\(P=\begin{pmatrix}0.98&amp;0.02\\0.30&amp;0.70\end{pmatrix}\)</span>. The stationary distribution satisfies <span class="arithmatex">\(0.02\pi_W=0.30\pi_F\)</span>, giving <span class="arithmatex">\((\pi_W,\pi_F)=(15/16,1/16)\)</span>.</p>
+</details>
+<h4 id="exercise-6-classification-of-states">Exercise 6 — Classification of states<a class="headerlink" href="#exercise-6-classification-of-states" title="Permanent link">&para;</a></h4>
+<p>Consider</p>
+<div class="arithmatex">\[
+P=\begin{pmatrix}
+1&amp;0&amp;0&amp;0\\
+0.2&amp;0.5&amp;0.3&amp;0\\
+0&amp;0&amp;0.6&amp;0.4\\
+0&amp;0&amp;0.1&amp;0.9
+\end{pmatrix}.
+\]</div>
+<ol>
+<li>Draw the transition diagram.</li>
+<li>Identify the communicating classes.</li>
+<li>Classify states as transient or recurrent.</li>
+<li>Identify all closed classes and stationary distributions.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<p>State 1 is an absorbing closed class. States 3 and 4 form another closed irreducible class. State 2 is transient because it can leave for either closed class and cannot be revisited from them. Each closed class supports a stationary distribution.</p>
+</details>
+<h4 id="exercise-7-estimating-a-transition-matrix">Exercise 7 — Estimating a transition matrix<a class="headerlink" href="#exercise-7-estimating-a-transition-matrix" title="Permanent link">&para;</a></h4>
+<p>An observed state sequence is</p>
+<div class="arithmatex">\[
+A,A,B,A,C,C,B,C,C,A,B,B,C,A,A.
+\]</div>
+<ol>
+<li>Count all observed one-step transitions.</li>
+<li>Estimate the transition matrix by row-normalising the counts.</li>
+<li>State which rows have the greatest estimation uncertainty and why.</li>
+<li>Simulate a sequence of length 100 from the fitted chain and compare transition frequencies.</li>
+</ol>
 
 
 
@@ -1283,7 +1257,7 @@ P=\left[\begin{array}{ccc}
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../09_Introduction_to_Stochastic_Processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 09 Introduction to Stochastic Processes">
+          <a href="../09_Autoregressive_Models_and_Forecasting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 09 Autoregressive Models and Forecasting">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1293,20 +1267,20 @@ P=\left[\begin{array}{ccc}
                 Previous
               </span>
               <div class="md-ellipsis">
-                09 Introduction to Stochastic Processes
+                09 Autoregressive Models and Forecasting
               </div>
             </div>
           </a>
         
         
           
-          <a href="../11_Recap_and_Exercises_Markov_Chains/" class="md-footer__link md-footer__link--next" aria-label="Next: 11 Recap and Exercises">
+          <a href="../11_Markov_Chains_and_Course_Recap/" class="md-footer__link md-footer__link--next" aria-label="Next: 11 Markov Chains and Course Recap">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                11 Recap and Exercises
+                11 Markov Chains and Course Recap
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1387,7 +1361,7 @@ P=\left[\begin{array}{ccc}
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.prune", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../javascripts/mathjax.js"></script>
       
