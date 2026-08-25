@@ -1,195 +1,134 @@
-<h1 align="center">Discrete Random Variables</h1>
+# 02 — Discrete Random Variables
 
-### Session Preparation:
-ASPE: 3
+## Session preparation
 
-Solve the [exercises from session 1](https://rbrooksdk.github.io/SMP1_26/01_Introduction_%2B_Recap_Probability_%2B_Stochastic_Variables/#exercises) before class.
+Attempt the core exercises from [Session 1](../01_Probability_Foundations_and_Random_Variables/README.md#exercises).
 
-### Session Material
+**Syllabus and input**
 
-[Recap and Exercises - notes](https://drive.google.com/file/d/1xX9-A1fTUsaXV-mFlmRYR4fRoQcoszrX/view?usp=sharing)
+- [Probability mass functions](https://www.probabilitycourse.com/chapter3/3_1_3_pmf.php)
+- [Special discrete distributions](https://www.probabilitycourse.com/chapter3/3_1_5_special_discrete_distr.php)
+- [Cumulative distribution functions](https://www.probabilitycourse.com/chapter3/3_2_1_cdf.php)
 
-[Session notes](https://drive.google.com/file/d/1LJ8Nu0D1PLLB1FF1jTsLK50HGLhl1EtG/view?usp=sharing)
+**Existing course material**
 
-[Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo)
-
----
-
-### Session Description
-In this session, we look at a variety of discrete probability distributions, laying the foundation for analysing and modelling random processes. We begin with the Bernoulli distribution, which describes experiments with two possible outcomes, and extend this to the Binomial and Geometric distributions. Building on these, we move on to the Negative Binomial (Pascal) distribution and the Hypergeometric distribution, highlighting their applications in scenarios where sampling without replacement plays a role. 
-
-The Poisson distribution, a model for counting events over time or space, is introduced, along with its use as an approximation for the Binomial distribution under specific conditions. Finally, we discuss key properties of these distributions, including their probability mass function (PMF) and cumulative distribution functions (CDFs), expectations, and variances.
-
-#### Key Concepts
-- Bernoulli Distribution
-- Geometric Distribution
-- Binomial Distribution
-- Negative Binomial (Pascal) Distribution
-- Hypergeometric Distribution
-- Poisson Distribution
-- Poisson as an Approximation for Binomial
-- Probability Mass Function (PMF)
-- Cumulative Distribution Function (CDF)
-- Expectation and Variance
+- [Recap and exercise notes](https://drive.google.com/file/d/1xX9-A1fTUsaXV-mFlmRYR4fRoQcoszrX/view?usp=sharing)
+- [Session notes](https://drive.google.com/file/d/1LJ8Nu0D1PLLB1FF1jTsLK50HGLhl1EtG/view?usp=sharing)
+- [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo)
 
 ---
 
-### Exercises
-Full solutions to the exercises can be found in [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo).
+## Session focus
 
-<style type="text/css">
-    ol { list-style-type: lower-alpha; }
-</style>
+We model countable outcomes using PMFs and CDFs and learn to select a distribution from the assumptions of a problem. The central models are Bernoulli, binomial, geometric, hypergeometric, and Poisson distributions.
 
-Note, sometimes we use '$=$' instead of '$\approx$' when we state probabilities with a given decimal precision.
+By the end of the session, you should be able to:
 
-#### Exercise 1
-A computer system uses passwords that are exactly six
-characters and each character is one of the 26 letters (a–z) or
-10 integers (0–9). Suppose that 10,000 users of the system have
-unique passwords. A hacker randomly selects (with replacement)
-100,000 passwords from the potential set, and a match to a user’s
-password is called a hit.
+- validate and use a PMF and construct its CDF;
+- calculate expectation and variance;
+- distinguish repeated independent trials, waiting-time models, sampling without replacement, and count models;
+- simulate a discrete random variable in Python.
 
-1. What is the distribution of the number of hits?
-2. What is the probability of no hits?
-3. What are the mean and variance of the number of hits?
+---
 
-??? answer
-    1. The distribution of the number of hits is Binomial with $n = 10^5$ and \(p=\frac{10^5}{36^6}\)
-    2. \(P(X=0) = 0.6317\)
-    3. \(\mu = \sigma^2 = 0.4594\)
+## Exercises
 
-#### Exercise 2
-Because all airline passengers do not show up for
-their reserved seat, an airline sells 125 tickets for a flight that holds
-only 120 passengers. The probability that a passenger does not
-show up is 0.10, and the passengers behave independently.
+#### Exercise 1 — Valid PMF
 
-1. What is the probability that every passenger who shows up can take the flight?
-2. What is the probability that the flight departs with empty seats?
+Let \(P(X=k)=c/3^k\) for \(k=1,2,\ldots\).
+
+1. Find \(c\).
+2. Find \(P(X\in\{2,4,6\})\).
+3. Find \(P(X\ge 3)\).
 
 ??? answer
-    1. \(p = 0.9961 \)
-    2. \(p = 0.9886\)
 
-#### Exercise 3
-A player of a video game is confronted with a series
-of opponents and has an 80% probability of defeating each one.
-Success with any opponent is independent of previous encounters.
-Until defeated, the player continues to contest opponents.
+    Since \(\sum_{k=1}^{\infty}c/3^k=c/2=1\), \(c=2\). The remaining probabilities are \(182/729\) and \(1/9\), respectively.
 
-1. What is the probability mass function of the number of opponents contested in a game?
-2. What is the probability that a player defeats at least two opponents in a game?
-3. What is the expected number of opponents contested in a game?
-4. What is the probability that a player contests four or more opponents in a game?
-5. What is the expected number of game plays until a player contests four or more opponents?
+#### Exercise 2 — Binomial model
+
+An airline sells 125 tickets for a flight with 120 seats. Each passenger independently fails to appear with probability 0.10.
+
+1. Find the probability that everyone who appears can take the flight.
+2. Find the probability that the flight leaves with at least one empty seat.
 
 ??? answer
-    1. \(P(X=k) = 0.8^{k-1} \cdot 0.2\)
-    2. \(p = 0.64\)
-    3. \(E[X] = 5\)
-    4. \(p = 0.512\)
-    5. \(E[Y] \approx 1.9531\)
 
-#### Exercise 4
-Astronomers treat the number of stars in a
-given volume of space as a Poisson random variable. The density
-in the Milky Way Galaxy in the vicinity of our solar system is one
-star per 16 cubic light-years.
+    Let \(X\sim\operatorname{Binomial}(125,0.9)\) be the number appearing. Calculate \(P(X\le120)\) and \(P(X\le119)\), respectively.
 
-1. What is the probability of no stars in 16 cubic light-years?
-2. What is the probability of two or more stars in 16 cubic light-years?
-3. How many cubic light-years of space must be studied so that the probability of one or more stars exceeds 0.95?
+#### Exercise 3 — Geometric model
+
+A player defeats each opponent independently with probability 0.8 and continues until the first defeat. Let \(X\) be the number of opponents contested.
+
+1. Find the PMF of \(X\).
+2. Find \(P(X\ge4)\).
+3. Find \(E[X]\).
 
 ??? answer
-    1. \(P(X=0)=e^{-1} \approx 0.3679\)
-    2. \(P(X \geq 2) \approx 0.2642\)
-    3. At least 48 cubic light-years of space must be studied.
 
-#### Exercise 5
-A congested computer network has a 1% chance of losing a data packet that must be resent, and packet losses are independent events. An e-mail message requires 100 packets.
+    \(X\sim\operatorname{Geometric}(0.2)\) when the terminal defeat is counted. Thus \(P(X=k)=0.8^{k-1}0.2\), \(P(X\ge4)=0.8^3\), and \(E[X]=5\).
 
-1. What is the distribution of the number of packets in an e-mail message that must be resent? Include the parameter values.
-2. What is the probability that at least one packet is resent?
-3. What is the probability that two or more packets are resent?
-4. What are the mean and standard deviation of the number of packets that are resent?
-5. If there are 10 messages and each contains 100 packets, what is the probability that at least one message requires that two or more packets be resent?
+#### Exercise 4 — Poisson counts
+
+The local density of stars is one star per 16 cubic light-years. Model counts in disjoint volumes as independent.
+
+1. Find the probability of no stars in 16 cubic light-years.
+2. Find the probability of at least two stars in that volume.
+3. Find the volume needed for the probability of at least one star to exceed 0.95.
 
 ??? answer
-    1. \(X \sim \operatorname{Binomial}(n=100, p=0.01)\)
-    2. \(P(X \geq 1)=0.634\)
-    3. \(P(X \geq 2)=0.2642\)
-    4. \(\mu = 1, \sigma = 0.995\)
-    5. \(P(Y \geq 1)=0.9535\)
 
-#### Exercise 6
-A manufacturer of a consumer electronics product expects 2% of units to fail during the warranty period. A sample of 500 independent units is tracked for warranty performance.
+    For volume \(v\), \(X\sim\operatorname{Poisson}(v/16)\). The answers are \(e^{-1}\), \(1-2e^{-1}\), and any \(v>-16\ln(0.05)\approx47.93\).
 
-1. What is the probability that none fails during the warranty period?
-2. What is the expected number of failures during the warranty period?
-3. What is the probability that more than two units fail during the warranty period?
+#### Exercise 5 — Model and simulate
+
+A packet is lost independently with probability 0.01, and a message contains 100 packets.
+
+1. State the distribution of the number of resent packets.
+2. Find the probability that at least one packet is resent.
+3. Simulate 10,000 messages and compare the simulated frequency with the exact result.
 
 ??? answer
-    1. \(P(X=0) \approx 0.0000\)
-    2. \(E[X] = 10\)
-    3. \(P(X > 2) \approx 0.9974\)
 
-#### Exercise 7
-The probability that a patient recovers from a rare blood disease is 0.4. If 15 people are known to have contracted this disease, what is the probability that:
+    \(X\sim\operatorname{Binomial}(100,0.01)\), so \(P(X\ge1)=1-0.99^{100}\approx0.6340\). A simulation should approach this value as the number of messages grows.
 
-1. At least 10 survive
+#### Exercise 6 — Warranty failures
 
-2. From 3 to 8 survive
+A manufacturer expects 2% of its units to fail during the warranty period. A sample of 500 independent units is followed.
 
-3. Exactly 5 survive
-
-4. Find the mean and variance.
+1. State the distribution of the number of failures.
+2. Find the probability that none fail.
+3. Find the expected number and standard deviation of failures.
+4. Find the probability that more than two units fail.
+5. Assess whether a Poisson approximation is reasonable and compare the two results.
 
 ??? answer
-    1. \(P(X \geq 10) \approx 0.0338\)
-    2. \(P(3 \leq X \leq 8) \approx 0.8778\)
-    3. \(P(X=5) \approx 0.1859\)
-    4. \(\mu = 6, \sigma^2 = 3.6\)
 
-#### Exercise 8
-A large chain retailer purchases a certain kind of electronic device from a manufacturer. The manufacturer indicates that the defective rate of the device is 3%.
+    \(X\sim\operatorname{Binomial}(500,0.02)\), with \(E[X]=10\) and \(\operatorname{SD}(X)=\sqrt{9.8}\). Use \(P(X>2)=1-P(X\le2)\). The approximation \(X\approx\operatorname{Poisson}(10)\) is reasonable because \(n\) is large and \(p\) is small.
 
-1. The inspector of the retailer randomly picks 20 items from a shipment. What is the probability that there will be at least one defective item among them?
+#### Exercise 7 — Shipments containing defects
 
-2. Suppose that the retailer receives 10 shipments in a month and the inspector randomly tests 20 devices per shipment. What is the probability that there will be 3 shipments containing at least one defective device?
+Each device is defective independently with probability 0.03. An inspector examines 20 devices from each of 10 shipments.
 
-??? answer
-    1. \(P(X \geq 1) \approx 0.4562\)
-    2. \(P(Y=3) \approx 0.1602\)
-
-#### Exercise 9
-High flows result in the closure of a causeway. From past records, the road is closed for this reason on 10 days during a 20-year period. At an adjoining village, there is concern about the closure of the causeway because it provides the only access. The villagers assume that the probability of a closure of the road for more than one day during a year is less than 0.10. Is this correct? Please show using the Poisson distribution.
+1. Find the probability that a particular inspected shipment contains at least one defective device.
+2. State the distribution of the number of inspected shipments containing at least one defective device.
+3. Find the probability that exactly three shipments contain at least one defective device.
+4. Simulate the complete two-level experiment and compare with the analytical result.
 
 ??? answer
-    The probability of a closure of the road for more than one day during a year is 0.0902.
 
-#### Exercise 10
-A company performs inspection on shipments from suppliers in order to detect nonconforming products. Assume a lot contains 1000 items and 1% is nonconforming. Assuming that the number of nonconforming products in the sample is binomial, what sample size is needed so that the probability of choosing at least one nonconforming item in the sample is at least 0.9?
+    For one shipment, \(q=1-0.97^{20}\). The number of affected shipments is \(Y\sim\operatorname{Binomial}(10,q)\), so \(P(Y=3)={10\choose3}q^3(1-q)^7\).
 
-??? answer
-    A sample size of at least 230 is needed.
+#### Exercise 8 — Designing an inspection sample
 
-#### Exercise 11
-The number of errors in a textbook follows a Poisson distribution with a
-mean of 0.01 error per page. What is the probability that there are three
-or less errors in 100 pages?
+A lot contains a small proportion \(p=0.01\) of nonconforming products. Items are sampled independently using a binomial approximation.
+
+1. Find the smallest sample size \(n\) for which the probability of observing at least one nonconforming item is at least 0.90.
+2. Repeat for target probabilities 0.95 and 0.99.
+3. Explain how the answer changes if sampling is without replacement from a lot of only 200 items.
 
 ??? answer
-    \(P(X \leq 3) \approx 0.981\)
 
-#### Additional Exercises
+    Solve \(1-(1-p)^n\ge q\), or \(n\ge \log(1-q)/\log(1-p)\), and round up. For \(q=0.90\), the minimum is \(230\). A small finite lot requires a hypergeometric rather than binomial model.
 
-``` py linenums="1"
-while student is "bored":
-    additional_exercises = [
-        "Exam 2014.3 (a-c)",
-        "Exam 2016 New Test.2",
-        "Exam 2018.2"
-    ]
-```
+The notebook [ex1.ipynb](ex1.ipynb) can be used as a starting point for discrete-distribution calculations.

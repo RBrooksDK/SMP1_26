@@ -15,14 +15,14 @@
 
 * **Course Responsible:** [Richard Brooks](https://rbrooksdk.github.io), <rib@via.dk>
 * **Credits:** 5 ECTS (European Credit Transfer System), equivalent to 130 working hours
-* **Sessions:** 11 sessions, each with a duration of 4 lessons, starting in week 6
+* **Sessions:** 11 sessions, each with a duration of 4 lessons, starting in week 36
 * **Level:** Bachelor — the course is academically challenging and requires independent work on problems
 * **Assessment:** 4-hour written exam (see exam description in the menu at the top)
 * **Recommended prerequisites:** In "Sessions" in the menu, a dedicated entry is made for prerequisites
 
 ## <i class="fas fa-vector-square" style="color:#6CA2C6"></i> Lectures and Course Organization
 
-The course is scheduled to start in week 6 and will be held on **Tuesdays** from **12:45 to 16:05** in room **C04.16**. In general, each session is made up of four activities:
+The course is scheduled to start in week 36 and will be held on **Fridays** from **8:20 to 11:50** in room **C04.16**. In general, each session is made up of four activities:
 
 1. At the beginning of each session, there will be a short recap of the previous session.
 2. We then go through the exercises from the previous session.
@@ -35,25 +35,23 @@ There are no mandatory assignments, but it is highly recommended to work on the 
 
 ## <i class="fas fa-wave-square" style="color:#6CA2C6"></i> Course Content and Learning Objectives
 
-Stochastic Modelling and Processes is the art of making sense of randomness in the world around us. We examine probability theory, finding the tools to describe and analyse random systems mathematically. You'll learn about random variables — their mean, variance, and the distributions that define them — and learn how these concepts power everything from decision-making to machine learning.
+Stochastic Modelling and Processes is about describing randomness mathematically and building models for systems that evolve over time. The course develops probability beyond the introductory level: from single random variables to joint distributions, dependence, simulation, stochastic processes, time series, and Markov chains.
 
 **Learning Objectives**
 
-- **Probability**: Understand the fundamental concepts of probability theory, including experiments, sample spaces, independence, conditional probability, and Bayes' theorem. Learn to approach random systems methodically using probabilistic reasoning.
-- **Random Variables**: Describe and analyse random systems through random variables. Understand their characteristics, including mean, variance, standard deviation, and commonly used distributions like normal, binomial, and Poisson.
-- **Point Estimation**: Learn techniques to estimate population parameters from sample data and evaluate the quality and reliability of these estimates.
-- **Statistical Intervals**: Construct and interpret confidence intervals for population parameters. Learn to assess the precision of estimates and their implications for statistical inference.
-- **Hypothesis Testing**: Explore the principles of hypothesis testing. Learn to formulate null and alternative hypotheses, compute and interpret p-values, and make informed decisions based on statistical evidence.
-- **Regression Analysis**: Investigate relationships between variables using regression models. Understand how to fit, interpret, and assess the quality of regression models for real-world data.
-- **Stochastic Processes**: Model and analyse systems that evolve over time using stochastic processes, including applications of Markov Chains for dynamic systems.
-- **Python for Statistical Modelling**: Gain hands-on experience with Python for data analysis, simulating random variables, conducting statistical tests, and visualizing statistical data to reinforce theoretical understanding.
-- **Critique and Evaluate Statistical Models**: Develop the competence to critically assess statistical models and results. Identify sources of error, critique experimental designs, and propose improvements for better reliability.
+- **Probability foundations**: Apply probability rules, conditional probability, independence, the law of total probability, and Bayes' theorem.
+- **Random variables**: Describe discrete and continuous random variables using PMFs, PDFs, CDFs, expected values, variances, and standard distributions.
+- **Joint probability and dependence**: Work with joint, marginal, and conditional distributions, conditional expectation, covariance, and correlation.
+- **Sampling and simulation**: Generate random samples in Python, use Monte Carlo methods, and explain the law of large numbers and the central limit theorem.
+- **Stochastic processes**: Formulate and analyse random processes, including Poisson processes and discrete-time Markov chains.
+- **Time series**: Use stationarity, autocorrelation, white noise, random walks, and autoregressive models to produce simple probabilistic forecasts.
+- **Critical modelling**: Assess assumptions, simulation error, forecast uncertainty, and limitations of probabilistic models.
 
-But it's not just about theory. You'll get hands-on with Python, simulating randomness, running statistical tests, and exploring applications of stochastic models. By the end, you'll not only understand how to model uncertainty but also how to use it to make informed predictions and decisions.
+Python is used throughout to simulate random variables and processes, investigate theoretical results, and compare analytical models with numerical experiments.
 
 ## <i class="fas fa-book-open" style="color:#6CA2C6"></i> Resources
 
-ASPE: Montgomery, D.C. & Runger, G.C. Applied Statistics and Probability for Engineers, 7th edition. All references are to chapters or exercises (found in the end of the book). Solutions to all exercises from the book are uploaded. You need to retrieve a copy however you usually retrieve books.
+The primary syllabus is H. Pishro-Nik's open textbook [Introduction to Probability, Statistics, and Random Processes](https://www.probabilitycourse.com/). Required sections are linked from each session page. Selected exercises and examples from Montgomery and Runger, *Applied Statistics and Probability for Engineers* (ASPE), may be used as supplementary practice.
 
 Non-session specific resources such as the exercises from the book, solutions, old exam cases, etc. can be found here:
 
@@ -62,8 +60,6 @@ Non-session specific resources such as the exercises from the book, solutions, o
 This folder is always accessible in the menu at the top.
 
 The Wiseflow code for all flows that are used during the course is always 0000. This is not the code for the actual exam in June, though.
-
-The course is loosely built up around [H. Pishro-Nik's](http://www.ecs.umass.edu/pishro) [https://www.probabilitycourse.com/](https://www.probabilitycourse.com/)
 
 Make sure you install a working version of Jupyter Notebook and Python version 3.7 or higher. The easiest way to install Python and Jupyter is using [Anaconda Distribution](https://www.anaconda.com/products/distribution). You can choose whichever framework you want to work in as long as it can handle Jupyter Notebooks. Installing VS Code with a Jupyter Notebook extension seems to be a popular choice.
 

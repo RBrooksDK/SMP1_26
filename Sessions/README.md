@@ -1,45 +1,33 @@
 # Sessions
 
-Click on a session in the top menu (or below) to access a plan of a specific session and additional resources for that session.
+SMP1 consists of 11 sessions of four lessons (4 × 45 minutes). The course moves from probability foundations to dependent random variables and then to systems that evolve over time.
 
-<style>
-.center-table table {
-  width: 100%;
-  border-collapse: collapse;
-}
+The normal rhythm of a session is:
 
-.center-table table th:nth-child(1),
-.center-table table td:nth-child(1) {
-  width: 10%;
-}
+| Activity | Time |
+| --- | ---: |
+| Recap and retrieval practice | 30 min |
+| Discussion of selected exercises | 60 min |
+| New theory, examples, and modelling | 75 min |
+| Start next exercises and wrap-up | 15 min |
 
-.center-table table th:nth-child(2),
-.center-table table td:nth-child(2) {
-  width: 25%;
-}
+Preparation should be realistic: read the specified ProbabilityCourse sections, review the previous session, and attempt the exercises. The lecturer may identify particular exercises for preparation or classroom discussion.
 
-.center-table table th:nth-child(3),
-.center-table table td:nth-child(3) {
-  width: 65%;
-}
-</style>
+| Session | Topic | Main progression |
+| ---: | --- | --- |
+| 00 | [Prerequisites](../00_Prerequisites/README.md) | Sets, combinatorics, sums, calculus, and matrices |
+| 01 | [Probability Foundations and Random Variables](../01_Probability_Foundations_and_Random_Variables/README.md) | Events, conditioning, Bayes, independence, expectation, and variance |
+| 02 | [Discrete Random Variables](../02_Discrete_Random_Variables/README.md) | PMF/CDF and Bernoulli, binomial, geometric, and Poisson models |
+| 03 | [Continuous Random Variables](../03_Continuous_Random_Variables/README.md) | PDF/CDF, expectation, transformations, normal, and exponential models |
+| 04 | [Joint Distributions](../04_Joint_Distributions/README.md) | Joint, marginal, and conditional distributions for two variables |
+| 05 | [Conditional Distributions and Dependence](../05_Conditional_Distributions_and_Dependence/README.md) | Conditional expectation, covariance, correlation, transformations, and sums |
+| 06 | [Random Sampling, Monte Carlo, and Limit Theorems](../06_Random_Sampling_Monte_Carlo_and_Limit_Theorems/README.md) | Simulation, sampling distributions, LLN, CLT, and Monte Carlo error |
+| 07 | [Stochastic Processes and Poisson Processes](../07_Stochastic_Processes_and_Poisson_Processes/README.md) | Random processes, increments, counting processes, and arrival times |
+| 08 | [Time-Series Fundamentals](../08_Time_Series_Fundamentals/README.md) | Time dependence, stationarity, autocovariance, white noise, and random walks |
+| 09 | [Autoregressive Models and Forecasting](../09_Autoregressive_Models_and_Forecasting/README.md) | AR models, simulation, recursive forecasts, and forecast uncertainty |
+| 10 | [Markov Chains](../10_Markov_Chains/README.md) | Markov property, transition matrices, classes, and stationary distributions |
+| 11 | [Markov Chains and Course Recap](../11_Markov_Chains_and_Course_Recap/README.md) | Long-run behaviour, simulation, and integration of the course models |
 
-<div class="center-table" markdown>
+## Core syllabus
 
-
-| Session | Date                 | Topic                        |
-| ------- | :----:               | ---------------------------- |
-| 00      |                      | [Important Recap](/SMP1_26/00_Important_Recap/) |
-| 01      | 4 Feb 12:45 – 16:05  | [Introduction + Recap Probability + Stochastic Variables](/SMP1_26/01_Introduction_+_Recap_Probability_+_Stochastic_Variables/) |
-| 02      | 11 Feb 12:45 – 16:05 | [Discrete Random Variables](/SMP1_26/02_Discrete_Random_Variables/) |
-| 03      | 18 Feb 12:45 – 16:05 | [Continuous Random Variables](/SMP1_26/03_Continuous_Random_Variables/) |
-| 04      | 25 Feb 12:45 – 16:05 | [Normal and Exponential Distributions and Multivariate Random Variables](/SMP1_26/04_Multivariate_Random_Variables/) |
-| 05      | 4 Mar 12:45 – 16:05  | [Multivariate Random Variables Part 2](/SMP1_26/05_MVR_part_2/) |
-| 06      | 11 Mar 12:45 – 16:05 | [Point Estimation, Sampling and Statistical Intervals](/SMP1_26/06_Statistical_Intervals/) |
-| 07      | 25 Mar 12:45 – 16:05 | [Hypothesis Testing](/SMP1_26/07_Hypothesis_Testing/) |
-| 08      | 1 Apr 12:45 – 16:05  | [Regression](/SMP1_26/08_Regression/) |
-| 09      | 8 Apr 12:45 – 16:05  | [Introduction to Stochastic Processes](/SMP1_26/09_Introduction_to_Stochastic_Processes/) |
-| 10      | 22 Apr 12:45 – 16:05 | [Markov Chains](/SMP1_26/10_Markov_Chains/) |
-| 11      | 29 Apr 12:45 – 16:05 | [Recap and Exercises Markov Chains](/SMP1_26/11_Recap_and_Exercises_Markov_Chains/) |
-
-</div>
+The primary online text is [Introduction to Probability, Statistics, and Random Processes](https://www.probabilitycourse.com/) by Hossein Pishro-Nik. Each session page identifies the sections used as input and syllabus. Chapters 1–7 provide the probability foundation, Chapter 10 introduces random processes, Chapter 11 covers Poisson processes and Markov chains, and Chapter 14 supplies Python-oriented simulation material.

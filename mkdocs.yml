@@ -139,18 +139,18 @@ nav:
   - Home: README.md
   - Sessions:
     - Sessions/README.md
-    - 00 Prerequisites: 00_Important_Recap/README.md
-    - 01 Introduction to Probability and Random Variables: 01_Introduction_+_Recap_Probability_+_Stochastic_Variables/README.md
+    - 00 Prerequisites: 00_Prerequisites/README.md
+    - 01 Probability Foundations and Random Variables: 01_Probability_Foundations_and_Random_Variables/README.md
     - 02 Discrete Random Variables: 02_Discrete_Random_Variables/README.md
     - 03 Continuous Random Variables: 03_Continuous_Random_Variables/README.md
-    - 04 Normal and Exponential Distributions and Multivariate Random Variables: 04_Multivariate_Random_Variables/README.md
-    - 05 Multivariate Random Variables Part 2: 05_MVR_part_2/README.md
-    - 06 Point Estimation, Sampling, and Statistical Intervals: 06_Statistical_Intervals/README.md
-    - 07 Hypothesis Testing: 07_Hypothesis_Testing/README.md
-    - 08 Regression: 08_Regression/README.md
-    - 09 Introduction to Stochastic Processes: 09_Introduction_to_Stochastic_Processes/README.md
+    - 04 Joint Distributions: 04_Joint_Distributions/README.md
+    - 05 Conditional Distributions and Dependence: 05_Conditional_Distributions_and_Dependence/README.md
+    - 06 Random Sampling, Monte Carlo, and Limit Theorems: 06_Random_Sampling_Monte_Carlo_and_Limit_Theorems/README.md
+    - 07 Stochastic Processes and Poisson Processes: 07_Stochastic_Processes_and_Poisson_Processes/README.md
+    - 08 Time-Series Fundamentals: 08_Time_Series_Fundamentals/README.md
+    - 09 Autoregressive Models and Forecasting: 09_Autoregressive_Models_and_Forecasting/README.md
     - 10 Markov Chains: 10_Markov_Chains/README.md
-    - 11 Recap and Exercises: 11_Recap_and_Exercises_Markov_Chains/README.md
+    - 11 Markov Chains and Course Recap: 11_Markov_Chains_and_Course_Recap/README.md
   - Exam: pages/exam.md
   - FAQ: pages/faq.md
   - General Resources SMP: https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Egbdbeb9oy1Oqk8hReXf2-wBibryPlLiVj2ujGdsvH5--w?e=liO02A

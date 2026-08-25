@@ -6,16 +6,16 @@
     Yes, you are looking at it! This FAQ is designed to answer some of the most common questions about the course. If you have a question that is not answered here, please feel free to contact the course responsible, [Richard Brooks](mailto: rib@via.dk)
 
 ??? question "What is the course about?"
-    The course covers an introduction to probability theory and statistics. In depth description can be found in the [course description](https://www.via.dk/TMH/Courses/stochastic-modelling-and-processes) or by going the description of each session in the Sessions menu.
+    The course develops probability theory and stochastic modelling, including joint distributions, simulation, stochastic processes, time series, and Markov chains. An in-depth description can be found in the [course description](https://www.via.dk/TMH/Courses/stochastic-modelling-and-processes) or on the individual session pages.
 
 ??? question "How is the course related to the study program?"
-    The course mostly relates to the study program by providing a foundation for understanding and applying probability theory and statistics in the context of engineering, especially in the field of data science and machine learning.
+    The course provides a foundation for modelling uncertainty and time-dependent systems in engineering, software systems, data science, and machine learning. Traditional statistical inference is covered in STA rather than SMP.
 
 ??? question "What are the prerequisites for the course?"
     In the menu to the left, you can find the prerequisites for the course under the "Prerequisites" section. The course is designed to be self-contained, but it is recommended that students have a basic understanding of the topics listed.
 
 ??? question "Who should take this course?"
-    The course is intended for students who are interested in learning about probability theory and statistics and how to apply them in the context of engineering. It is very useful for students who are interested in data science and machine learning. It is a complex course, and you should only take it if you are willing to put in the effort to learn the material. The course is mandatory for some Master's programs.
+    The course is intended for students who want a deeper understanding of probability and stochastic models and their engineering applications. It is particularly useful for data science, machine learning, simulation, and performance modelling. The course requires regular work with mathematical exercises and Python.
 
 ??? question "Is attendance mandatory?"
     Attendance is not mandatory, but it is highly recommended. The course is complex, and it is important to keep up with the material. If you are unable to attend a session, make sure to catch up on the material using the session pages and exercises.

@@ -1,6 +1,17 @@
-<h1 align="center">10 Markov Chains</h1>
+# 10 — Markov Chains
 
-**Material:**
+## Session preparation
+
+Review conditional probability, matrix multiplication, and the idea of a discrete-time process.
+
+**Syllabus and input**
+
+- [ProbabilityCourse 11.2.1: discrete-time Markov chains](https://www.probabilitycourse.com/chapter11/11_2_1_introduction.php)
+- [State-transition matrix and diagram](https://www.probabilitycourse.com/chapter11/11_2_2_state_transition_matrix_and_diagram.php)
+- [State probability distributions](https://www.probabilitycourse.com/chapter11/11_2_3_probability_distributions.php)
+- [Classification of states](https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php)
+
+**Existing course material**
 
 [Recap notes](https://drive.google.com/file/d/1GJYl8qMMGcRZ7FD0qTif7jJazdyUPuQr/view?usp=sharing)
 
@@ -8,25 +19,23 @@
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuqNIuAYAltDmfXlB9l-DpMBTP5g7G1XrHFCqcXim9OfNQ?e=IMjqf3)
 
-## Topics
+---
 
-Markov chains are a mathematical framework used to model systems that change over time, such as the weather or the stock market. The key feature of a Markov chain is that it assumes that the future state of the system depends only on its current state, and not on any previous states. This is known as the Markov property. Markov chains are defined by a set of states, a transition matrix that describes the probabilities of moving from one state to another, and an initial state. The long-term behavior of a Markov chain can be analyzed using techniques such as finding the stationary distribution or calculating expected values. Markov chains are used in a wide range of applications, including computer science, physics, finance, and biology, among others.
+## Session focus
 
-- Markov property: The assumption that the future state of a system depends only on its current state, and not on any previous states.
-- State: A possible condition or configuration of the system being modeled.
-- Transition matrix: A matrix that describes the probabilities of moving from one state to another.
-- Stationary distribution: The long-term distribution of states that a Markov chain approaches over time.
-- Expected value: The average value that a variable takes over many iterations of the Markov chain.
+Markov chains model state-based systems in which the next state is conditionally independent of the earlier past given the current state. We connect conditional probability, matrices, stochastic processes, and simulation.
 
-## Problems to be worked on in class:
+By the end of the session, you should be able to define a state space and transition matrix, calculate path and multi-step probabilities, identify communicating classes, and calculate and interpret a stationary distribution.
 
-Do Problems 10 and the Wiseflow exam cases covering the final topics.
+---
+
+## Exercises
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }
 </style>
 
-### Exercise 1
+#### Exercise 1 — Paths and transitions
 
 Consider the Markov chain with three states, $S=\{1,2,3\}$, that has the following transition matrix
 
@@ -47,7 +56,7 @@ $$
         <li style> 1/12 </li>
     </ol>
 
-### Exercise 2
+#### Exercise 2
 
 Consider the Markov chain in the figure below. There are two recurrent classes, $R_1=\{1,2\}$, and $R_2=\{5,6,7\}$.
 
@@ -60,7 +69,7 @@ Consider the Markov chain in the figure below. There are two recurrent classes, 
     1. $a_3=\frac{5}{7}$
     2. $t_3=\frac{12}{7}$
 
-### Exercise 3
+#### Exercise 3
 
 Consider the following Markov chain
 
@@ -77,7 +86,7 @@ Consider the following Markov chain
     3. $\pi_1 \approx 0.457, \pi_2 \approx 0.257, \pi_3 \approx 0.286$
     4. yes
 
-### Exercise 4
+#### Exercise 4
 
 Consider the following Markov chain
 
@@ -87,3 +96,51 @@ Assume $X_0=1$, and let $R$ be the first time that the chain returns to state 1 
 
 ???answer
     $\frac{8}{3}$
+
+#### Exercise 5 — A two-state reliability chain
+
+A component is either Working or Failed. During each hour, a working component fails with probability 0.02, while a failed component is repaired with probability 0.30.
+
+1. Construct the transition matrix and diagram.
+2. Starting in Working, find the probability of being Failed after 2 and 10 hours.
+3. Find the stationary distribution.
+4. Interpret the stationary failure probability operationally.
+
+??? answer
+
+    With state order \((W,F)\), \(P=\begin{pmatrix}0.98&0.02\\0.30&0.70\end{pmatrix}\). The stationary distribution satisfies \(0.02\pi_W=0.30\pi_F\), giving \((\pi_W,\pi_F)=(15/16,1/16)\).
+
+#### Exercise 6 — Classification of states
+
+Consider
+
+\[
+P=\begin{pmatrix}
+1&0&0&0\\
+0.2&0.5&0.3&0\\
+0&0&0.6&0.4\\
+0&0&0.1&0.9
+\end{pmatrix}.
+\]
+
+1. Draw the transition diagram.
+2. Identify the communicating classes.
+3. Classify states as transient or recurrent.
+4. Identify all closed classes and stationary distributions.
+
+??? answer
+
+    State 1 is an absorbing closed class. States 3 and 4 form another closed irreducible class. State 2 is transient because it can leave for either closed class and cannot be revisited from them. Each closed class supports a stationary distribution.
+
+#### Exercise 7 — Estimating a transition matrix
+
+An observed state sequence is
+
+\[
+A,A,B,A,C,C,B,C,C,A,B,B,C,A,A.
+\]
+
+1. Count all observed one-step transitions.
+2. Estimate the transition matrix by row-normalising the counts.
+3. State which rows have the greatest estimation uncertainty and why.
+4. Simulate a sequence of length 100 from the fitted chain and compare transition frequencies.
