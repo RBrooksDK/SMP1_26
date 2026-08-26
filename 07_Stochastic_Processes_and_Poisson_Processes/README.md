@@ -1,6 +1,35 @@
-# 07 — Stochastic Processes and Poisson Processes
+---
+tags:
+    - Stochastic Processes
+    - Poisson Process
+    - Interarrival Times
+    - Thinning
+---
 
-## Session preparation
+<h1 align="center">Stochastic Processes and Poisson Processes</h1>
+
+A stochastic process is a collection of random variables indexed by time. We distinguish a distribution at one time from dependence across time, then study the Poisson counting process through stationary independent increments and exponential interarrival times.
+
+The Poisson process is specified by a rate. Counts on disjoint intervals are independent, arrival times have Gamma distributions, and merging or thinning produces new Poisson processes. Simulation via exponential waiting times makes event histories visible, and conditioning on the count in an interval recovers uniformly ordered arrival times.
+
+#### Key Concepts
+
+- State space and time index of a stochastic process
+- Poisson counting process, increments, and arrival times
+- Exponential interarrival times
+- Superposition and thinning
+- Simulation of event histories
+
+!!! tip "Learning Objectives"
+
+    - Describe a process through its state space and time index.
+    - Calculate probabilities for Poisson-process increments and arrival times.
+    - Combine or thin Poisson processes.
+    - Simulate event histories.
+
+<hr/>
+
+### Session Preparation:
 
 Review the Poisson and exponential distributions and the LLN from Sessions 2, 3, and 6.
 
@@ -15,17 +44,9 @@ Review the Poisson and exponential distributions and the LLN from Sessions 2, 3,
 - [Session notes](https://drive.google.com/file/d/1gTaiww6T_lyrVKNU7E93SkhK3ITO3ojL/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EpMa2OpoQTRLjtQWiM9qhugBXvJkRWuUGK7-4SuiycEDYQ?e=Fg6B41)
 
----
+<hr/>
 
-## Session focus
-
-A stochastic process is a collection of random variables indexed by time. We distinguish a distribution at one time from dependence across time, then study the Poisson counting process through stationary independent increments and exponential interarrival times.
-
-By the end of the session, you should be able to describe a process through its state space and time index, calculate probabilities for Poisson-process increments and arrival times, combine or thin Poisson processes, and simulate event histories.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — Server arrivals
 

@@ -1,6 +1,36 @@
-# 03 — Continuous Random Variables
+---
+tags:
+    - Continuous Random Variables
+    - PDF
+    - CDF
+    - Exponential
+    - Normal
+---
 
-## Session preparation
+<h1 align="center">Continuous Random Variables</h1>
+
+The ideas from discrete variables are transferred from sums to integrals. We work with PDFs, CDFs, expectation, variance, transformations, and the uniform, exponential, and normal distributions.
+
+A density is not itself a probability; probabilities come from integrating the PDF over an interval, and the CDF is that running integral. Expectation and variance are likewise integrals. Named continuous models are chosen from the story of the problem — a waiting time, a bounded interval, a symmetric error — and a transformation of one continuous variable is obtained from the CDF or the density.
+
+#### Key Concepts
+
+- PDFs, CDFs, and interval probabilities
+- Expectation and variance via integrals
+- Uniform, exponential, and normal models
+- Transformations of a single continuous random variable
+- Memorylessness of the exponential distribution
+
+!!! tip "Learning Objectives"
+
+    - Validate a PDF and derive a CDF.
+    - Calculate interval probabilities, expectation, and variance using integrals.
+    - Select and interpret common continuous models.
+    - Transform a single continuous random variable.
+
+<hr/>
+
+### Session Preparation:
 
 Attempt the core exercises from [Session 2](../02_Discrete_Random_Variables/README.md#exercises) and review basic integration from the [prerequisites](../00_Prerequisites/README.md).
 
@@ -18,22 +48,9 @@ Attempt the core exercises from [Session 2](../02_Discrete_Random_Variables/READ
 - [Session notes, part 1](https://drive.google.com/file/d/1-MKzwovM7uHrSUQ_XBe1NczVT2ssdbKd/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Ev_P59eY9qJOiDMwGkdri9ABxzovHXJiHdLP432519F7vQ?e=gwTShz)
 
----
+<hr/>
 
-## Session focus
-
-The ideas from discrete variables are transferred from sums to integrals. We work with PDFs, CDFs, expectation, variance, transformations, and the uniform, exponential, and normal distributions.
-
-By the end of the session, you should be able to:
-
-- validate a PDF and derive a CDF;
-- calculate interval probabilities, expectation, and variance using integrals;
-- select and interpret common continuous models;
-- transform a single continuous random variable.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — Reading a CDF
 

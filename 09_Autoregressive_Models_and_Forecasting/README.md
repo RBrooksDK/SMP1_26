@@ -1,6 +1,35 @@
-# 09 — Autoregressive Models and Probabilistic Forecasting
+---
+tags:
+    - AR(1)
+    - Stationarity
+    - Forecasting
+    - Forecast Variance
+---
 
-## Session preparation
+<h1 align="center">Autoregressive Models and Probabilistic Forecasting</h1>
+
+We introduce the AR(1) model as a simple dependent process that can be simulated, analysed, and used for forecasting. Forecasts are conditional distributions, not single guaranteed values. We derive the stationary mean, variance, ACF, multi-step forecast, and forecast uncertainty.
+
+Stationarity of AR(1) requires \(|\phi|<1\). Recursive forecasts revert toward the stationary mean, while forecast variance grows with the horizon toward the stationary variance. Residuals are used to check the white-noise assumption. Updating a forecast after a new observation is just restarting the recursion from the new state.
+
+#### Key Concepts
+
+- The AR(1) recursion and its stationarity condition
+- Stationary mean, variance, and ACF
+- Multi-step conditional means and forecast variance
+- Mean reversion and forecast updating
+- Residual checks of the innovation assumption
+
+!!! tip "Learning Objectives"
+
+    - Analyse and simulate an AR(1) process.
+    - Determine when an AR(1) process is stationary.
+    - Calculate recursive forecasts and forecast variance.
+    - Evaluate assumptions using residuals.
+
+<hr/>
+
+### Session Preparation:
 
 Attempt the core exercises from [Session 8](../08_Time_Series_Fundamentals/README.md#exercises). Be able to calculate covariance and condition on an observed value.
 
@@ -9,17 +38,9 @@ Attempt the core exercises from [Session 8](../08_Time_Series_Fundamentals/READM
 - [ProbabilityCourse: stationary processes](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php) as the probability foundation
 - Session notes on autoregressive models, recursive forecasting, and forecast distributions
 
----
+<hr/>
 
-## Session focus
-
-We introduce the AR(1) model as a simple dependent process that can be simulated, analysed, and used for forecasting. Forecasts are conditional distributions, not single guaranteed values. We derive the stationary mean, variance, ACF, multi-step forecast, and forecast uncertainty.
-
-By the end of the session, you should be able to analyse and simulate an AR(1) process, determine when it is stationary, calculate recursive forecasts and forecast variance, and evaluate assumptions using residuals.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — AR(1) properties
 

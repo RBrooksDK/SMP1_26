@@ -1,6 +1,35 @@
-# 11 — Markov Chains and Course Recap
+---
+tags:
+    - Markov Chains
+    - Stationary Distribution
+    - Model Selection
+    - Course Recap
+---
 
-## Session preparation
+<h1 align="center">Markov Chains and Course Recap</h1>
+
+The final session consolidates Markov-chain analysis and connects the major course ideas: conditional probability, dependence, simulation, processes, long-run behaviour, and probabilistic prediction. Class time is primarily used for problem solving and model selection.
+
+A Markov chain, a Poisson process, a stationary time series, and a simple random sample answer different questions. The last meeting practises choosing among them, checking assumptions, and moving between probability rules, distributions, simulation, and process models.
+
+#### Key Concepts
+
+- Classification of states and stationary versus limiting distributions
+- Recursion with the law of total probability
+- Choosing among binomial, Poisson-process, time-series, random-walk, and Markov models
+- Long-run behaviour and absorption
+- Connecting probability, simulation, and stochastic processes
+
+!!! tip "Learning Objectives"
+
+    - Use classification of states, recursion, and stationary distributions on a Markov chain.
+    - Choose a model from the course and state the assumptions that make it appropriate.
+    - Estimate a probability by Monte Carlo simulation and report uncertainty.
+    - Move between probability rules, distributions, simulation, and process models.
+
+<hr/>
+
+### Session Preparation:
 
 Attempt the exercises from [Session 10](../10_Markov_Chains/README.md#exercises) and identify the two course topics you most need to revisit.
 
@@ -12,15 +41,9 @@ Attempt the exercises from [Session 10](../10_Markov_Chains/README.md#exercises)
 - [Session exercises: Problems 10](https://drive.google.com/file/d/13m9g-jfVpG9yaxR9CF6aEza6ObSWXNEW/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Enaype9j_R1DvUKrGId_u3kBW9qq69kr6D5UwdyKBCCAjg?e=d32pBn)
 
----
+<hr/>
 
-## Session focus
-
-The final session consolidates Markov-chain analysis and connects the major course ideas: conditional probability, dependence, simulation, processes, long-run behaviour, and probabilistic prediction. Class time is primarily used for problem solving and model selection.
-
----
-
-## Integrative exercises
+### Exercises
 
 #### Exercise 1 — Web-service states
 
@@ -101,7 +124,7 @@ Requests arrive as a Poisson process with rate 20 per minute. Each request indep
 
     Thinning gives Poisson means \(20(10)(0.03)=6\) and \(20(10)(0.15)=30\). Hence \(P(F=0)=0.8e^{-6}+0.2e^{-30}\), and Bayes' rule gives \(P(N\mid F=0)=\frac{0.8e^{-6}}{0.8e^{-6}+0.2e^{-30}}\).
 
-## Course checklist
+### Course checklist
 
 You should now be able to move between four representations of uncertainty:
 

@@ -1,6 +1,36 @@
-# 05 — Conditional Distributions and Dependence
+---
+tags:
+    - Conditional Expectation
+    - Covariance
+    - Correlation
+    - Transformations
+    - Dependence
+---
 
-## Session preparation
+<h1 align="center">Conditional Distributions and Dependence</h1>
+
+This session develops the quantitative tools for dependence. Conditional expectation summarises how one variable changes with another, while covariance and correlation describe linear dependence. Transformations and sums connect joint probability to later work with sampling, time series, and stochastic processes.
+
+The laws of total expectation and total variance turn a mixture of conditional models into unconditional moments. Covariance is not independence, and a small correlation does not imply that two variables are unrelated. Functions of two variables and sums of several variables are obtained from the joint model, by calculation or by simulation.
+
+#### Key Concepts
+
+- Conditional expectation and conditional variance
+- Laws of total expectation and total variance
+- Covariance, correlation, and their limitations
+- Transformations of two random variables
+- Means and variances of sums
+
+!!! tip "Learning Objectives"
+
+    - Calculate and interpret conditional expectation and variance.
+    - Apply the laws of total expectation and total variance.
+    - Calculate covariance and correlation and explain their limitations.
+    - Obtain distributions or moments of transformations and sums.
+
+<hr/>
+
+### Session Preparation:
 
 Attempt the core exercises from [Session 4](../04_Joint_Distributions/README.md#exercises).
 
@@ -18,22 +48,9 @@ Attempt the core exercises from [Session 4](../04_Joint_Distributions/README.md#
 - [Session notes](https://drive.google.com/file/d/1oUHWdzQZa62bTqsmLe_eRts7OpOEhFgJ/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EnYOFBJCZ-hNtWAfipCS0pUB6xsNt8lOW1fDyq_l_vNqUg?e=BSqiaH)
 
----
+<hr/>
 
-## Session focus
-
-This session develops the quantitative tools for dependence. Conditional expectation summarises how one variable changes with another, while covariance and correlation describe linear dependence. Transformations and sums connect joint probability to later work with sampling, time series, and stochastic processes.
-
-By the end of the session, you should be able to:
-
-- calculate and interpret conditional expectation and variance;
-- apply the laws of total expectation and total variance;
-- calculate covariance and correlation and explain their limitations;
-- obtain distributions or moments of transformations and sums.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — Conditional moments
 

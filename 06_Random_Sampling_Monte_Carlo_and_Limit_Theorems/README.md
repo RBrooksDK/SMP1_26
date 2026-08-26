@@ -1,6 +1,35 @@
-# 06 — Random Sampling, Monte Carlo, and Limit Theorems
+---
+tags:
+    - Random Sampling
+    - Monte Carlo
+    - Law of Large Numbers
+    - Central Limit Theorem
+---
 
-## Session preparation
+<h1 align="center">Random Sampling, Monte Carlo, and Limit Theorems</h1>
+
+Random sampling connects probability models to computation. We use Python to generate i.i.d. samples, construct Monte Carlo estimates, and study their uncertainty. The LLN explains consistency; the CLT explains the approximate shape and scale of simulation error.
+
+A sample mean has a mean and a variance that follow from the underlying model. Monte Carlo replaces an integral or a probability by an average of simulated indicators or values, with an error that typically shrinks like \(1/\sqrt{n}\). Rare events need larger samples than a generic \(n\) of a few thousand.
+
+#### Key Concepts
+
+- I.i.d. samples and the sampling distribution of the sample mean
+- Monte Carlo estimators and Monte Carlo standard error
+- The law of large numbers
+- The central limit theorem
+- Reproducible simulation with a fixed seed
+
+!!! tip "Learning Objectives"
+
+    - Generate random samples and construct Monte Carlo estimators.
+    - Calculate the mean and variance of a sample mean.
+    - Use the LLN and CLT appropriately.
+    - Report a Monte Carlo standard error and choose a sample size for a target accuracy.
+
+<hr/>
+
+### Session Preparation:
 
 Attempt the core exercises from [Session 5](../05_Conditional_Distributions_and_Dependence/README.md#exercises).
 
@@ -11,17 +40,9 @@ Attempt the core exercises from [Session 5](../05_Conditional_Distributions_and_
 - [Central Limit Theorem](https://www.probabilitycourse.com/chapter7/7_1_2_central_limit_theorem.php)
 - [Chapter 14: simulation using Python](https://www.probabilitycourse.com/chapter14/Chapter_14.pdf), selected sections
 
----
+<hr/>
 
-## Session focus
-
-Random sampling connects probability models to computation. We use Python to generate i.i.d. samples, construct Monte Carlo estimates, and study their uncertainty. The LLN explains consistency; the CLT explains the approximate shape and scale of simulation error.
-
-By the end of the session, you should be able to generate random samples, construct Monte Carlo estimators, calculate the mean and variance of a sample mean, and use the LLN and CLT appropriately.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — Sampling distribution
 

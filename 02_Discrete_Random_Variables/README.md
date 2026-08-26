@@ -1,6 +1,36 @@
-# 02 — Discrete Random Variables
+---
+tags:
+    - Discrete Random Variables
+    - PMF
+    - CDF
+    - Binomial
+    - Poisson
+---
 
-## Session preparation
+<h1 align="center">Discrete Random Variables</h1>
+
+We model countable outcomes using PMFs and CDFs and learn to select a distribution from the assumptions of a problem. The central models are Bernoulli, binomial, geometric, hypergeometric, and Poisson distributions.
+
+A probability mass function assigns probability to each possible value; the CDF accumulates those probabilities. Expectation and variance follow from the PMF. Choosing a named distribution is a modelling step: repeated independent trials, waiting times, sampling without replacement, and counts each point to a different family. Python is used to simulate the chosen model.
+
+#### Key Concepts
+
+- Probability mass functions and CDFs
+- Expectation and variance of a discrete random variable
+- Bernoulli, binomial, geometric, hypergeometric, and Poisson models
+- Matching a distribution to the assumptions of a problem
+- Simulation of a discrete random variable
+
+!!! tip "Learning Objectives"
+
+    - Validate and use a PMF and construct its CDF.
+    - Calculate expectation and variance.
+    - Distinguish repeated independent trials, waiting-time models, sampling without replacement, and count models.
+    - Simulate a discrete random variable in Python.
+
+<hr/>
+
+### Session Preparation:
 
 Attempt the core exercises from [Session 1](../01_Probability_Foundations_and_Random_Variables/README.md#exercises).
 
@@ -16,22 +46,9 @@ Attempt the core exercises from [Session 1](../01_Probability_Foundations_and_Ra
 - [Session notes](https://drive.google.com/file/d/1LJ8Nu0D1PLLB1FF1jTsLK50HGLhl1EtG/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo)
 
----
+<hr/>
 
-## Session focus
-
-We model countable outcomes using PMFs and CDFs and learn to select a distribution from the assumptions of a problem. The central models are Bernoulli, binomial, geometric, hypergeometric, and Poisson distributions.
-
-By the end of the session, you should be able to:
-
-- validate and use a PMF and construct its CDF;
-- calculate expectation and variance;
-- distinguish repeated independent trials, waiting-time models, sampling without replacement, and count models;
-- simulate a discrete random variable in Python.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — Valid PMF
 

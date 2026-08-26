@@ -1,6 +1,36 @@
-# 08 — Time-Series Fundamentals
+---
+tags:
+    - Time Series
+    - Stationarity
+    - Autocovariance
+    - White Noise
+    - Random Walk
+---
 
-## Session preparation
+<h1 align="center">Time-Series Fundamentals</h1>
+
+A time series is one observed realisation of a discrete-time stochastic process. We study time dependence through lagged covariance and correlation and distinguish white noise, stationary processes, and random walks. The emphasis is probabilistic structure rather than a catalogue of statistical tests.
+
+Strict and weak stationarity describe whether the law of the process is stable in time. Autocovariance and autocorrelation summarise linear dependence across lags. White noise is uncorrelated; a random walk is not stationary. Plots and sample ACFs are useful, but they mix model properties with sampling variation.
+
+#### Key Concepts
+
+- Realisation versus underlying process
+- Strict and weak stationarity
+- Autocovariance and autocorrelation
+- White noise and random walks
+- Sample ACF and its limitations
+
+!!! tip "Learning Objectives"
+
+    - Define strict and weak stationarity.
+    - Calculate autocovariance and autocorrelation.
+    - Recognise white noise and random-walk behaviour.
+    - Use plots and sample ACFs cautiously.
+
+<hr/>
+
+### Session Preparation:
 
 Review covariance and correlation from Session 5 and the distinction between a random variable and a random process from Session 7.
 
@@ -9,17 +39,9 @@ Review covariance and correlation from Session 5 and the distinction between a r
 - [Basic concepts of random processes](https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php)
 - [Stationary processes](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php), through weak-sense stationarity
 
----
+<hr/>
 
-## Session focus
-
-A time series is one observed realisation of a discrete-time stochastic process. We study time dependence through lagged covariance and correlation and distinguish white noise, stationary processes, and random walks. The emphasis is probabilistic structure rather than a catalogue of statistical tests.
-
-By the end of the session, you should be able to define strict and weak stationarity, calculate autocovariance and autocorrelation, recognise white noise and random-walk behaviour, and use plots and sample ACFs cautiously.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — Classify the process
 

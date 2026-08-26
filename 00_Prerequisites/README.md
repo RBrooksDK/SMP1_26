@@ -1,14 +1,41 @@
-# Prerequisites
+---
+tags:
+    - Prerequisites
+    - Sets
+    - Combinatorics
+    - Probability
+    - Matrices
+---
 
-Students taking the course are expected to have basic mathematical skills (e.g. from IT-DMA1 or IT-MSE1). The course is designed to be self-contained, but it is recommended that students have a basic understanding of the following topics:
+<h1 align="center">Prerequisites</h1>
 
-### Material
+Students taking the course are expected to have basic mathematical skills (e.g. from IT-DMA1 or IT-MSE1). The course is designed to be self-contained, but it is recommended that students have a basic understanding of the topics below.
+
+Most of the topics can be found in our course [Mathematics for Software Engineers (MSE)](https://rbrooksdk.github.io/MSE1/). I have written a [book](https://drive.google.com/file/d/1P9eidJb5qtlZgvHCtqu4uuPa5FFU0Zpn/view?usp=sharing) for that course, and it covers the topics quite well. The references below are to the slides found in the session material as well as the book chapters that also correspond to the MSE course sessions.
+
+#### Key Concepts
+
+- Boolean algebra and sets
+- Combinatorics, especially combinations
+- Probability rules, conditioning, independence, and Bayes' theorem
+- Sequences, series, and closed-form sums
+- Matrix algebra, inverses, and systems of equations
+- Integrals needed from Session 3 onwards
+
+!!! tip "Learning Objectives"
+
+    - Recall set operations, combinations, and the main probability identities.
+    - Use series and closed-form summation formulae where the course needs them.
+    - Carry out basic matrix calculations, including inverse matrices.
+    - Refresh definite integrals before the continuous-variable sessions.
+
+<hr/>
+
+### Session Preparation:
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/En0s5AGeHABFl6Vb0SaGndwBNjmoxJ3-CbjwXURoX7xScQ?e=fiKF5a)
 
 ### Topics
-
-Most of the topics can be found in our course [Mathematics for Software Engineers (MSE)](https://rbrooksdk.github.io/MSE1/). I have written a [book](https://drive.google.com/file/d/1P9eidJb5qtlZgvHCtqu4uuPa5FFU0Zpn/view?usp=sharing) for that course, and it covers the topics quite well. The references below are to the slides found in the material above as well as the book chapters that also correspond to the MSE course sessions.
 
 #### Boolean Algebra
 - Ch. 4

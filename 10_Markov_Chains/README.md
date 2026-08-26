@@ -1,6 +1,35 @@
-# 10 — Markov Chains
+---
+tags:
+    - Markov Chains
+    - Transition Matrix
+    - Stationary Distribution
+    - Classification of States
+---
 
-## Session preparation
+<h1 align="center">Markov Chains</h1>
+
+Markov chains model state-based systems in which the next state is conditionally independent of the earlier past given the current state. We connect conditional probability, matrices, stochastic processes, and simulation.
+
+A chain is specified by a state space and a transition matrix. Path probabilities multiply along a route; multi-step probabilities come from powers of the matrix. Communicating classes, transience, and recurrence organise the long-run picture, and a stationary distribution describes the equilibrium occupancy of an irreducible class.
+
+#### Key Concepts
+
+- Markov property, state space, and transition matrix
+- Path and multi-step probabilities
+- Communicating classes, transience, and recurrence
+- Stationary distributions
+- Absorption in closed classes
+
+!!! tip "Learning Objectives"
+
+    - Define a state space and transition matrix.
+    - Calculate path and multi-step probabilities.
+    - Identify communicating classes.
+    - Calculate and interpret a stationary distribution.
+
+<hr/>
+
+### Session Preparation:
 
 Review conditional probability, matrix multiplication, and the idea of a discrete-time process.
 
@@ -19,17 +48,9 @@ Review conditional probability, matrix multiplication, and the idea of a discret
 
 [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuqNIuAYAltDmfXlB9l-DpMBTP5g7G1XrHFCqcXim9OfNQ?e=IMjqf3)
 
----
+<hr/>
 
-## Session focus
-
-Markov chains model state-based systems in which the next state is conditionally independent of the earlier past given the current state. We connect conditional probability, matrices, stochastic processes, and simulation.
-
-By the end of the session, you should be able to define a state space and transition matrix, calculate path and multi-step probabilities, identify communicating classes, and calculate and interpret a stationary distribution.
-
----
-
-## Exercises
+### Exercises
 
 <style type="text/css">
     ol { list-style-type: lower-alpha; }

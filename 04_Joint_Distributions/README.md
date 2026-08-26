@@ -1,6 +1,35 @@
-# 04 — Joint Distributions
+---
+tags:
+    - Joint Distributions
+    - Marginal Distributions
+    - Conditional Distributions
+    - Independence
+---
 
-## Session preparation
+<h1 align="center">Joint Distributions</h1>
+
+A single random variable describes one aspect of an experiment. Joint distributions describe several quantities simultaneously and make dependence visible. We construct joint, marginal, and conditional distributions in both discrete and continuous settings.
+
+A joint PMF or joint PDF must be validated, then summed or integrated to obtain marginals. Conditioning restricts attention to a slice of the joint model. Independence means the joint factors into a product of marginals; a glance at the support or at a table of zeros is often enough to rule it out. Probabilities over regions in the plane are areas or sums over the corresponding cells.
+
+#### Key Concepts
+
+- Joint PMFs and joint PDFs
+- Marginal and conditional distributions
+- Probabilities over two-dimensional regions
+- Independence of two random variables
+- Discrete tables and continuous supports
+
+!!! tip "Learning Objectives"
+
+    - Validate and use a joint PMF or joint PDF.
+    - Derive marginal and conditional distributions.
+    - Calculate probabilities over regions in two dimensions.
+    - Determine whether two random variables are independent.
+
+<hr/>
+
+### Session Preparation:
 
 Attempt the core exercises from [Session 3](../03_Continuous_Random_Variables/README.md#exercises).
 
@@ -16,22 +45,9 @@ Attempt the core exercises from [Session 3](../03_Continuous_Random_Variables/RE
 - [Session notes](https://drive.google.com/file/d/1oUHWdzQZa62bTqsmLe_eRts7OpOEhFgJ/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EoKqqy67NdBBk7Qnug21TH4BXHHtg2jlNNSF45_H9n7feg?e=3dBknY)
 
----
+<hr/>
 
-## Session focus
-
-A single random variable describes one aspect of an experiment. Joint distributions describe several quantities simultaneously and make dependence visible. We construct joint, marginal, and conditional distributions in both discrete and continuous settings.
-
-By the end of the session, you should be able to:
-
-- validate and use a joint PMF or joint PDF;
-- derive marginal and conditional distributions;
-- calculate probabilities over regions in two dimensions;
-- determine whether two random variables are independent.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — Joint PMF table
 

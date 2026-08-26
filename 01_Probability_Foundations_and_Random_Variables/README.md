@@ -1,6 +1,36 @@
-# 01 — Probability Foundations and Random Variables
+---
+tags:
+    - Probability
+    - Sample Space
+    - Conditional Probability
+    - Bayes
+    - Random Variables
+---
 
-## Session preparation
+<h1 align="center">Probability Foundations and Random Variables</h1>
+
+This session establishes the language used throughout the course: experiments, sample spaces, events, probability measures, conditioning, independence, and random variables. Expectation and variance are introduced as properties of a model rather than sample summaries.
+
+We represent a random experiment with a sample space and events, then apply probability rules, conditional probability, the law of total probability, and Bayes' theorem. Independence is distinguished from mutually exclusive events. A random variable assigns a numerical value to each outcome, and its expectation and variance describe the model, not a data sample.
+
+#### Key Concepts
+
+- Experiments, sample spaces, and events
+- Probability rules, conditional probability, and Bayes' theorem
+- Independence versus mutually exclusive events
+- Random variables
+- Expectation and variance as model properties
+
+!!! tip "Learning Objectives"
+
+    - Represent a random experiment using a sample space and events.
+    - Apply probability rules, conditional probability, total probability, and Bayes' theorem.
+    - Distinguish independence from mutually exclusive events.
+    - Define a random variable and interpret its expectation and variance.
+
+<hr/>
+
+### Session Preparation:
 
 There are no exercises due before the first class. Review the [prerequisites](../00_Prerequisites/README.md), especially sets, combinatorics, and basic probability.
 
@@ -16,22 +46,9 @@ There are no exercises due before the first class. Review the [prerequisites](..
 - [Session notes](https://drive.google.com/file/d/1oqEy7sINksGCfdytv_O8qIZ0FoVEyWjz/view?usp=drive_link)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuOeq6E9sg9Jjf5n_qCeM80B4uonPufDX4RnR0nFz3EdMg?e=dRNi7T)
 
----
+<hr/>
 
-## Session focus
-
-The session establishes the language used throughout the course: experiments, sample spaces, events, probability measures, conditioning, independence, and random variables. Expectation and variance are introduced as properties of a model rather than sample summaries.
-
-By the end of the session, you should be able to:
-
-- represent a random experiment using a sample space and events;
-- apply probability rules, conditional probability, total probability, and Bayes' theorem;
-- distinguish independence from mutually exclusive events;
-- define a random variable and interpret its expectation and variance.
-
----
-
-## Exercises
+### Exercises
 
 #### Exercise 1 — Probability tree
 
