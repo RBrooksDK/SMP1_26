@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#03-continuous-random-variables" class="md-skip">
+        <a href="#session-preparation" class="md-skip">
           Skip to content
         </a>
       
@@ -607,8 +607,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -651,8 +649,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -664,18 +660,7 @@
   <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Session preparation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#session-focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Session focus
+        Session Preparation:
       
     </span>
   </a>
@@ -1031,8 +1016,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1044,18 +1027,7 @@
   <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Session preparation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#session-focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Session focus
+        Session Preparation:
       
     </span>
   </a>
@@ -1093,8 +1065,30 @@
   
 
 
-<h1 id="03-continuous-random-variables">03 — Continuous Random Variables<a class="headerlink" href="#03-continuous-random-variables" title="Permanent link">&para;</a></h1>
-<h2 id="session-preparation">Session preparation<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h2>
+<h1 align="center">Continuous Random Variables</h1>
+
+<p>The ideas from discrete variables are transferred from sums to integrals. We work with PDFs, CDFs, expectation, variance, transformations, and the uniform, exponential, and normal distributions.</p>
+<p>A density is not itself a probability; probabilities come from integrating the PDF over an interval, and the CDF is that running integral. Expectation and variance are likewise integrals. Named continuous models are chosen from the story of the problem — a waiting time, a bounded interval, a symmetric error — and a transformation of one continuous variable is obtained from the CDF or the density.</p>
+<h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
+<ul>
+<li>PDFs, CDFs, and interval probabilities</li>
+<li>Expectation and variance via integrals</li>
+<li>Uniform, exponential, and normal models</li>
+<li>Transformations of a single continuous random variable</li>
+<li>Memorylessness of the exponential distribution</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Learning Objectives</p>
+<ul>
+<li>Validate a PDF and derive a CDF.</li>
+<li>Calculate interval probabilities, expectation, and variance using integrals.</li>
+<li>Select and interpret common continuous models.</li>
+<li>Transform a single continuous random variable.</li>
+</ul>
+</div>
+<hr/>
+
+<h3 id="session-preparation">Session Preparation:<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h3>
 <p>Attempt the core exercises from <a href="../02_Discrete_Random_Variables/#exercises">Session 2</a> and review basic integration from the <a href="../00_Prerequisites/">prerequisites</a>.</p>
 <p><strong>Syllabus and input</strong></p>
 <ul>
@@ -1110,18 +1104,9 @@
 <li><a href="https://drive.google.com/file/d/1-MKzwovM7uHrSUQ_XBe1NczVT2ssdbKd/view?usp=sharing">Session notes, part 1</a></li>
 <li><a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Ev_P59eY9qJOiDMwGkdri9ABxzovHXJiHdLP432519F7vQ?e=gwTShz">Session material</a></li>
 </ul>
-<hr />
-<h2 id="session-focus">Session focus<a class="headerlink" href="#session-focus" title="Permanent link">&para;</a></h2>
-<p>The ideas from discrete variables are transferred from sums to integrals. We work with PDFs, CDFs, expectation, variance, transformations, and the uniform, exponential, and normal distributions.</p>
-<p>By the end of the session, you should be able to:</p>
-<ul>
-<li>validate a PDF and derive a CDF;</li>
-<li>calculate interval probabilities, expectation, and variance using integrals;</li>
-<li>select and interpret common continuous models;</li>
-<li>transform a single continuous random variable.</li>
-</ul>
-<hr />
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<hr/>
+
+<h3 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h3>
 <h4 id="exercise-1-reading-a-cdf">Exercise 1 — Reading a CDF<a class="headerlink" href="#exercise-1-reading-a-cdf" title="Permanent link">&para;</a></h4>
 <p>Let <span class="arithmatex">\(T\)</span> be the time in hours to complete a job, with</p>
 <div class="arithmatex">\[
@@ -1220,6 +1205,9 @@ f(x)=\begin{cases}c(1-x^2),&amp;-1&lt;x&lt;1,\\0,&amp;\text{otherwise}.\end{case
 
 
 
+
+  
+  
 
 
 

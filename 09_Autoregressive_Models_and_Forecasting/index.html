@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#09-autoregressive-models-and-probabilistic-forecasting" class="md-skip">
+        <a href="#session-preparation" class="md-skip">
           Skip to content
         </a>
       
@@ -775,8 +775,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -819,8 +817,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -832,18 +828,7 @@
   <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Session preparation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#session-focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Session focus
+        Session Preparation:
       
     </span>
   </a>
@@ -1031,8 +1016,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1044,18 +1027,7 @@
   <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Session preparation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#session-focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Session focus
+        Session Preparation:
       
     </span>
   </a>
@@ -1093,20 +1065,39 @@
   
 
 
-<h1 id="09-autoregressive-models-and-probabilistic-forecasting">09 — Autoregressive Models and Probabilistic Forecasting<a class="headerlink" href="#09-autoregressive-models-and-probabilistic-forecasting" title="Permanent link">&para;</a></h1>
-<h2 id="session-preparation">Session preparation<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h2>
+<h1 align="center">Autoregressive Models and Probabilistic Forecasting</h1>
+
+<p>We introduce the AR(1) model as a simple dependent process that can be simulated, analysed, and used for forecasting. Forecasts are conditional distributions, not single guaranteed values. We derive the stationary mean, variance, ACF, multi-step forecast, and forecast uncertainty.</p>
+<p>Stationarity of AR(1) requires <span class="arithmatex">\(|\phi|&lt;1\)</span>. Recursive forecasts revert toward the stationary mean, while forecast variance grows with the horizon toward the stationary variance. Residuals are used to check the white-noise assumption. Updating a forecast after a new observation is just restarting the recursion from the new state.</p>
+<h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
+<ul>
+<li>The AR(1) recursion and its stationarity condition</li>
+<li>Stationary mean, variance, and ACF</li>
+<li>Multi-step conditional means and forecast variance</li>
+<li>Mean reversion and forecast updating</li>
+<li>Residual checks of the innovation assumption</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Learning Objectives</p>
+<ul>
+<li>Analyse and simulate an AR(1) process.</li>
+<li>Determine when an AR(1) process is stationary.</li>
+<li>Calculate recursive forecasts and forecast variance.</li>
+<li>Evaluate assumptions using residuals.</li>
+</ul>
+</div>
+<hr/>
+
+<h3 id="session-preparation">Session Preparation:<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h3>
 <p>Attempt the core exercises from <a href="../08_Time_Series_Fundamentals/#exercises">Session 8</a>. Be able to calculate covariance and condition on an observed value.</p>
 <p><strong>Syllabus and input</strong></p>
 <ul>
 <li><a href="https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php">ProbabilityCourse: stationary processes</a> as the probability foundation</li>
 <li>Session notes on autoregressive models, recursive forecasting, and forecast distributions</li>
 </ul>
-<hr />
-<h2 id="session-focus">Session focus<a class="headerlink" href="#session-focus" title="Permanent link">&para;</a></h2>
-<p>We introduce the AR(1) model as a simple dependent process that can be simulated, analysed, and used for forecasting. Forecasts are conditional distributions, not single guaranteed values. We derive the stationary mean, variance, ACF, multi-step forecast, and forecast uncertainty.</p>
-<p>By the end of the session, you should be able to analyse and simulate an AR(1) process, determine when it is stationary, calculate recursive forecasts and forecast variance, and evaluate assumptions using residuals.</p>
-<hr />
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<hr/>
+
+<h3 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h3>
 <h4 id="exercise-1-ar1-properties">Exercise 1 — AR(1) properties<a class="headerlink" href="#exercise-1-ar1-properties" title="Permanent link">&para;</a></h4>
 <p>Let <span class="arithmatex">\(X_t=c+\phi X_{t-1}+\varepsilon_t\)</span>, where <span class="arithmatex">\(\varepsilon_t\)</span> is white noise with variance <span class="arithmatex">\(\sigma^2\)</span>.</p>
 <ol>
@@ -1174,6 +1165,9 @@ x=(-1.2,-0.7,-0.4,0.1,0.5,0.3,0.8,0.6),
 
 
 
+
+  
+  
 
 
 

@@ -98,7 +98,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#06-random-sampling-monte-carlo-and-limit-theorems" class="md-skip">
+        <a href="#session-preparation" class="md-skip">
           Skip to content
         </a>
       
@@ -691,8 +691,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -735,8 +733,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -748,18 +744,7 @@
   <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Session preparation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#session-focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Session focus
+        Session Preparation:
       
     </span>
   </a>
@@ -1031,8 +1016,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1044,18 +1027,7 @@
   <a href="#session-preparation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Session preparation
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#session-focus" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Session focus
+        Session Preparation:
       
     </span>
   </a>
@@ -1093,8 +1065,30 @@
   
 
 
-<h1 id="06-random-sampling-monte-carlo-and-limit-theorems">06 — Random Sampling, Monte Carlo, and Limit Theorems<a class="headerlink" href="#06-random-sampling-monte-carlo-and-limit-theorems" title="Permanent link">&para;</a></h1>
-<h2 id="session-preparation">Session preparation<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h2>
+<h1 align="center">Random Sampling, Monte Carlo, and Limit Theorems</h1>
+
+<p>Random sampling connects probability models to computation. We use Python to generate i.i.d. samples, construct Monte Carlo estimates, and study their uncertainty. The LLN explains consistency; the CLT explains the approximate shape and scale of simulation error.</p>
+<p>A sample mean has a mean and a variance that follow from the underlying model. Monte Carlo replaces an integral or a probability by an average of simulated indicators or values, with an error that typically shrinks like <span class="arithmatex">\(1/\sqrt{n}\)</span>. Rare events need larger samples than a generic <span class="arithmatex">\(n\)</span> of a few thousand.</p>
+<h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
+<ul>
+<li>I.i.d. samples and the sampling distribution of the sample mean</li>
+<li>Monte Carlo estimators and Monte Carlo standard error</li>
+<li>The law of large numbers</li>
+<li>The central limit theorem</li>
+<li>Reproducible simulation with a fixed seed</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Learning Objectives</p>
+<ul>
+<li>Generate random samples and construct Monte Carlo estimators.</li>
+<li>Calculate the mean and variance of a sample mean.</li>
+<li>Use the LLN and CLT appropriately.</li>
+<li>Report a Monte Carlo standard error and choose a sample size for a target accuracy.</li>
+</ul>
+</div>
+<hr/>
+
+<h3 id="session-preparation">Session Preparation:<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h3>
 <p>Attempt the core exercises from <a href="../05_Conditional_Distributions_and_Dependence/#exercises">Session 5</a>.</p>
 <p><strong>Syllabus and input</strong></p>
 <ul>
@@ -1103,12 +1097,9 @@
 <li><a href="https://www.probabilitycourse.com/chapter7/7_1_2_central_limit_theorem.php">Central Limit Theorem</a></li>
 <li><a href="https://www.probabilitycourse.com/chapter14/Chapter_14.pdf">Chapter 14: simulation using Python</a>, selected sections</li>
 </ul>
-<hr />
-<h2 id="session-focus">Session focus<a class="headerlink" href="#session-focus" title="Permanent link">&para;</a></h2>
-<p>Random sampling connects probability models to computation. We use Python to generate i.i.d. samples, construct Monte Carlo estimates, and study their uncertainty. The LLN explains consistency; the CLT explains the approximate shape and scale of simulation error.</p>
-<p>By the end of the session, you should be able to generate random samples, construct Monte Carlo estimators, calculate the mean and variance of a sample mean, and use the LLN and CLT appropriately.</p>
-<hr />
-<h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
+<hr/>
+
+<h3 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h3>
 <h4 id="exercise-1-sampling-distribution">Exercise 1 — Sampling distribution<a class="headerlink" href="#exercise-1-sampling-distribution" title="Permanent link">&para;</a></h4>
 <p>Water samples have mean sulfate content <span class="arithmatex">\(7.48\)</span> mg/L and standard deviation <span class="arithmatex">\(1.60\)</span> mg/L. For an independent sample of size 10:</p>
 <ol>
@@ -1175,6 +1166,9 @@
 
 
 
+
+  
+  
 
 
 
