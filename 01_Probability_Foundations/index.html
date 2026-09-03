@@ -12,7 +12,7 @@
         <meta name="author" content="Richard Brooks">
       
       
-        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_26/01_Probability_Foundations_and_Random_Variables/">
+        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_26/01_Probability_Foundations/">
       
       
         <link rel="prev" href="../00_Prerequisites/">
@@ -29,7 +29,7 @@
     
     
       
-        <title>01 Probability Foundations and Random Variables - Stochastic Modelling and Processes</title>
+        <title>01 Probability Foundations - Stochastic Modelling and Processes</title>
       
     
     
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01 Probability Foundations and Random Variables
+              01 Probability Foundations
             
           </span>
         </div>
@@ -559,7 +559,7 @@
   <span class="md-ellipsis">
     
   
-    01 Probability Foundations and Random Variables
+    01 Probability Foundations
   
 
     
@@ -577,7 +577,7 @@
   <span class="md-ellipsis">
     
   
-    01 Probability Foundations and Random Variables
+    01 Probability Foundations
   
 
     
@@ -616,6 +616,17 @@
     <span class="md-ellipsis">
       
         Exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional practice
       
     </span>
   </a>
@@ -1045,6 +1056,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#optional-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optional practice
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1065,17 +1087,16 @@
   
 
 
-<h1 align="center">Probability Foundations and Random Variables</h1>
+<h1 align="center">Probability Foundations</h1>
 
-<p>This session establishes the language used throughout the course: experiments, sample spaces, events, probability measures, conditioning, independence, and random variables. Expectation and variance are introduced as properties of a model rather than sample summaries.</p>
-<p>We represent a random experiment with a sample space and events, then apply probability rules, conditional probability, the law of total probability, and Bayes' theorem. Independence is distinguished from mutually exclusive events. A random variable assigns a numerical value to each outcome, and its expectation and variance describe the model, not a data sample.</p>
+<p>This session establishes the language used throughout the course: experiments, sample spaces, events, probability measures, conditioning, total probability, Bayes' theorem, and independence.</p>
+<p>We represent a random experiment with a sample space and events, then apply probability rules, conditional probability, the law of total probability, and Bayes' theorem. Independence is distinguished carefully from mutually exclusive events. Tables, trees, and event notation are used as complementary representations of the same probability model.</p>
 <h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Experiments, sample spaces, and events</li>
 <li>Probability rules, conditional probability, and Bayes' theorem</li>
+<li>The law of total probability</li>
 <li>Independence versus mutually exclusive events</li>
-<li>Random variables</li>
-<li>Expectation and variance as model properties</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Learning Objectives</p>
@@ -1083,7 +1104,6 @@
 <li>Represent a random experiment using a sample space and events.</li>
 <li>Apply probability rules, conditional probability, total probability, and Bayes' theorem.</li>
 <li>Distinguish independence from mutually exclusive events.</li>
-<li>Define a random variable and interpret its expectation and variance.</li>
 </ul>
 </div>
 <hr/>
@@ -1099,12 +1119,13 @@
 </ul>
 <p><strong>Existing course material</strong></p>
 <ul>
-<li><a href="https://drive.google.com/file/d/1oqEy7sINksGCfdytv_O8qIZ0FoVEyWjz/view?usp=drive_link">Session notes</a></li>
+<li><a href="https://drive.google.com/file/d/1zlX0GMnfSynycj4fUvv1JaWjefYTQ8cc/view?usp=drivesdk">Session notes</a></li>
 <li><a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuOeq6E9sg9Jjf5n_qCeM80B4uonPufDX4RnR0nFz3EdMg?e=dRNi7T">Session material</a></li>
 </ul>
 <hr/>
 
 <h3 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h3>
+<p>The first five exercises form the core set. The remaining exercises provide optional practice or additional classroom examples.</p>
 <h4 id="exercise-1-probability-tree">Exercise 1 — Probability tree<a class="headerlink" href="#exercise-1-probability-tree" title="Permanent link">&para;</a></h4>
 <p>Heart failures are due to natural occurrences (87%) or outside factors (13%). Outside factors are related to induced substances (73%) or foreign objects (27%). Natural occurrences are caused by arterial blockage (56%), disease (27%), or infection (17%).</p>
 <ol>
@@ -1135,20 +1156,7 @@
 <li><span class="arithmatex">\(1-P(A-B)=0.8\)</span>.</li>
 </ol>
 </details>
-<h4 id="exercise-3-bayes-theorem">Exercise 3 — Bayes' theorem<a class="headerlink" href="#exercise-3-bayes-theorem" title="Permanent link">&para;</a></h4>
-<p>An IT company receives 40% of its circuit boards from supplier 1 and 60% from supplier 2. The defect rates are 5% and 3%, respectively.</p>
-<ol>
-<li>Find the probability that a randomly chosen board is defective.</li>
-<li>Given that a board is defective, find the probability that it came from supplier 1.</li>
-</ol>
-<details class="answer">
-<summary>Answer</summary>
-<ol>
-<li><span class="arithmatex">\(P(D)=0.4(0.05)+0.6(0.03)=0.038\)</span>.</li>
-<li><span class="arithmatex">\(P(S_1\mid D)=0.4(0.05)/0.038\approx0.5263\)</span>.</li>
-</ol>
-</details>
-<h4 id="exercise-4-conditional-probability">Exercise 4 — Conditional probability<a class="headerlink" href="#exercise-4-conditional-probability" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-3-conditional-probability">Exercise 3 — Conditional probability<a class="headerlink" href="#exercise-3-conditional-probability" title="Permanent link">&para;</a></h4>
 <p>For a scheduled flight, <span class="arithmatex">\(P(D)=0.83\)</span> is the probability of departing on time, <span class="arithmatex">\(P(A)=0.82\)</span> is the probability of arriving on time, and <span class="arithmatex">\(P(D\cap A)=0.78\)</span>.</p>
 <ol>
 <li>Find <span class="arithmatex">\(P(A\mid D)\)</span>.</li>
@@ -1163,18 +1171,45 @@
 <li><span class="arithmatex">\((0.82-0.78)/(1-0.83)\approx0.2353\)</span>.</li>
 </ol>
 </details>
-<h4 id="exercise-5-a-first-random-variable">Exercise 5 — A first random variable<a class="headerlink" href="#exercise-5-a-first-random-variable" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X\)</span> be the number of sixes obtained in three independent rolls of a fair die.</p>
+<h4 id="exercise-4-three-suppliers-total-probability-and-bayes-theorem">Exercise 4 — Three suppliers, total probability, and Bayes' theorem<a class="headerlink" href="#exercise-4-three-suppliers-total-probability-and-bayes-theorem" title="Permanent link">&para;</a></h4>
+<p>A batch contains 50% Western Digital, 30% Toshiba, and 20% Seagate hard drives. The defect rates for Toshiba and Seagate are both 2%, while 3% of the entire batch is defective.</p>
 <ol>
-<li>State the possible values of <span class="arithmatex">\(X\)</span>.</li>
-<li>Find the probability of each value.</li>
-<li>Find <span class="arithmatex">\(E[X]\)</span> and <span class="arithmatex">\(\operatorname{Var}(X)\)</span>.</li>
+<li>Find the defect rate for Western Digital drives.</li>
+<li>Construct a supplier-by-quality contingency table for a batch of 1,000 drives.</li>
+<li>Given that a drive is defective, find the probability that it came from Seagate.</li>
+<li>Given that a drive is not defective, find the probability that it came from Western Digital.</li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
-<p><span class="arithmatex">\(X\sim\operatorname{Binomial}(3,1/6)\)</span>. Thus <span class="arithmatex">\(R_X=\{0,1,2,3\}\)</span>, <span class="arithmatex">\(P(X=k)={3\choose k}(1/6)^k(5/6)^{3-k}\)</span>, <span class="arithmatex">\(E[X]=1/2\)</span>, and <span class="arithmatex">\(\operatorname{Var}(X)=5/12\)</span>.</p>
+<p>Total probability gives <span class="arithmatex">\(0.03=0.5p+0.3(0.02)+0.2(0.02)\)</span>, so <span class="arithmatex">\(p=0.04\)</span>. There are 20, 6, and 4 defective drives from Western Digital, Toshiba, and Seagate. Thus <span class="arithmatex">\(P(S\mid D)=4/30\)</span> and <span class="arithmatex">\(P(W\mid D^c)=480/970\)</span>.</p>
 </details>
-<h4 id="exercise-6-keyboard-failures">Exercise 6 — Keyboard failures<a class="headerlink" href="#exercise-6-keyboard-failures" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-5-independence-versus-mutual-exclusivity">Exercise 5 — Independence versus mutual exclusivity<a class="headerlink" href="#exercise-5-independence-versus-mutual-exclusivity" title="Permanent link">&para;</a></h4>
+<p>A fair six-sided die is rolled once. Let <span class="arithmatex">\(A=\{2,4,6\}\)</span>, <span class="arithmatex">\(B=\{1,2,3,4\}\)</span>, and <span class="arithmatex">\(C=\{1,3,5\}\)</span>.</p>
+<ol>
+<li>Find <span class="arithmatex">\(P(A)\)</span>, <span class="arithmatex">\(P(B)\)</span>, <span class="arithmatex">\(P(C)\)</span>, <span class="arithmatex">\(P(A\cap B)\)</span>, and <span class="arithmatex">\(P(A\cap C)\)</span>.</li>
+<li>Determine whether <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are independent.</li>
+<li>Determine whether <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span> are mutually exclusive.</li>
+<li>Explain why mutually exclusive events with positive probability cannot be independent.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<p><span class="arithmatex">\(P(A)=P(C)=1/2\)</span>, <span class="arithmatex">\(P(B)=2/3\)</span>, <span class="arithmatex">\(P(A\cap B)=1/3\)</span>, and <span class="arithmatex">\(P(A\cap C)=0\)</span>. Since <span class="arithmatex">\(P(A\cap B)=P(A)P(B)=1/3\)</span>, <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are independent. Events <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(C\)</span> are mutually exclusive, but <span class="arithmatex">\(0=P(A\cap C)\ne P(A)P(C)=1/4\)</span>, so they are not independent.</p>
+</details>
+<h3 id="optional-practice">Optional practice<a class="headerlink" href="#optional-practice" title="Permanent link">&para;</a></h3>
+<h4 id="exercise-6-a-simpler-bayes-calculation">Exercise 6 — A simpler Bayes calculation<a class="headerlink" href="#exercise-6-a-simpler-bayes-calculation" title="Permanent link">&para;</a></h4>
+<p>An IT company receives 40% of its circuit boards from supplier 1 and 60% from supplier 2. The defect rates are 5% and 3%, respectively.</p>
+<ol>
+<li>Find the probability that a randomly chosen board is defective.</li>
+<li>Given that a board is defective, find the probability that it came from supplier 1.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li><span class="arithmatex">\(P(D)=0.4(0.05)+0.6(0.03)=0.038\)</span>.</li>
+<li><span class="arithmatex">\(P(S_1\mid D)=0.4(0.05)/0.038\approx0.5263\)</span>.</li>
+</ol>
+</details>
+<h4 id="exercise-7-keyboard-failures">Exercise 7 — Keyboard failures<a class="headerlink" href="#exercise-7-keyboard-failures" title="Permanent link">&para;</a></h4>
 <p>Computer keyboard failures are caused by faulty electrical connections (12%) or mechanical defects (88%). Mechanical defects are loose keys (27%) or improper assembly (73%). Electrical defects are defective wires (35%), improper connections (13%), or poorly welded wires (52%).</p>
 <ol>
 <li>Draw a probability tree.</li>
@@ -1186,7 +1221,7 @@
 <summary>Answer</summary>
 <p>The answers are <span class="arithmatex">\(0.88(0.27)=0.2376\)</span>, <span class="arithmatex">\(0.12(0.13+0.52)=0.078\)</span>, and <span class="arithmatex">\(0.35\)</span>, respectively.</p>
 </details>
-<h4 id="exercise-7-sample-space-and-complements">Exercise 7 — Sample space and complements<a class="headerlink" href="#exercise-7-sample-space-and-complements" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-8-sample-space-and-complements">Exercise 8 — Sample space and complements<a class="headerlink" href="#exercise-8-sample-space-and-complements" title="Permanent link">&para;</a></h4>
 <p>Two teams play a football match. Let <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span>, and <span class="arithmatex">\(d\)</span> denote that team A wins, team B wins, or the match is drawn. Suppose <span class="arithmatex">\(P(a)=0.50\)</span> and <span class="arithmatex">\(P(d)=0.25\)</span>.</p>
 <ol>
 <li>Write the sample space and its power set.</li>
@@ -1197,18 +1232,6 @@
 <details class="answer">
 <summary>Answer</summary>
 <p><span class="arithmatex">\(S=\{a,b,d\}\)</span>, <span class="arithmatex">\(P(b)=0.25\)</span>, and <span class="arithmatex">\(P(A\text{ does not win})=P(\{b,d\})=0.50\)</span>. Mutual exclusivity depends on the events chosen and requires an empty intersection.</p>
-</details>
-<h4 id="exercise-8-three-suppliers-and-bayes-rule">Exercise 8 — Three suppliers and Bayes' rule<a class="headerlink" href="#exercise-8-three-suppliers-and-bayes-rule" title="Permanent link">&para;</a></h4>
-<p>A batch contains 50% Western Digital, 30% Toshiba, and 20% Seagate hard drives. The defect rates for Toshiba and Seagate are both 2%, while 3% of the entire batch is defective.</p>
-<ol>
-<li>Find the defect rate for Western Digital drives.</li>
-<li>Construct a supplier-by-quality contingency table for a batch of 1,000 drives.</li>
-<li>Given that a drive is defective, find the probability that it came from Seagate.</li>
-<li>Given that a drive is not defective, find the probability that it came from Western Digital.</li>
-</ol>
-<details class="answer">
-<summary>Answer</summary>
-<p>Total probability gives <span class="arithmatex">\(0.03=0.5p+0.3(0.02)+0.2(0.02)\)</span>, so <span class="arithmatex">\(p=0.04\)</span>. There are 20, 6, and 4 defective drives from Western Digital, Toshiba, and Seagate. Thus <span class="arithmatex">\(P(S\mid D)=4/30\)</span> and <span class="arithmatex">\(P(W\mid D^c)=480/970\)</span>.</p>
 </details>
 
 

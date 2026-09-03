@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_26/02_Discrete_Random_Variables/">
       
       
-        <link rel="prev" href="../01_Probability_Foundations_and_Random_Variables/">
+        <link rel="prev" href="../01_Probability_Foundations/">
       
       
         <link rel="next" href="../03_Continuous_Random_Variables/">
@@ -545,14 +545,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../01_Probability_Foundations_and_Random_Variables/" class="md-nav__link">
+      <a href="../01_Probability_Foundations/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    01 Probability Foundations and Random Variables
+    01 Probability Foundations
   
 
     
@@ -1067,10 +1067,11 @@
 
 <h1 align="center">Discrete Random Variables</h1>
 
-<p>We model countable outcomes using PMFs and CDFs and learn to select a distribution from the assumptions of a problem. The central models are Bernoulli, binomial, geometric, hypergeometric, and Poisson distributions.</p>
+<p>This session introduces random variables as numerical functions of outcomes and models their countable values using PMFs and CDFs. Expectation and variance are introduced as properties of a probability model rather than summaries calculated from an observed data sample. The central models are Bernoulli, binomial, geometric, hypergeometric, and Poisson distributions.</p>
 <p>A probability mass function assigns probability to each possible value; the CDF accumulates those probabilities. Expectation and variance follow from the PMF. Choosing a named distribution is a modelling step: repeated independent trials, waiting times, sampling without replacement, and counts each point to a different family. Python is used to simulate the chosen model.</p>
 <h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
 <ul>
+<li>Random variables as numerical functions of outcomes</li>
 <li>Probability mass functions and CDFs</li>
 <li>Expectation and variance of a discrete random variable</li>
 <li>Bernoulli, binomial, geometric, hypergeometric, and Poisson models</li>
@@ -1080,8 +1081,9 @@
 <div class="admonition tip">
 <p class="admonition-title">Learning Objectives</p>
 <ul>
+<li>Define a discrete random variable and identify its possible values.</li>
 <li>Validate and use a PMF and construct its CDF.</li>
-<li>Calculate expectation and variance.</li>
+<li>Calculate and interpret expectation and variance as model properties.</li>
 <li>Distinguish repeated independent trials, waiting-time models, sampling without replacement, and count models.</li>
 <li>Simulate a discrete random variable in Python.</li>
 </ul>
@@ -1089,7 +1091,7 @@
 <hr/>
 
 <h3 id="session-preparation">Session Preparation:<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h3>
-<p>Attempt the core exercises from <a href="../01_Probability_Foundations_and_Random_Variables/#exercises">Session 1</a>.</p>
+<p>Attempt the core exercises from <a href="../01_Probability_Foundations/#exercises">Session 1</a>.</p>
 <p><strong>Syllabus and input</strong></p>
 <ul>
 <li><a href="https://www.probabilitycourse.com/chapter3/3_1_3_pmf.php">Probability mass functions</a></li>
@@ -1105,7 +1107,19 @@
 <hr/>
 
 <h3 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h3>
-<h4 id="exercise-1-valid-pmf">Exercise 1 — Valid PMF<a class="headerlink" href="#exercise-1-valid-pmf" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-1-from-outcomes-to-a-distribution">Exercise 1 — From outcomes to a distribution<a class="headerlink" href="#exercise-1-from-outcomes-to-a-distribution" title="Permanent link">&para;</a></h4>
+<p>Let <span class="arithmatex">\(X\)</span> be the number of sixes obtained in three independent rolls of a fair die.</p>
+<ol>
+<li>State the possible values of <span class="arithmatex">\(X\)</span>.</li>
+<li>Find the PMF of <span class="arithmatex">\(X\)</span>.</li>
+<li>Find <span class="arithmatex">\(E[X]\)</span> and <span class="arithmatex">\(\operatorname{Var}(X)\)</span>.</li>
+<li>Explain which assumptions make a binomial model appropriate.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<p><span class="arithmatex">\(X\sim\operatorname{Binomial}(3,1/6)\)</span>. Thus <span class="arithmatex">\(R_X=\{0,1,2,3\}\)</span>, <span class="arithmatex">\(P(X=k)={3\choose k}(1/6)^k(5/6)^{3-k}\)</span>, <span class="arithmatex">\(E[X]=1/2\)</span>, and <span class="arithmatex">\(\operatorname{Var}(X)=5/12\)</span>. The three trials have two relevant outcomes, use the same success probability, and are independent.</p>
+</details>
+<h4 id="exercise-2-valid-pmf">Exercise 2 — Valid PMF<a class="headerlink" href="#exercise-2-valid-pmf" title="Permanent link">&para;</a></h4>
 <p>Let <span class="arithmatex">\(P(X=k)=c/3^k\)</span> for <span class="arithmatex">\(k=1,2,\ldots\)</span>.</p>
 <ol>
 <li>Find <span class="arithmatex">\(c\)</span>.</li>
@@ -1116,7 +1130,7 @@
 <summary>Answer</summary>
 <p>Since <span class="arithmatex">\(\sum_{k=1}^{\infty}c/3^k=c/2=1\)</span>, <span class="arithmatex">\(c=2\)</span>. The remaining probabilities are <span class="arithmatex">\(182/729\)</span> and <span class="arithmatex">\(1/9\)</span>, respectively.</p>
 </details>
-<h4 id="exercise-2-binomial-model">Exercise 2 — Binomial model<a class="headerlink" href="#exercise-2-binomial-model" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-3-binomial-model">Exercise 3 — Binomial model<a class="headerlink" href="#exercise-3-binomial-model" title="Permanent link">&para;</a></h4>
 <p>An airline sells 125 tickets for a flight with 120 seats. Each passenger independently fails to appear with probability 0.10.</p>
 <ol>
 <li>Find the probability that everyone who appears can take the flight.</li>
@@ -1126,7 +1140,7 @@
 <summary>Answer</summary>
 <p>Let <span class="arithmatex">\(X\sim\operatorname{Binomial}(125,0.9)\)</span> be the number appearing. Calculate <span class="arithmatex">\(P(X\le120)\)</span> and <span class="arithmatex">\(P(X\le119)\)</span>, respectively.</p>
 </details>
-<h4 id="exercise-3-geometric-model">Exercise 3 — Geometric model<a class="headerlink" href="#exercise-3-geometric-model" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-4-geometric-model">Exercise 4 — Geometric model<a class="headerlink" href="#exercise-4-geometric-model" title="Permanent link">&para;</a></h4>
 <p>A player defeats each opponent independently with probability 0.8 and continues until the first defeat. Let <span class="arithmatex">\(X\)</span> be the number of opponents contested.</p>
 <ol>
 <li>Find the PMF of <span class="arithmatex">\(X\)</span>.</li>
@@ -1137,7 +1151,7 @@
 <summary>Answer</summary>
 <p><span class="arithmatex">\(X\sim\operatorname{Geometric}(0.2)\)</span> when the terminal defeat is counted. Thus <span class="arithmatex">\(P(X=k)=0.8^{k-1}0.2\)</span>, <span class="arithmatex">\(P(X\ge4)=0.8^3\)</span>, and <span class="arithmatex">\(E[X]=5\)</span>.</p>
 </details>
-<h4 id="exercise-4-poisson-counts">Exercise 4 — Poisson counts<a class="headerlink" href="#exercise-4-poisson-counts" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-5-poisson-counts">Exercise 5 — Poisson counts<a class="headerlink" href="#exercise-5-poisson-counts" title="Permanent link">&para;</a></h4>
 <p>The local density of stars is one star per 16 cubic light-years. Model counts in disjoint volumes as independent.</p>
 <ol>
 <li>Find the probability of no stars in 16 cubic light-years.</li>
@@ -1148,7 +1162,7 @@
 <summary>Answer</summary>
 <p>For volume <span class="arithmatex">\(v\)</span>, <span class="arithmatex">\(X\sim\operatorname{Poisson}(v/16)\)</span>. The answers are <span class="arithmatex">\(e^{-1}\)</span>, <span class="arithmatex">\(1-2e^{-1}\)</span>, and any <span class="arithmatex">\(v&gt;-16\ln(0.05)\approx47.93\)</span>.</p>
 </details>
-<h4 id="exercise-5-model-and-simulate">Exercise 5 — Model and simulate<a class="headerlink" href="#exercise-5-model-and-simulate" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-6-model-and-simulate">Exercise 6 — Model and simulate<a class="headerlink" href="#exercise-6-model-and-simulate" title="Permanent link">&para;</a></h4>
 <p>A packet is lost independently with probability 0.01, and a message contains 100 packets.</p>
 <ol>
 <li>State the distribution of the number of resent packets.</li>
@@ -1159,7 +1173,7 @@
 <summary>Answer</summary>
 <p><span class="arithmatex">\(X\sim\operatorname{Binomial}(100,0.01)\)</span>, so <span class="arithmatex">\(P(X\ge1)=1-0.99^{100}\approx0.6340\)</span>. A simulation should approach this value as the number of messages grows.</p>
 </details>
-<h4 id="exercise-6-warranty-failures">Exercise 6 — Warranty failures<a class="headerlink" href="#exercise-6-warranty-failures" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-7-warranty-failures">Exercise 7 — Warranty failures<a class="headerlink" href="#exercise-7-warranty-failures" title="Permanent link">&para;</a></h4>
 <p>A manufacturer expects 2% of its units to fail during the warranty period. A sample of 500 independent units is followed.</p>
 <ol>
 <li>State the distribution of the number of failures.</li>
@@ -1172,7 +1186,7 @@
 <summary>Answer</summary>
 <p><span class="arithmatex">\(X\sim\operatorname{Binomial}(500,0.02)\)</span>, with <span class="arithmatex">\(E[X]=10\)</span> and <span class="arithmatex">\(\operatorname{SD}(X)=\sqrt{9.8}\)</span>. Use <span class="arithmatex">\(P(X&gt;2)=1-P(X\le2)\)</span>. The approximation <span class="arithmatex">\(X\approx\operatorname{Poisson}(10)\)</span> is reasonable because <span class="arithmatex">\(n\)</span> is large and <span class="arithmatex">\(p\)</span> is small.</p>
 </details>
-<h4 id="exercise-7-shipments-containing-defects">Exercise 7 — Shipments containing defects<a class="headerlink" href="#exercise-7-shipments-containing-defects" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-8-shipments-containing-defects">Exercise 8 — Shipments containing defects<a class="headerlink" href="#exercise-8-shipments-containing-defects" title="Permanent link">&para;</a></h4>
 <p>Each device is defective independently with probability 0.03. An inspector examines 20 devices from each of 10 shipments.</p>
 <ol>
 <li>Find the probability that a particular inspected shipment contains at least one defective device.</li>
@@ -1184,7 +1198,7 @@
 <summary>Answer</summary>
 <p>For one shipment, <span class="arithmatex">\(q=1-0.97^{20}\)</span>. The number of affected shipments is <span class="arithmatex">\(Y\sim\operatorname{Binomial}(10,q)\)</span>, so <span class="arithmatex">\(P(Y=3)={10\choose3}q^3(1-q)^7\)</span>.</p>
 </details>
-<h4 id="exercise-8-designing-an-inspection-sample">Exercise 8 — Designing an inspection sample<a class="headerlink" href="#exercise-8-designing-an-inspection-sample" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-9-designing-an-inspection-sample">Exercise 9 — Designing an inspection sample<a class="headerlink" href="#exercise-9-designing-an-inspection-sample" title="Permanent link">&para;</a></h4>
 <p>A lot contains a small proportion <span class="arithmatex">\(p=0.01\)</span> of nonconforming products. Items are sampled independently using a binomial approximation.</p>
 <ol>
 <li>Find the smallest sample size <span class="arithmatex">\(n\)</span> for which the probability of observing at least one nonconforming item is at least 0.90.</li>
@@ -1236,7 +1250,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../01_Probability_Foundations_and_Random_Variables/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 01 Probability Foundations and Random Variables">
+          <a href="../01_Probability_Foundations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 01 Probability Foundations">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1246,7 +1260,7 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                01 Probability Foundations and Random Variables
+                01 Probability Foundations
               </div>
             </div>
           </a>
