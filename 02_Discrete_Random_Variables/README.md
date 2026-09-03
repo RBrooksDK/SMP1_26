@@ -34,7 +34,7 @@ A probability mass function assigns probability to each possible value; the CDF 
 
 ### Session Preparation:
 
-Attempt the core exercises from [Session 1](../01_Probability_Foundations/README.md#exercises).
+Attempt the exercises from [Session 1](../01_Probability_Foundations/README.md#exercises).
 
 **Syllabus and input**
 

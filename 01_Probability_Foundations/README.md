@@ -47,8 +47,6 @@ There are no exercises due before the first class. Review the [prerequisites](..
 
 ### Exercises
 
-The first five exercises form the core set. The remaining exercises provide optional practice or additional classroom examples.
-
 #### Exercise 1 — Probability tree
 
 Heart failures are due to natural occurrences (87%) or outside factors (13%). Outside factors are related to induced substances (73%) or foreign objects (27%). Natural occurrences are caused by arterial blockage (56%), disease (27%), or infection (17%).
@@ -116,8 +114,6 @@ A fair six-sided die is rolled once. Let \(A=\{2,4,6\}\), \(B=\{1,2,3,4\}\), and
 ??? answer
 
     \(P(A)=P(C)=1/2\), \(P(B)=2/3\), \(P(A\cap B)=1/3\), and \(P(A\cap C)=0\). Since \(P(A\cap B)=P(A)P(B)=1/3\), \(A\) and \(B\) are independent. Events \(A\) and \(C\) are mutually exclusive, but \(0=P(A\cap C)\ne P(A)P(C)=1/4\), so they are not independent.
-
-### Optional practice
 
 #### Exercise 6 — A simpler Bayes calculation
 
