@@ -18,7 +18,7 @@ Preparation should be realistic: read the specified ProbabilityCourse sections, 
 | Session | Topic | Main progression |
 | ---: | --- | --- |
 | 00 | [Prerequisites](../00_Prerequisites/README.md) | Sets, combinatorics, sums, calculus, and matrices |
-| 01 | [Probability Foundations](../01_Probability_Foundations/README.md) | Events, probability rules, conditioning, total probability, Bayes, and independence |
+| 01 | [Probability Foundations](../01_Probability_Foundations/README.md) | Events, combinatorics, probability rules, conditioning, total probability, Bayes, and independence |
 | 02 | [Discrete Random Variables](../02_Discrete_Random_Variables/README.md) | Random variables, PMF/CDF, expectation, variance, and named discrete models |
 | 03 | [Continuous Random Variables](../03_Continuous_Random_Variables/README.md) | PDF/CDF, expectation, transformations, normal, and exponential models |
 | 04 | [Joint Distributions](../04_Joint_Distributions/README.md) | Joint, marginal, and conditional distributions for two variables |

@@ -1,6 +1,7 @@
 ---
 tags:
     - Probability
+    - Combinatorics
     - Sample Space
     - Conditional Probability
     - Bayes
@@ -8,13 +9,14 @@ tags:
 
 <h1 align="center">Probability Foundations</h1>
 
-This session establishes the language used throughout the course: experiments, sample spaces, events, probability measures, conditioning, total probability, Bayes' theorem, and independence.
+This session establishes the language used throughout the course: experiments, sample spaces, events, combinatorics, probability measures, conditioning, total probability, Bayes' theorem, and independence.
 
-We represent a random experiment with a sample space and events, then apply probability rules, conditional probability, the law of total probability, and Bayes' theorem. Independence is distinguished carefully from mutually exclusive events. Tables, trees, and event notation are used as complementary representations of the same probability model.
+We represent a random experiment with a sample space and events, use the multiplication principle, permutations, and combinations to count outcomes, then apply probability rules, conditional probability, the law of total probability, and Bayes' theorem. Independence is distinguished carefully from mutually exclusive events. Tables, trees, and event notation are used as complementary representations of the same probability model.
 
 #### Key Concepts
 
 - Experiments, sample spaces, and events
+- Combinatorics: the multiplication principle, permutations, and combinations, with and without replacement
 - Probability rules, conditional probability, and Bayes' theorem
 - The law of total probability
 - Independence versus mutually exclusive events
@@ -22,6 +24,7 @@ We represent a random experiment with a sample space and events, then apply prob
 !!! tip "Learning Objectives"
 
     - Represent a random experiment using a sample space and events.
+    - Count outcomes using the multiplication principle, permutations, and combinations, distinguishing whether order matters and replacement is allowed.
     - Apply probability rules, conditional probability, total probability, and Bayes' theorem.
     - Distinguish independence from mutually exclusive events.
 
@@ -33,10 +36,20 @@ There are no exercises due before the first class. Review the [prerequisites](..
 
 **Syllabus and input**
 
+Chapter 1 — Basic Concepts:
+
 - [Chapter 1 introduction](https://www.probabilitycourse.com/chapter1/1_0_0_introduction.php)
 - [Probability axioms](https://www.probabilitycourse.com/chapter1/1_3_2_probability.php)
 - [Conditional probability](https://www.probabilitycourse.com/chapter1/1_4_0_conditional_probability.php)
 - [Bayes' rule](https://www.probabilitycourse.com/chapter1/1_4_3_bayes_rule.php)
+
+Chapter 2 — Combinatorics: Counting Methods (sections 2.1.0–2.1.4):
+
+- [Counting and the multiplication principle](https://www.probabilitycourse.com/chapter2/2_1_0_counting.php)
+- [Ordered sampling with replacement](https://www.probabilitycourse.com/chapter2/2_1_1_ordered_with_replacement.php)
+- [Ordered sampling without replacement: permutations](https://www.probabilitycourse.com/chapter2/2_1_2_ordered_without_replacement.php)
+- [Unordered sampling without replacement: combinations](https://www.probabilitycourse.com/chapter2/2_1_3_unordered_without_replacement.php)
+- [Unordered sampling with replacement](https://www.probabilitycourse.com/chapter2/2_1_4_unordered_with_replacement.php)
 
 **Existing course material**
 
