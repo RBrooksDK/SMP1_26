@@ -9,12 +9,13 @@ tags:
 
 <h1 align="center">Discrete Random Variables</h1>
 
-We model countable outcomes using PMFs and CDFs and learn to select a distribution from the assumptions of a problem. The central models are Bernoulli, binomial, geometric, hypergeometric, and Poisson distributions.
+This session introduces random variables as numerical functions of outcomes and models their countable values using PMFs and CDFs. Expectation and variance are introduced as properties of a probability model rather than summaries calculated from an observed data sample. The central models are Bernoulli, binomial, geometric, hypergeometric, and Poisson distributions.
 
 A probability mass function assigns probability to each possible value; the CDF accumulates those probabilities. Expectation and variance follow from the PMF. Choosing a named distribution is a modelling step: repeated independent trials, waiting times, sampling without replacement, and counts each point to a different family. Python is used to simulate the chosen model.
 
 #### Key Concepts
 
+- Random variables as numerical functions of outcomes
 - Probability mass functions and CDFs
 - Expectation and variance of a discrete random variable
 - Bernoulli, binomial, geometric, hypergeometric, and Poisson models
@@ -23,8 +24,9 @@ A probability mass function assigns probability to each possible value; the CDF 
 
 !!! tip "Learning Objectives"
 
+    - Define a discrete random variable and identify its possible values.
     - Validate and use a PMF and construct its CDF.
-    - Calculate expectation and variance.
+    - Calculate and interpret expectation and variance as model properties.
     - Distinguish repeated independent trials, waiting-time models, sampling without replacement, and count models.
     - Simulate a discrete random variable in Python.
 
@@ -32,7 +34,7 @@ A probability mass function assigns probability to each possible value; the CDF 
 
 ### Session Preparation:
 
-Attempt the core exercises from [Session 1](../01_Probability_Foundations_and_Random_Variables/README.md#exercises).
+Attempt the core exercises from [Session 1](../01_Probability_Foundations/README.md#exercises).
 
 **Syllabus and input**
 
@@ -50,7 +52,20 @@ Attempt the core exercises from [Session 1](../01_Probability_Foundations_and_Ra
 
 ### Exercises
 
-#### Exercise 1 — Valid PMF
+#### Exercise 1 — From outcomes to a distribution
+
+Let \(X\) be the number of sixes obtained in three independent rolls of a fair die.
+
+1. State the possible values of \(X\).
+2. Find the PMF of \(X\).
+3. Find \(E[X]\) and \(\operatorname{Var}(X)\).
+4. Explain which assumptions make a binomial model appropriate.
+
+??? answer
+
+    \(X\sim\operatorname{Binomial}(3,1/6)\). Thus \(R_X=\{0,1,2,3\}\), \(P(X=k)={3\choose k}(1/6)^k(5/6)^{3-k}\), \(E[X]=1/2\), and \(\operatorname{Var}(X)=5/12\). The three trials have two relevant outcomes, use the same success probability, and are independent.
+
+#### Exercise 2 — Valid PMF
 
 Let \(P(X=k)=c/3^k\) for \(k=1,2,\ldots\).
 
@@ -62,7 +77,7 @@ Let \(P(X=k)=c/3^k\) for \(k=1,2,\ldots\).
 
     Since \(\sum_{k=1}^{\infty}c/3^k=c/2=1\), \(c=2\). The remaining probabilities are \(182/729\) and \(1/9\), respectively.
 
-#### Exercise 2 — Binomial model
+#### Exercise 3 — Binomial model
 
 An airline sells 125 tickets for a flight with 120 seats. Each passenger independently fails to appear with probability 0.10.
 
@@ -73,7 +88,7 @@ An airline sells 125 tickets for a flight with 120 seats. Each passenger indepen
 
     Let \(X\sim\operatorname{Binomial}(125,0.9)\) be the number appearing. Calculate \(P(X\le120)\) and \(P(X\le119)\), respectively.
 
-#### Exercise 3 — Geometric model
+#### Exercise 4 — Geometric model
 
 A player defeats each opponent independently with probability 0.8 and continues until the first defeat. Let \(X\) be the number of opponents contested.
 
@@ -85,7 +100,7 @@ A player defeats each opponent independently with probability 0.8 and continues 
 
     \(X\sim\operatorname{Geometric}(0.2)\) when the terminal defeat is counted. Thus \(P(X=k)=0.8^{k-1}0.2\), \(P(X\ge4)=0.8^3\), and \(E[X]=5\).
 
-#### Exercise 4 — Poisson counts
+#### Exercise 5 — Poisson counts
 
 The local density of stars is one star per 16 cubic light-years. Model counts in disjoint volumes as independent.
 
@@ -97,7 +112,7 @@ The local density of stars is one star per 16 cubic light-years. Model counts in
 
     For volume \(v\), \(X\sim\operatorname{Poisson}(v/16)\). The answers are \(e^{-1}\), \(1-2e^{-1}\), and any \(v>-16\ln(0.05)\approx47.93\).
 
-#### Exercise 5 — Model and simulate
+#### Exercise 6 — Model and simulate
 
 A packet is lost independently with probability 0.01, and a message contains 100 packets.
 
@@ -109,7 +124,7 @@ A packet is lost independently with probability 0.01, and a message contains 100
 
     \(X\sim\operatorname{Binomial}(100,0.01)\), so \(P(X\ge1)=1-0.99^{100}\approx0.6340\). A simulation should approach this value as the number of messages grows.
 
-#### Exercise 6 — Warranty failures
+#### Exercise 7 — Warranty failures
 
 A manufacturer expects 2% of its units to fail during the warranty period. A sample of 500 independent units is followed.
 
@@ -123,7 +138,7 @@ A manufacturer expects 2% of its units to fail during the warranty period. A sam
 
     \(X\sim\operatorname{Binomial}(500,0.02)\), with \(E[X]=10\) and \(\operatorname{SD}(X)=\sqrt{9.8}\). Use \(P(X>2)=1-P(X\le2)\). The approximation \(X\approx\operatorname{Poisson}(10)\) is reasonable because \(n\) is large and \(p\) is small.
 
-#### Exercise 7 — Shipments containing defects
+#### Exercise 8 — Shipments containing defects
 
 Each device is defective independently with probability 0.03. An inspector examines 20 devices from each of 10 shipments.
 
@@ -136,7 +151,7 @@ Each device is defective independently with probability 0.03. An inspector exami
 
     For one shipment, \(q=1-0.97^{20}\). The number of affected shipments is \(Y\sim\operatorname{Binomial}(10,q)\), so \(P(Y=3)={10\choose3}q^3(1-q)^7\).
 
-#### Exercise 8 — Designing an inspection sample
+#### Exercise 9 — Designing an inspection sample
 
 A lot contains a small proportion \(p=0.01\) of nonconforming products. Items are sampled independently using a binomial approximation.
 

@@ -140,7 +140,7 @@ nav:
   - Sessions:
     - Sessions/README.md
     - 00 Prerequisites: 00_Prerequisites/README.md
-    - 01 Probability Foundations and Random Variables: 01_Probability_Foundations_and_Random_Variables/README.md
+    - 01 Probability Foundations: 01_Probability_Foundations/README.md
     - 02 Discrete Random Variables: 02_Discrete_Random_Variables/README.md
     - 03 Continuous Random Variables: 03_Continuous_Random_Variables/README.md
     - 04 Joint Distributions: 04_Joint_Distributions/README.md
