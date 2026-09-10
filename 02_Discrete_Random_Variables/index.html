@@ -1109,7 +1109,6 @@
 <hr/>
 
 <h3 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h3>
-<p>Full solutions to the exercises can be found in <a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo">Session material</a>.</p>
 <h4 id="exercise-1-password-hits">Exercise 1 — Password hits<a class="headerlink" href="#exercise-1-password-hits" title="Permanent link">&para;</a></h4>
 <p>A computer system uses passwords that are exactly six characters, and each character is one of the 26 letters (a-z) or 10 integers (0-9). Suppose that 10,000 users of the system have unique passwords. A hacker randomly selects, with replacement, 100,000 passwords from the potential set. A match to a user's password is called a hit.</p>
 <ol>
@@ -1179,7 +1178,7 @@
 <li>What is the probability that at least one packet is resent?</li>
 <li>What is the probability that two or more packets are resent?</li>
 <li>What are the mean and standard deviation of the number of packets that are resent?</li>
-<li>If there are 10 messages and each contains 100 packets, what is the probability that at least one message requires two or more packets to be resent?</li>
+<li>Simulate 10,000 e-mail messages and compare the simulated probabilities of at least one and at least two lost packets with the exact probabilities.</li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
@@ -1188,7 +1187,7 @@
 <li><span class="arithmatex">\(P(X\ge1)\approx0.6340\)</span>.</li>
 <li><span class="arithmatex">\(P(X\ge2)\approx0.2642\)</span>.</li>
 <li><span class="arithmatex">\(E[X]=1\)</span> and <span class="arithmatex">\(\operatorname{SD}(X)=\sqrt{0.99}\approx0.995\)</span>.</li>
-<li>The probability is approximately <span class="arithmatex">\(0.9535\)</span>.</li>
+<li>The simulated probabilities should approach <span class="arithmatex">\(0.6340\)</span> and <span class="arithmatex">\(0.2642\)</span>, respectively.</li>
 </ol>
 </details>
 <h4 id="exercise-6-warranty-failures">Exercise 6 — Warranty failures<a class="headerlink" href="#exercise-6-warranty-failures" title="Permanent link">&para;</a></h4>
@@ -1197,6 +1196,7 @@
 <li>What is the probability that none fail during the warranty period?</li>
 <li>What is the expected number of failures during the warranty period?</li>
 <li>What is the probability that more than two units fail during the warranty period?</li>
+<li>Approximate the probabilities in parts 1 and 3 with a Poisson distribution, and compare the results with the exact binomial probabilities.</li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
@@ -1204,6 +1204,7 @@
 <li><span class="arithmatex">\(P(X=0)\approx0.0000\)</span>, where <span class="arithmatex">\(X\sim\operatorname{Binomial}(500,0.02)\)</span>.</li>
 <li><span class="arithmatex">\(E[X]=10\)</span>.</li>
 <li><span class="arithmatex">\(P(X&gt;2)\approx0.9974\)</span>.</li>
+<li>Using <span class="arithmatex">\(Y\sim\operatorname{Poisson}(10)\)</span>, <span class="arithmatex">\(P(Y=0)\approx0.0000454\)</span> and <span class="arithmatex">\(P(Y&gt;2)\approx0.9972\)</span>. The corresponding exact binomial values are approximately <span class="arithmatex">\(0.0000410\)</span> and <span class="arithmatex">\(0.9974\)</span>, so the approximation is close.</li>
 </ol>
 </details>
 <h4 id="exercise-7-recovery-from-a-rare-disease">Exercise 7 — Recovery from a rare disease<a class="headerlink" href="#exercise-7-recovery-from-a-rare-disease" title="Permanent link">&para;</a></h4>
@@ -1237,23 +1238,55 @@
 <li>Let <span class="arithmatex">\(q=1-0.97^{20}\)</span>. Then <span class="arithmatex">\(Y\sim\operatorname{Binomial}(10,q)\)</span>, and <span class="arithmatex">\(P(Y=3)={10\choose3}q^3(1-q)^7\approx0.1602\)</span>.</li>
 </ol>
 </details>
-<h4 id="exercise-9-causeway-closures">Exercise 9 — Causeway closures<a class="headerlink" href="#exercise-9-causeway-closures" title="Permanent link">&para;</a></h4>
-<p>High flows result in the closure of a causeway. From past records, the road was closed for this reason on 10 days during a 20-year period. At an adjoining village, there is concern about the closure because the causeway provides the only access. The villagers assume that the probability of the road being closed for more than one day during a year is less than 0.10. Is this correct? Show your calculation using the Poisson distribution.</p>
+<h4 id="exercise-9-negative-binomial-model">Exercise 9 — Negative binomial model<a class="headerlink" href="#exercise-9-negative-binomial-model" title="Permanent link">&para;</a></h4>
+<p>Each inspected unit is acceptable independently with probability 0.8. Let <span class="arithmatex">\(X\)</span> be the number of units inspected up to and including the fourth acceptable unit.</p>
+<ol>
+<li>Identify the distribution of <span class="arithmatex">\(X\)</span> and state its possible values.</li>
+<li>Write its PMF.</li>
+<li>Find <span class="arithmatex">\(P(X=6)\)</span> and <span class="arithmatex">\(P(X\le6)\)</span>.</li>
+<li>Find <span class="arithmatex">\(E[X]\)</span> and <span class="arithmatex">\(\operatorname{Var}(X)\)</span>.</li>
+</ol>
 <details class="answer">
 <summary>Answer</summary>
-<p>With <span class="arithmatex">\(X\sim\operatorname{Poisson}(0.5)\)</span>, <span class="arithmatex">\(P(X&gt;1)=1-e^{-0.5}(1+0.5)\approx0.0902\)</span>. The villagers' assumption is correct under this model.</p>
+<ol>
+<li><span class="arithmatex">\(X\sim\operatorname{Pascal}(4,0.8)\)</span>, with <span class="arithmatex">\(R_X=\{4,5,6,\ldots\}\)</span>.</li>
+<li><span class="arithmatex">\(P(X=k)={k-1\choose3}(0.8)^4(0.2)^{k-4}\)</span>, for <span class="arithmatex">\(k=4,5,6,\ldots\)</span>.</li>
+<li><span class="arithmatex">\(P(X=6)=0.16384\)</span> and <span class="arithmatex">\(P(X\le6)=0.90112\)</span>.</li>
+<li><span class="arithmatex">\(E[X]=4/0.8=5\)</span> and <span class="arithmatex">\(\operatorname{Var}(X)=4(0.2)/(0.8)^2=1.25\)</span>.</li>
+</ol>
 </details>
 <h4 id="exercise-10-designing-an-inspection-sample">Exercise 10 — Designing an inspection sample<a class="headerlink" href="#exercise-10-designing-an-inspection-sample" title="Permanent link">&para;</a></h4>
-<p>A company performs inspection on shipments from suppliers to detect nonconforming products. Assume that a lot contains 1,000 items and 1% are nonconforming. Using a binomial model, what sample size is needed so that the probability of selecting at least one nonconforming item is at least 0.90?</p>
+<p>A company performs inspection on shipments from suppliers to detect nonconforming products. Assume that a lot contains 1,000 items and exactly 10 are nonconforming.</p>
+<ol>
+<li>Using a binomial model with <span class="arithmatex">\(p=0.01\)</span>, what sample size is needed so that the probability of selecting at least one nonconforming item is at least 0.90?</li>
+<li>If the items are sampled without replacement, write the exact hypergeometric probability of selecting at least one nonconforming item in a sample of size <span class="arithmatex">\(n\)</span>.</li>
+<li>Find the smallest sample size that gives a probability of at least 0.90 under the hypergeometric model, and compare it with the binomial result.</li>
+</ol>
 <details class="answer">
 <summary>Answer</summary>
-<p>A sample size of at least 230 is needed.</p>
+<ol>
+<li>The binomial model requires a sample size of at least 230.</li>
+<li>The exact probability is <span class="arithmatex">\(1-\frac{{990\choose n}}{{1000\choose n}}\)</span>.</li>
+<li>The hypergeometric model requires a sample size of at least 205. Sampling without replacement increases the chance of finding a nonconforming item because the lot contains exactly 10 such items.</li>
+</ol>
 </details>
-<h4 id="exercise-11-errors-in-a-textbook">Exercise 11 — Errors in a textbook<a class="headerlink" href="#exercise-11-errors-in-a-textbook" title="Permanent link">&para;</a></h4>
-<p>The number of errors in a textbook follows a Poisson distribution with a mean of 0.01 error per page. What is the probability that there are three or fewer errors in 100 pages?</p>
+<h4 id="exercise-11-valid-pmf">Exercise 11 — Valid PMF<a class="headerlink" href="#exercise-11-valid-pmf" title="Permanent link">&para;</a></h4>
+<p>Let</p>
+<div class="arithmatex">\[
+P(X=k)=\frac{c}{3^k},\qquad k=1,2,\ldots
+\]</div>
+<ol>
+<li>Find <span class="arithmatex">\(c\)</span> so that this is a valid PMF.</li>
+<li>Find <span class="arithmatex">\(P(X\in\{2,4,6\})\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(X\ge3)\)</span>.</li>
+</ol>
 <details class="answer">
 <summary>Answer</summary>
-<p>For 100 pages, <span class="arithmatex">\(X\sim\operatorname{Poisson}(1)\)</span>, so <span class="arithmatex">\(P(X\le3)\approx0.9810\)</span>.</p>
+<ol>
+<li>Since <span class="arithmatex">\(\sum_{k=1}^{\infty}c/3^k=c/2=1\)</span>, <span class="arithmatex">\(c=2\)</span>.</li>
+<li><span class="arithmatex">\(P(X\in\{2,4,6\})=182/729\)</span>.</li>
+<li><span class="arithmatex">\(P(X\ge3)=1/9\)</span>.</li>
+</ol>
 </details>
 <p>The notebook <a href="ex1.ipynb">ex1.ipynb</a> can be used as a starting point for discrete-distribution calculations.</p>
 
