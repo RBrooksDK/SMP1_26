@@ -58,8 +58,6 @@ Attempt the exercises from [Session 1](../01_Probability_Foundations/README.md#e
 
 ### Exercises
 
-Full solutions to the exercises can be found in [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo).
-
 #### Exercise 1 — Password hits
 
 A computer system uses passwords that are exactly six characters, and each character is one of the 26 letters (a-z) or 10 integers (0-9). Suppose that 10,000 users of the system have unique passwords. A hacker randomly selects, with replacement, 100,000 passwords from the potential set. A match to a user's password is called a hit.
@@ -126,7 +124,7 @@ A packet is lost independently with probability 0.01, and a message contains 100
 2. What is the probability that at least one packet is resent?
 3. What is the probability that two or more packets are resent?
 4. What are the mean and standard deviation of the number of packets that are resent?
-5. If there are 10 messages and each contains 100 packets, what is the probability that at least one message requires two or more packets to be resent?
+5. Simulate 10,000 e-mail messages and compare the simulated probabilities of at least one and at least two lost packets with the exact probabilities.
 
 ??? answer
 
@@ -134,7 +132,7 @@ A packet is lost independently with probability 0.01, and a message contains 100
     2. \(P(X\ge1)\approx0.6340\).
     3. \(P(X\ge2)\approx0.2642\).
     4. \(E[X]=1\) and \(\operatorname{SD}(X)=\sqrt{0.99}\approx0.995\).
-    5. The probability is approximately \(0.9535\).
+    5. The simulated probabilities should approach \(0.6340\) and \(0.2642\), respectively.
 
 #### Exercise 6 — Warranty failures
 
@@ -143,12 +141,14 @@ A manufacturer expects 2% of its units to fail during the warranty period. A sam
 1. What is the probability that none fail during the warranty period?
 2. What is the expected number of failures during the warranty period?
 3. What is the probability that more than two units fail during the warranty period?
+4. Approximate the probabilities in parts 1 and 3 with a Poisson distribution, and compare the results with the exact binomial probabilities.
 
 ??? answer
 
     1. \(P(X=0)\approx0.0000\), where \(X\sim\operatorname{Binomial}(500,0.02)\).
     2. \(E[X]=10\).
     3. \(P(X>2)\approx0.9974\).
+    4. Using \(Y\sim\operatorname{Poisson}(10)\), \(P(Y=0)\approx0.0000454\) and \(P(Y>2)\approx0.9972\). The corresponding exact binomial values are approximately \(0.0000410\) and \(0.9974\), so the approximation is close.
 
 #### Exercise 7 — Recovery from a rare disease
 
@@ -179,28 +179,52 @@ Each device is defective independently with probability 0.03. An inspector exami
     1. For one shipment, \(P(X\ge1)=1-0.97^{20}\approx0.4562\).
     2. Let \(q=1-0.97^{20}\). Then \(Y\sim\operatorname{Binomial}(10,q)\), and \(P(Y=3)={10\choose3}q^3(1-q)^7\approx0.1602\).
 
-#### Exercise 9 — Causeway closures
+#### Exercise 9 — Negative binomial model
 
-High flows result in the closure of a causeway. From past records, the road was closed for this reason on 10 days during a 20-year period. At an adjoining village, there is concern about the closure because the causeway provides the only access. The villagers assume that the probability of the road being closed for more than one day during a year is less than 0.10. Is this correct? Show your calculation using the Poisson distribution.
+Each inspected unit is acceptable independently with probability 0.8. Let \(X\) be the number of units inspected up to and including the fourth acceptable unit.
+
+1. Identify the distribution of \(X\) and state its possible values.
+2. Write its PMF.
+3. Find \(P(X=6)\) and \(P(X\le6)\).
+4. Find \(E[X]\) and \(\operatorname{Var}(X)\).
 
 ??? answer
 
-    With \(X\sim\operatorname{Poisson}(0.5)\), \(P(X>1)=1-e^{-0.5}(1+0.5)\approx0.0902\). The villagers' assumption is correct under this model.
+    1. \(X\sim\operatorname{Pascal}(4,0.8)\), with \(R_X=\{4,5,6,\ldots\}\).
+    2. \(P(X=k)={k-1\choose3}(0.8)^4(0.2)^{k-4}\), for \(k=4,5,6,\ldots\).
+    3. \(P(X=6)=0.16384\) and \(P(X\le6)=0.90112\).
+    4. \(E[X]=4/0.8=5\) and \(\operatorname{Var}(X)=4(0.2)/(0.8)^2=1.25\).
 
 #### Exercise 10 — Designing an inspection sample
 
-A company performs inspection on shipments from suppliers to detect nonconforming products. Assume that a lot contains 1,000 items and 1% are nonconforming. Using a binomial model, what sample size is needed so that the probability of selecting at least one nonconforming item is at least 0.90?
+A company performs inspection on shipments from suppliers to detect nonconforming products. Assume that a lot contains 1,000 items and exactly 10 are nonconforming.
+
+1. Using a binomial model with \(p=0.01\), what sample size is needed so that the probability of selecting at least one nonconforming item is at least 0.90?
+2. If the items are sampled without replacement, write the exact hypergeometric probability of selecting at least one nonconforming item in a sample of size \(n\).
+3. Find the smallest sample size that gives a probability of at least 0.90 under the hypergeometric model, and compare it with the binomial result.
 
 ??? answer
 
-    A sample size of at least 230 is needed.
+    1. The binomial model requires a sample size of at least 230.
+    2. The exact probability is \(1-\frac{{990\choose n}}{{1000\choose n}}\).
+    3. The hypergeometric model requires a sample size of at least 205. Sampling without replacement increases the chance of finding a nonconforming item because the lot contains exactly 10 such items.
 
-#### Exercise 11 — Errors in a textbook
+#### Exercise 11 — Valid PMF
 
-The number of errors in a textbook follows a Poisson distribution with a mean of 0.01 error per page. What is the probability that there are three or fewer errors in 100 pages?
+Let
+
+\[
+P(X=k)=\frac{c}{3^k},\qquad k=1,2,\ldots
+\]
+
+1. Find \(c\) so that this is a valid PMF.
+2. Find \(P(X\in\{2,4,6\})\).
+3. Find \(P(X\ge3)\).
 
 ??? answer
 
-    For 100 pages, \(X\sim\operatorname{Poisson}(1)\), so \(P(X\le3)\approx0.9810\).
+    1. Since \(\sum_{k=1}^{\infty}c/3^k=c/2=1\), \(c=2\).
+    2. \(P(X\in\{2,4,6\})=182/729\).
+    3. \(P(X\ge3)=1/9\).
 
 The notebook [ex1.ipynb](ex1.ipynb) can be used as a starting point for discrete-distribution calculations.
