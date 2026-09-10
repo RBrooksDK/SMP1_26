@@ -50,8 +50,8 @@ Attempt the exercises from [Session 1](../01_Probability_Foundations/README.md#e
 
 **Existing course material**
 
-- [Recap and exercise notes](https://drive.google.com/file/d/1xX9-A1fTUsaXV-mFlmRYR4fRoQcoszrX/view?usp=sharing)
-- [Session notes](https://drive.google.com/file/d/1LJ8Nu0D1PLLB1FF1jTsLK50HGLhl1EtG/view?usp=sharing)
+- [Session notes](https://drive.google.com/file/d/1OovTGgnYuL_G_5SUaI3L2ZUf1nDDLvRl/view?usp=sharing)
+- [Recap and exercise notes](https://drive.google.com/file/d/1T39OfYneVpa9PzthqThTyzNCXej1FgKH/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EthiTapbBz1JrNRDVKsHTnkB2LPmmbKwlY22zvyaCJMI9Q?e=0ggVfo)
 
 <hr/>
