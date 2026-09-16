@@ -20,9 +20,9 @@ Preparation should be realistic: read the specified ProbabilityCourse sections, 
 | 00 | [Prerequisites](../00_Prerequisites/README.md) | Sets, combinatorics, sums, calculus, and matrices |
 | 01 | [Probability Foundations](../01_Probability_Foundations/README.md) | Events, combinatorics, probability rules, conditioning, total probability, Bayes, and independence |
 | 02 | [Discrete Random Variables](../02_Discrete_Random_Variables/README.md) | Random variables, PMF/CDF, expectation, variance, and named discrete models |
-| 03 | [Continuous Random Variables](../03_Continuous_Random_Variables/README.md) | PDF/CDF, expectation, transformations, normal, and exponential models |
-| 04 | [Joint Distributions](../04_Joint_Distributions/README.md) | Joint, marginal, and conditional distributions for two variables |
-| 05 | [Conditional Distributions and Dependence](../05_Conditional_Distributions_and_Dependence/README.md) | Conditional expectation, covariance, correlation, transformations, and sums |
+| 03 | [Continuous Random Variables I](../03_Continuous_Random_Variables/README.md) | PDF/CDF, interval probabilities, expectation, variance, and uniform models |
+| 04 | [Continuous Random Variables II](../04_Continuous_Random_Variables_II/README.md) | Transformations, exponential waiting times, memorylessness, and normal models |
+| 05 | [Joint Distributions and Dependence](../05_Joint_Distributions_and_Dependence/README.md) | Joint and conditional distributions, independence, conditional expectation, covariance, correlation, and sums |
 | 06 | [Random Sampling, Monte Carlo, and Limit Theorems](../06_Random_Sampling_Monte_Carlo_and_Limit_Theorems/README.md) | Simulation, sampling distributions, LLN, CLT, and Monte Carlo error |
 | 07 | [Stochastic Processes and Poisson Processes](../07_Stochastic_Processes_and_Poisson_Processes/README.md) | Random processes, increments, counting processes, and arrival times |
 | 08 | [Time-Series Fundamentals](../08_Time_Series_Fundamentals/README.md) | Time dependence, stationarity, autocovariance, white noise, and random walks |

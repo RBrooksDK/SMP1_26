@@ -31,7 +31,7 @@ The Poisson process is specified by a rate. Counts on disjoint intervals are ind
 
 ### Session Preparation:
 
-Review the Poisson and exponential distributions and the LLN from Sessions 2, 3, and 6.
+Review the Poisson and exponential distributions and the LLN from Sessions 2, 4, and 6.
 
 **Syllabus and input**
 

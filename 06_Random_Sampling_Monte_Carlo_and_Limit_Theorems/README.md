@@ -31,10 +31,11 @@ A sample mean has a mean and a variance that follow from the underlying model. M
 
 ### Session Preparation:
 
-Attempt the core exercises from [Session 5](../05_Conditional_Distributions_and_Dependence/README.md#exercises).
+Attempt the core exercises from [Session 5](../05_Joint_Distributions_and_Dependence/README.md#core-exercises), especially the exercise on moments of a sum.
 
 **Syllabus and input**
 
+- [Sums of random variables](https://www.probabilitycourse.com/chapter6/6_1_2_sums_random_variables.php)
 - [Random sampling](https://www.probabilitycourse.com/chapter8/8_1_1_random_sampling.php)
 - [Law of Large Numbers](https://www.probabilitycourse.com/chapter7/7_1_1_law_of_large_numbers.php)
 - [Central Limit Theorem](https://www.probabilitycourse.com/chapter7/7_1_2_central_limit_theorem.php)
