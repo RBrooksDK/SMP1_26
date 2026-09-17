@@ -45,8 +45,8 @@ Attempt the core exercises from [Session 2](../02_Discrete_Random_Variables/READ
 
 **Existing course material**
 
-- [Recap notes](https://drive.google.com/file/d/1bfSGEXCjWAhseYAkICVakgEmtgMJUtBy/view?usp=sharing)
-- [Session notes, part 1](https://drive.google.com/file/d/1-MKzwovM7uHrSUQ_XBe1NczVT2ssdbKd/view?usp=sharing)
+- [Session notes](https://drive.google.com/file/d/1pJzZ3zuWmTWrpJ-tnzG1CE04hdlNwoUN/view?usp=sharing)
+- [Recap and exercise notes](https://drive.google.com/file/d/15QrOe1fh9mv6WumlpLBZrV7U8wh_AWvH/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Ev_P59eY9qJOiDMwGkdri9ABxzovHXJiHdLP432519F7vQ?e=gwTShz)
 
 <hr/>

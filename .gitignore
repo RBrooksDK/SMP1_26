@@ -1,6 +1,11 @@
 # MkDocs build output
 _site/
 
+# Local authoring files (excluded from the published site)
+output/
+tmp/
+tools/
+
 # Python virtual environment
 .venv/
 .venv-manim/
