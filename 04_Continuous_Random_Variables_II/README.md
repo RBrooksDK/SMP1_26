@@ -43,8 +43,8 @@ Attempt the core exercises from [Session 3](../03_Continuous_Random_Variables/RE
 
 **Existing course material**
 
-- [Session notes](https://drive.google.com/file/d/1FiEaxaq-pDUw7vvVdzoD_SsxRCY5z1lw/view?usp=sharing)
 - [Recap and exercise notes](https://drive.google.com/file/d/1G7XfakWQwW6NklFLE7GY2WWV9Lp-WIXh/view?usp=sharing)
+- [Session notes](https://drive.google.com/file/d/1FiEaxaq-pDUw7vvVdzoD_SsxRCY5z1lw/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Ev_P59eY9qJOiDMwGkdri9ABxzovHXJiHdLP432519F7vQ?e=gwTShz)
 
 <hr/>
