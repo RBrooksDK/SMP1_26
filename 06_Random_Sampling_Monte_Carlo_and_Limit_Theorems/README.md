@@ -41,6 +41,12 @@ Attempt the core exercises from [Session 5](../05_Joint_Distributions_and_Depend
 - [Central Limit Theorem](https://www.probabilitycourse.com/chapter7/7_1_2_central_limit_theorem.php)
 - [Chapter 14: simulation using Python](https://www.probabilitycourse.com/chapter14/Chapter_14.pdf), selected sections
 
+**Session material**
+
+- [Recap and exercise notes](https://drive.google.com/file/d/1nFftZYFj_XvNIkPptXezvwoSKmhJKFpX/view?usp=sharing)
+- [Teaching notebook (.ipynb)](SMP1_26_session06_live_lecture.ipynb){ download }
+- [Lecture slides (.pptx)](SMP1_26_session06_lecture_slides_revised.pptx){ download }
+
 <hr/>
 
 ### Exercises
