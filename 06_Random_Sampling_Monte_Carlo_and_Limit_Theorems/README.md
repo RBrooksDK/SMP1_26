@@ -43,7 +43,7 @@ Attempt the core exercises from [Session 5](../05_Joint_Distributions_and_Depend
 
 **Session material**
 
-- [Recap and exercise notes](https://drive.google.com/file/d/1nFftZYFj_XvNIkPptXezvwoSKmhJKFpX/view?usp=sharing)
+- [Recap and exercise notes](https://drive.google.com/file/d/1feTmKu6LguSlsLNGddCzKnfAzB5P5D7D/view?usp=sharing)
 - [Teaching notebook (.ipynb)](SMP1_26_session06_live_lecture.ipynb){ download }
 - [Lecture slides (.pptx)](SMP1_26_session06_lecture_slides_revised.pptx){ download }
 
