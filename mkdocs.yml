@@ -6,6 +6,7 @@ site_description: Course page for Stochastic Modelling and Processes at VIA Univ
 docs_dir: .
 site_dir: _site
 exclude_docs: |
+  CLAUDE.md
   _site/
   output/
   tmp/
