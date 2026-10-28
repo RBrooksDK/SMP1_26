@@ -13,7 +13,6 @@ Kursusside (engelsk) for valgfaget SMP1. SMP1 bærer den dybere sandsynlighedste
 
 - Ingen `mkdocs-jupyter`: notebooks renderes ikke som sider, de tilbydes kun som download.
 - `requirements.txt` indeholder ikke selve `mkdocs` (det kommer med mkdocs-material).
-- Der er ingen lokal `.venv`; brug den globale Python-installation.
 
 ## Lokalt og ikke publiceret
 
