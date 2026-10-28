@@ -4,7 +4,7 @@ Kursusside (engelsk) for valgfaget SMP1. SMP1 bærer den dybere sandsynlighedste
 
 ## Struktur
 
-- Sessioner `00_Prerequisites` til `11_Autoregressive_Models_and_Course_Recap`. Hver session er én `README.md` med Key Concepts, Session Preparation, links og Exercises (`#### Exercise N — Titel`).
+- Sessioner `00_Prerequisites` til `11_Autoregressive_Models_Forecasting_and_Course_Recap`. Hver session er én `README.md` med Key Concepts, Session Preparation, links og Exercises (`#### Exercise N — Titel`).
 - Ingen Tutorial-filer som i STA1_26. Undervisningsnotebooks og slides lægges direkte i sessionsmappen og linkes med `{ download }`, fx `SMP1_26_session06_live_lecture.ipynb`.
 - Litteratur: primært probabilitycourse.com (links pr. afsnit). Recap-noter ligger på Google Drive; generelle ressourcer på SharePoint (link i nav).
 - `01_Probability_Foundations_and_Random_Variables/` er en tom, ikke-tracket mappe; sessionen i nav er `01_Probability_Foundations/`.

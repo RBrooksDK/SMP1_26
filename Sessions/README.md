@@ -28,7 +28,7 @@ Preparation should be realistic: read the specified ProbabilityCourse sections, 
 | 08 | [Markov Chains](../08_Markov_Chains/README.md) | Markov property, transition matrices, multi-step probabilities, and classes |
 | 09 | [Markov Chains: Long-Run Behaviour](../09_Markov_Chains_Long_Run_Behaviour/README.md) | Absorption, recursion, stationary and limiting distributions, and simulation |
 | 10 | [Time-Series Fundamentals](../10_Time_Series_Fundamentals/README.md) | Time dependence, stationarity, autocovariance, white noise, and random walks |
-| 11 | [Autoregressive Models and Course Recap](../11_Autoregressive_Models_and_Course_Recap/README.md) | AR models, recursive forecasts, forecast uncertainty, and integration of the course models |
+| 11 | [Autoregressive Models, Forecasting, and Course Recap](../11_Autoregressive_Models_Forecasting_and_Course_Recap/README.md) | AR models, recursive forecasts, forecast uncertainty, and integration of the course models |
 
 ## Core syllabus
 
