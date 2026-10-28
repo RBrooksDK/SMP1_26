@@ -8,7 +8,7 @@ tags:
 
 <h1 align="center">Markov Chains</h1>
 
-Markov chains model state-based systems in which the next state is conditionally independent of the earlier past given the current state. We connect conditional probability, matrices, stochastic processes, and simulation.
+Markov chains model state-based systems in which the next state is conditionally independent of the earlier past given the current state. The Poisson process in Session 7 forgets its past completely; a Markov chain remembers exactly one thing, the current state. We connect conditional probability, matrices, stochastic processes, and simulation.
 
 A chain is specified by a state space and a transition matrix. Path probabilities multiply along a route; multi-step probabilities come from powers of the matrix. Communicating classes, transience, and recurrence organise the long-run picture, and a stationary distribution describes the equilibrium occupancy of an irreducible class.
 
@@ -31,7 +31,7 @@ A chain is specified by a state space and a transition matrix. Path probabilitie
 
 ### Session Preparation:
 
-Review conditional probability, matrix multiplication, and the idea of a discrete-time process.
+Review conditional probability and the law of total probability from [Session 1](../01_Probability_Foundations/README.md), matrix multiplication from the [prerequisites](../00_Prerequisites/README.md), and the state space and index set of a process from [Session 7](../07_Stochastic_Processes_and_Poisson_Processes/README.md).
 
 **Syllabus and input**
 

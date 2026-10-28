@@ -15,6 +15,7 @@ The Poisson process is specified by a rate. Counts on disjoint intervals are ind
 #### Key Concepts
 
 - State space and time index of a stochastic process
+- Sample paths, mean function, and covariance function
 - Poisson counting process, increments, and arrival times
 - Exponential interarrival times
 - Superposition and thinning
@@ -23,6 +24,7 @@ The Poisson process is specified by a rate. Counts on disjoint intervals are ind
 !!! tip "Learning Objectives"
 
     - Describe a process through its state space and time index.
+    - Calculate the mean and covariance functions of a simple process.
     - Calculate probabilities for Poisson-process increments and arrival times.
     - Combine or thin Poisson processes.
     - Simulate event histories.
@@ -36,6 +38,7 @@ Review the Poisson and exponential distributions and the LLN from Sessions 2, 4,
 **Syllabus and input**
 
 - [Basic concepts of random processes](https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php)
+- [Mean and correlation functions](https://www.probabilitycourse.com/chapter10/10_1_2_mean_and_correlation_functions.php)
 - [Basic concepts of the Poisson process](https://www.probabilitycourse.com/chapter11/11_1_2_basic_concepts_of_the_poisson_process.php)
 - [Merging and splitting Poisson processes](https://www.probabilitycourse.com/chapter11/11_1_3_merging_and_splitting_poisson_processes.php)
 
