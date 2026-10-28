@@ -12,13 +12,13 @@
         <meta name="author" content="Richard Brooks">
       
       
-        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_26/08_Time_Series_Fundamentals/">
+        <link rel="canonical" href="https://rbrooksdk.github.io/SMP1_26/09_Markov_Chains_Long_Run_Behaviour/">
       
       
-        <link rel="prev" href="../07_Stochastic_Processes_and_Poisson_Processes/">
+        <link rel="prev" href="../08_Markov_Chains/">
       
       
-        <link rel="next" href="../09_Autoregressive_Models_and_Forecasting/">
+        <link rel="next" href="../10_Time_Series_Fundamentals/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>08 Time-Series Fundamentals - Stochastic Modelling and Processes</title>
+        <title>09 Markov Chains, Long-Run Behaviour - Stochastic Modelling and Processes</title>
       
     
     
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              08 Time-Series Fundamentals
+              09 Markov Chains, Long-Run Behaviour
             
           </span>
         </div>
@@ -738,6 +738,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../08_Markov_Chains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 Markov Chains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -755,7 +783,7 @@
   <span class="md-ellipsis">
     
   
-    08 Time-Series Fundamentals
+    09 Markov Chains, Long-Run Behaviour
   
 
     
@@ -773,7 +801,7 @@
   <span class="md-ellipsis">
     
   
-    08 Time-Series Fundamentals
+    09 Markov Chains, Long-Run Behaviour
   
 
     
@@ -834,14 +862,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../09_Autoregressive_Models_and_Forecasting/" class="md-nav__link">
+      <a href="../10_Time_Series_Fundamentals/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    09 Autoregressive Models and Forecasting
+    10 Time-Series Fundamentals
   
 
     
@@ -862,42 +890,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../10_Markov_Chains/" class="md-nav__link">
+      <a href="../11_Autoregressive_Models_and_Course_Recap/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    10 Markov Chains
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../11_Markov_Chains_and_Course_Recap/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    11 Markov Chains and Course Recap
+    11 Autoregressive Models and Course Recap
   
 
     
@@ -1065,97 +1065,74 @@
   
 
 
-<h1 align="center">Time-Series Fundamentals</h1>
+<h1 align="center">Markov Chains: Long-Run Behaviour</h1>
 
-<p>A time series is one observed realisation of a discrete-time stochastic process. We study time dependence through lagged covariance and correlation and distinguish white noise, stationary processes, and random walks. The emphasis is probabilistic structure rather than a catalogue of statistical tests.</p>
-<p>Strict and weak stationarity describe whether the law of the process is stable in time. Autocovariance and autocorrelation summarise linear dependence across lags. White noise is uncorrelated; a random walk is not stationary. Plots and sample ACFs are useful, but they mix model properties with sampling variation.</p>
+<p>This session follows a Markov chain over many steps. Where does the chain end up, how long does it take to get there, and what fraction of time does it spend in each state? Conditioning on the first step turns these questions into systems of linear equations.</p>
+<p>Classification of states decides which long-run questions make sense. In a chain with absorbing states, we calculate absorption probabilities and expected absorption times by recursion with the law of total probability. In an irreducible and aperiodic chain, the stationary distribution is also the limiting distribution and gives the long-run proportion of time spent in each state. Simulation checks every analytical result.</p>
 <h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Realisation versus underlying process</li>
-<li>Strict and weak stationarity</li>
-<li>Autocovariance and autocorrelation</li>
-<li>White noise and random walks</li>
-<li>Sample ACF and its limitations</li>
+<li>Classification of states, periodicity, and irreducibility</li>
+<li>Recursion with the law of total probability</li>
+<li>Absorption probabilities and expected absorption times</li>
+<li>Stationary versus limiting distributions</li>
+<li>Long-run proportions of time and their simulation</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Learning Objectives</p>
 <ul>
-<li>Define strict and weak stationarity.</li>
-<li>Calculate autocovariance and autocorrelation.</li>
-<li>Recognise white noise and random-walk behaviour.</li>
-<li>Use plots and sample ACFs cautiously.</li>
+<li>Classify the states of a Markov chain and identify closed classes.</li>
+<li>Use first-step analysis to find absorption probabilities and expected absorption times.</li>
+<li>Decide when a stationary distribution is also a limiting distribution.</li>
+<li>Interpret stationary probabilities as long-run proportions and verify them by simulation.</li>
 </ul>
 </div>
 <hr/>
 
 <h3 id="session-preparation">Session Preparation:<a class="headerlink" href="#session-preparation" title="Permanent link">&para;</a></h3>
-<p>Review covariance and correlation from Session 5 and the distinction between a random variable and a random process from Session 7.</p>
+<p>Attempt the exercises from <a href="../08_Markov_Chains/#exercises">Session 8</a>.</p>
 <p><strong>Syllabus and input</strong></p>
 <ul>
-<li><a href="https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php">Basic concepts of random processes</a></li>
-<li><a href="https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php">Stationary processes</a>, through weak-sense stationarity</li>
+<li><a href="https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php">Classification of states</a></li>
+<li><a href="https://www.probabilitycourse.com/chapter11/11_2_5_using_the_law_of_total_probability_with_recursion.php">The law of total probability and recursion</a></li>
+<li><a href="https://www.probabilitycourse.com/chapter11/11_2_6_stationary_and_limiting_distributions.php">Stationary and limiting distributions</a></li>
+<li><a href="https://drive.google.com/file/d/13m9g-jfVpG9yaxR9CF6aEza6ObSWXNEW/view?usp=sharing">Session exercises: Problems 10</a></li>
+<li><a href="https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Enaype9j_R1DvUKrGId_u3kBW9qq69kr6D5UwdyKBCCAjg?e=d32pBn">Session material</a></li>
 </ul>
 <hr/>
 
 <h3 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h3>
-<h4 id="exercise-1-classify-the-process">Exercise 1 — Classify the process<a class="headerlink" href="#exercise-1-classify-the-process" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(\varepsilon_t\)</span> be i.i.d. with mean 0 and variance <span class="arithmatex">\(\sigma^2\)</span>. For each process, decide whether it is weakly stationary and justify your answer:</p>
+<h4 id="exercise-1-web-service-states">Exercise 1 — Web-service states<a class="headerlink" href="#exercise-1-web-service-states" title="Permanent link">&para;</a></h4>
+<p>A service is in state Normal, Degraded, or Down. Construct a plausible transition matrix satisfying the following one-step statements: a normal service remains normal with probability 0.92; a degraded service goes down with probability 0.10; and a down service recovers to degraded with probability 0.60. Choose and justify the remaining probabilities.</p>
 <ol>
-<li><span class="arithmatex">\(X_t=5+\varepsilon_t\)</span></li>
-<li><span class="arithmatex">\(X_t=t+\varepsilon_t\)</span></li>
-<li><span class="arithmatex">\(X_t=X_{t-1}+\varepsilon_t\)</span>, with <span class="arithmatex">\(X_0=0\)</span></li>
+<li>Draw the transition diagram.</li>
+<li>Calculate the distribution after 5 steps from Normal.</li>
+<li>Find a stationary distribution.</li>
+<li>Simulate 10,000 steps and compare empirical state frequencies with the stationary distribution.</li>
 </ol>
-<details class="answer">
-<summary>Answer</summary>
-<p>The first is stationary white noise around mean 5. The second has a time-varying mean. The third has variance <span class="arithmatex">\(t\sigma^2\)</span>; neither of the last two is weakly stationary.</p>
-</details>
-<h4 id="exercise-2-an-ma1-process">Exercise 2 — An MA(1) process<a class="headerlink" href="#exercise-2-an-ma1-process" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X_t=\varepsilon_t+\theta\varepsilon_{t-1}\)</span>.</p>
+<h4 id="exercise-2-long-run-service-availability">Exercise 2 — Long-run service availability<a class="headerlink" href="#exercise-2-long-run-service-availability" title="Permanent link">&para;</a></h4>
+<p>Use the transition matrix constructed in Exercise 1.</p>
 <ol>
-<li>Find its mean and variance.</li>
-<li>Find <span class="arithmatex">\(\gamma(h)=\operatorname{Cov}(X_t,X_{t-h})\)</span> for all lags.</li>
-<li>Find the autocorrelation function.</li>
+<li>Determine whether the chain is irreducible and aperiodic.</li>
+<li>Find its stationary distribution.</li>
+<li>Interpret the long-run proportions of time in Normal, Degraded, and Down.</li>
+<li>Change one transition probability to represent an improved repair process and quantify the effect on long-run availability.</li>
 </ol>
-<details class="answer">
-<summary>Answer</summary>
-<p>The mean is 0 and variance is <span class="arithmatex">\((1+\theta^2)\sigma^2\)</span>. The autocovariance is <span class="arithmatex">\(\theta\sigma^2\)</span> at lags <span class="arithmatex">\(\pm1\)</span> and zero for <span class="arithmatex">\(|h|&gt;1\)</span>. Divide by the variance to obtain the ACF.</p>
-</details>
-<h4 id="exercise-3-realisation-versus-model">Exercise 3 — Realisation versus model<a class="headerlink" href="#exercise-3-realisation-versus-model" title="Permanent link">&para;</a></h4>
-<p>Simulate 300 observations of white noise and of a random walk. For each, plot the series, rolling mean, rolling variance, and sample ACF. Explain which visual patterns are model properties and which may simply be sampling variation.</p>
-<h4 id="exercise-4-dependence-without-trend">Exercise 4 — Dependence without trend<a class="headerlink" href="#exercise-4-dependence-without-trend" title="Permanent link">&para;</a></h4>
-<p>Construct two stationary processes with the same marginal <span class="arithmatex">\(N(0,1)\)</span> distribution but different serial dependence. Simulate both and explain why a histogram cannot distinguish them.</p>
-<h4 id="exercise-5-autocovariance-from-a-short-series">Exercise 5 — Autocovariance from a short series<a class="headerlink" href="#exercise-5-autocovariance-from-a-short-series" title="Permanent link">&para;</a></h4>
-<p>For the observations <span class="arithmatex">\(x=(2,4,3,7,6,8)\)</span>:</p>
+<h4 id="exercise-3-an-absorbing-release-process">Exercise 3 — An absorbing release process<a class="headerlink" href="#exercise-3-an-absorbing-release-process" title="Permanent link">&para;</a></h4>
+<p>A software change moves among Review, Testing, Released, and Rejected with transition matrix</p>
+<div class="arithmatex">\[
+P=\begin{pmatrix}
+0.3&amp;0.6&amp;0&amp;0.1\\
+0.2&amp;0.3&amp;0.4&amp;0.1\\
+0&amp;0&amp;1&amp;0\\
+0&amp;0&amp;0&amp;1
+\end{pmatrix}.
+\]</div>
 <ol>
-<li>Calculate the sample mean.</li>
-<li>Calculate the sample autocovariance at lags 0, 1, and 2 using denominator <span class="arithmatex">\(n\)</span>.</li>
-<li>Convert the results to sample autocorrelations.</li>
-<li>Compare your manual values with a Python implementation and document the denominator convention used by the software.</li>
+<li>Identify transient and absorbing states.</li>
+<li>Starting in Review, find the probability of eventual release.</li>
+<li>Find the expected number of steps until absorption.</li>
+<li>Verify both results by simulation.</li>
 </ol>
-<h4 id="exercise-6-random-phase-sinusoid">Exercise 6 — Random-phase sinusoid<a class="headerlink" href="#exercise-6-random-phase-sinusoid" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X_t=A\cos(\omega t+U)\)</span>, where <span class="arithmatex">\(U\sim\operatorname{Uniform}(0,2\pi)\)</span>.</p>
-<ol>
-<li>Find <span class="arithmatex">\(E[X_t]\)</span>.</li>
-<li>Show that <span class="arithmatex">\(\operatorname{Cov}(X_t,X_{t+h})\)</span> depends only on <span class="arithmatex">\(h\)</span>.</li>
-<li>Determine whether the process is weakly stationary.</li>
-<li>Simulate several realisations by drawing a new phase for each realisation.</li>
-</ol>
-<details class="answer">
-<summary>Answer</summary>
-<p>Integration over the random phase gives <span class="arithmatex">\(E[X_t]=0\)</span> and <span class="arithmatex">\(\gamma(h)=A^2\cos(\omega h)/2\)</span>. Hence the process is weakly stationary.</p>
-</details>
-<h4 id="exercise-7-filtering-white-noise">Exercise 7 — Filtering white noise<a class="headerlink" href="#exercise-7-filtering-white-noise" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X_t=\varepsilon_t+0.6\varepsilon_{t-1}-0.2\varepsilon_{t-2}\)</span>, where <span class="arithmatex">\(\varepsilon_t\)</span> is white noise with variance <span class="arithmatex">\(\sigma^2\)</span>.</p>
-<ol>
-<li>Find the mean and variance of <span class="arithmatex">\(X_t\)</span>.</li>
-<li>Find <span class="arithmatex">\(\gamma(1)\)</span>, <span class="arithmatex">\(\gamma(2)\)</span>, and <span class="arithmatex">\(\gamma(h)\)</span> for <span class="arithmatex">\(|h|&gt;2\)</span>.</li>
-<li>Plot the theoretical ACF.</li>
-<li>Simulate the process and compare its sample ACF with theory.</li>
-</ol>
-<details class="answer">
-<summary>Answer</summary>
-<p><span class="arithmatex">\(\gamma(0)=(1+0.6^2+0.2^2)\sigma^2=1.4\sigma^2\)</span>, <span class="arithmatex">\(\gamma(1)=(0.6-0.12)\sigma^2=0.48\sigma^2\)</span>, <span class="arithmatex">\(\gamma(2)=-0.2\sigma^2\)</span>, and later autocovariances are zero.</p>
-</details>
 
 
 
@@ -1196,7 +1173,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../07_Stochastic_Processes_and_Poisson_Processes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 07 Stochastic Processes and Poisson Processes">
+          <a href="../08_Markov_Chains/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 08 Markov Chains">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1206,20 +1183,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                07 Stochastic Processes and Poisson Processes
+                08 Markov Chains
               </div>
             </div>
           </a>
         
         
           
-          <a href="../09_Autoregressive_Models_and_Forecasting/" class="md-footer__link md-footer__link--next" aria-label="Next: 09 Autoregressive Models and Forecasting">
+          <a href="../10_Time_Series_Fundamentals/" class="md-footer__link md-footer__link--next" aria-label="Next: 10 Time-Series Fundamentals">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                09 Autoregressive Models and Forecasting
+                10 Time-Series Fundamentals
               </div>
             </div>
             <div class="md-footer__button md-icon">
