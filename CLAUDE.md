@@ -13,7 +13,6 @@ Kursusside (engelsk) for valgfaget SMP1. SMP1 bærer den dybere sandsynlighedste
 
 - Ingen `mkdocs-jupyter`: notebooks renderes ikke som sider, de tilbydes kun som download.
 - `requirements.txt` indeholder ikke selve `mkdocs` (det kommer med mkdocs-material).
-- CI (`ci.yml`) kører kun `mkdocs gh-deploy --force` med Python `3.x` og bygger ikke med `--strict`. Kør derfor selv `mkdocs build --strict` før push.
 - Der er ingen lokal `.venv`; brug den globale Python-installation.
 
 ## Lokalt og ikke publiceret
