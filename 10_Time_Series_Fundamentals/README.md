@@ -32,13 +32,16 @@ Strict and weak stationarity describe whether the law of the process is stable i
 
 ### Session Preparation:
 
-Review covariance and correlation from [Session 5](../05_Joint_Distributions_and_Dependence/README.md), the mean and covariance functions of a process from [Session 7](../07_Stochastic_Processes_and_Poisson_Processes/README.md), and the stationary distribution of a Markov chain from [Session 9](../09_Markov_Chains_Long_Run_Behaviour/README.md). Stationarity of a time series asks a related question: when does the law of the process not change over time?
+Review covariance and correlation from [Session 5](../05_Joint_Distributions_and_Dependence/README.md), the mean and covariance functions of a process from [Session 7](../07_Stochastic_Processes_and_Poisson_Processes/README.md) ([basic concepts](https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php) and [mean and correlation functions](https://www.probabilitycourse.com/chapter10/10_1_2_mean_and_correlation_functions.php)), and the stationary distribution of a Markov chain from [Session 9](../09_Markov_Chains_Long_Run_Behaviour/README.md). Stationarity of a time series asks a related question: when does the law of the process not change over time?
 
 **Syllabus and input**
 
-- [Basic concepts of random processes](https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php)
-- [Mean and correlation functions](https://www.probabilitycourse.com/chapter10/10_1_2_mean_and_correlation_functions.php)
-- [Stationary processes](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php), through weak-sense stationarity
+- [ProbabilityCourse 10.1.4: stationary processes](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php), through weak-sense stationarity
+- [FPP3 2.8: autocorrelation](https://otexts.com/fpp3/graphics.html#sec-acf)
+- [FPP3 2.9: white noise](https://otexts.com/fpp3/graphics.html#sec-wn)
+- [FPP3 9.1: stationarity and differencing](https://otexts.com/fpp3/arima.html#sec-stationarity), through the random walk model
+
+FPP3 is Hyndman and Athanasopoulos, *Forecasting: Principles and Practice*, 3rd edition (free online). Its code is in R; read it for the concepts and do the computations in Python.
 
 <hr/>
 
