@@ -17,14 +17,14 @@ Strict and weak stationarity describe whether the law of the process is stable i
 
 - Realisation versus underlying process
 - Strict and weak stationarity
-- Autocovariance and autocorrelation
+- Mean function, autocovariance, and autocorrelation
 - White noise and random walks
 - Sample ACF and its limitations
 
 !!! tip "Learning Objectives"
 
     - Define strict and weak stationarity.
-    - Calculate autocovariance and autocorrelation.
+    - Calculate the mean function, autocovariance, and autocorrelation of a model.
     - Recognise white noise and random-walk behaviour.
     - Use plots and sample ACFs cautiously.
 
@@ -32,11 +32,12 @@ Strict and weak stationarity describe whether the law of the process is stable i
 
 ### Session Preparation:
 
-Review covariance and correlation from [Session 5](../05_Joint_Distributions_and_Dependence/README.md), the mean and covariance functions of a process from [Session 7](../07_Stochastic_Processes_and_Poisson_Processes/README.md) ([basic concepts](https://www.probabilitycourse.com/chapter10/10_1_0_basic_concepts.php) and [mean and correlation functions](https://www.probabilitycourse.com/chapter10/10_1_2_mean_and_correlation_functions.php)), and the stationary distribution of a Markov chain from [Session 9](../09_Markov_Chains_Long_Run_Behaviour/README.md). Stationarity of a time series asks a related question: when does the law of the process not change over time?
+Review covariance and correlation from [Session 5](../05_Joint_Distributions_and_Dependence/README.md), stochastic processes and sample paths from [Session 7](../07_Stochastic_Processes_and_Poisson_Processes/README.md), and the stationary distribution of a Markov chain from [Session 9](../09_Markov_Chains_Long_Run_Behaviour/README.md). Stationarity of a time series asks a related question: when does the law of the process not change over time?
 
 **Syllabus and input**
 
 - [Chapter 10: Time-Series Fundamentals (PDF)](SMP1_26_chapter10_time_series.pdf){ download }, the main text for the session, with worked examples for the exercises
+- [ProbabilityCourse 10.1.2: mean and correlation functions](https://www.probabilitycourse.com/chapter10/10_1_2_mean_and_correlation_functions.php)
 - [ProbabilityCourse 10.1.4: stationary processes](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php), through weak-sense stationarity
 
 <hr/>
