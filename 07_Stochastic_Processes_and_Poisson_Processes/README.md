@@ -43,7 +43,8 @@ Review the Poisson and exponential distributions and the LLN from Sessions 2, 4,
 
 **Existing course material**
 
-- [Session notes](https://drive.google.com/file/d/1gTaiww6T_lyrVKNU7E93SkhK3ITO3ojL/view?usp=sharing)
+- [Recap and exercise notes](https://drive.google.com/file/d/1Mf66ampHq-kUZ0lsbgpXZYj8w5fbcTtE/view?usp=sharing)
+- [Session notes](https://drive.google.com/file/d/1foeOIX-YkWQntYinzOObYBN-JusqIJEc/view?usp=sharing)
 - [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EpMa2OpoQTRLjtQWiM9qhugBXvJkRWuUGK7-4SuiycEDYQ?e=Fg6B41)
 
 <hr/>
