@@ -40,13 +40,7 @@ Review conditional probability and the law of total probability from [Session 1]
 - [State probability distributions](https://www.probabilitycourse.com/chapter11/11_2_3_probability_distributions.php)
 - [Classification of states](https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php)
 
-**Existing course material**
-
-[Recap notes](https://drive.google.com/file/d/1GJYl8qMMGcRZ7FD0qTif7jJazdyUPuQr/view?usp=sharing)
-
-[Session notes](https://drive.google.com/file/d/1AyY6nKHnY9f9Tl9siholsRkop_BbB2Fv/view?usp=sharing)
-
-[Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EuqNIuAYAltDmfXlB9l-DpMBTP5g7G1XrHFCqcXim9OfNQ?e=IMjqf3)
+**Session material**
 
 <hr/>
 

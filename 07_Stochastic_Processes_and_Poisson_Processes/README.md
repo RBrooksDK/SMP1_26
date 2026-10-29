@@ -41,11 +41,10 @@ Review the Poisson and exponential distributions and the LLN from Sessions 2, 4,
 - [Basic concepts of the Poisson process](https://www.probabilitycourse.com/chapter11/11_1_2_basic_concepts_of_the_poisson_process.php)
 - [Merging and splitting Poisson processes](https://www.probabilitycourse.com/chapter11/11_1_3_merging_and_splitting_poisson_processes.php)
 
-**Existing course material**
+**Session material**
 
 - [Recap and exercise notes](https://drive.google.com/file/d/1Mf66ampHq-kUZ0lsbgpXZYj8w5fbcTtE/view?usp=sharing)
 - [Session notes](https://drive.google.com/file/d/1foeOIX-YkWQntYinzOObYBN-JusqIJEc/view?usp=sharing)
-- [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/EpMa2OpoQTRLjtQWiM9qhugBXvJkRWuUGK7-4SuiycEDYQ?e=Fg6B41)
 
 <hr/>
 

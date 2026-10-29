@@ -38,8 +38,6 @@ Attempt the exercises from [Session 8](../08_Markov_Chains/README.md#exercises).
 - [Classification of states](https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php)
 - [The law of total probability and recursion](https://www.probabilitycourse.com/chapter11/11_2_5_using_the_law_of_total_probability_with_recursion.php)
 - [Stationary and limiting distributions](https://www.probabilitycourse.com/chapter11/11_2_6_stationary_and_limiting_distributions.php)
-- [Session exercises: Problems 10](https://drive.google.com/file/d/13m9g-jfVpG9yaxR9CF6aEza6ObSWXNEW/view?usp=sharing)
-- [Session material](https://viaucdk-my.sharepoint.com/:f:/g/personal/rib_viauc_dk/Enaype9j_R1DvUKrGId_u3kBW9qq69kr6D5UwdyKBCCAjg?e=d32pBn)
 
 <hr/>
 
