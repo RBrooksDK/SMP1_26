@@ -36,12 +36,8 @@ Review covariance and correlation from [Session 5](../05_Joint_Distributions_and
 
 **Syllabus and input**
 
+- [Chapter 10: Time-Series Fundamentals (PDF)](SMP1_26_chapter10_time_series.pdf){ download }, the main text for the session, with worked examples for the exercises
 - [ProbabilityCourse 10.1.4: stationary processes](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php), through weak-sense stationarity
-- [FPP3 2.8: autocorrelation](https://otexts.com/fpp3/graphics.html#sec-acf)
-- [FPP3 2.9: white noise](https://otexts.com/fpp3/graphics.html#sec-wn)
-- [FPP3 9.1: stationarity and differencing](https://otexts.com/fpp3/arima.html#sec-stationarity), through the random walk model
-
-FPP3 is Hyndman and Athanasopoulos, *Forecasting: Principles and Practice*, 3rd edition (free online). Its code is in R; read it for the concepts and do the computations in Python.
 
 <hr/>
 
