@@ -117,9 +117,8 @@ Incidents arrive at rate 12 per hour. Independently, 50% are classified as minor
 
 1. Describe the three classified counting processes.
 2. Find the probability of at least one critical incident in 30 minutes.
-3. Given that 10 incidents occurred in one hour, find the conditional distribution of the three class counts.
-4. Simulate the split processes and empirically check their pairwise independence without conditioning on the total.
+3. Simulate the split processes and empirically check their pairwise independence.
 
 ??? answer
 
-    Thinning gives independent Poisson processes with rates 6, 4.2, and 1.8 per hour. Part 2 is \(1-e^{-0.9}\). Conditional on a total of 10, the class counts are multinomial with probabilities \((0.50,0.35,0.15)\).
+    Thinning gives independent Poisson processes with rates 6, 4.2, and 1.8 per hour. Part 2 is \(1-e^{-0.9}\). In part 3 the simulated class counts have correlations close to 0, and each count has mean and variance close to its rate.
