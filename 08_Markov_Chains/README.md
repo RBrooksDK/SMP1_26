@@ -2,30 +2,30 @@
 tags:
     - Markov Chains
     - Transition Matrix
-    - Stationary Distribution
-    - Classification of States
+    - Multi-Step Probabilities
+    - Simulation
 ---
 
 <h1 align="center">Markov Chains</h1>
 
 Markov chains model state-based systems in which the next state is conditionally independent of the earlier past given the current state. The Poisson process in Session 7 forgets its past completely; a Markov chain remembers exactly one thing, the current state. We connect conditional probability, matrices, stochastic processes, and simulation.
 
-A chain is specified by a state space and a transition matrix. Path probabilities multiply along a route; multi-step probabilities come from powers of the matrix. Communicating classes, transience, and recurrence organise the long-run picture, and a stationary distribution describes the equilibrium occupancy of an irreducible class.
+A chain is specified by a state space, a transition matrix, and an initial distribution. Path probabilities multiply along a route, and the distribution of the chain after several steps comes from powers of the matrix. Simulating the chain step by step makes the same distributions visible and checks every calculation.
 
 #### Key Concepts
 
-- Markov property, state space, and transition matrix
-- Path and multi-step probabilities
-- Communicating classes, transience, and recurrence
-- Stationary distributions
-- Absorption in closed classes
+- Markov property and time homogeneity
+- State space, transition matrix, and transition diagram
+- Path probabilities
+- Distribution of \(X_n\) and \(n\)-step transition probabilities
+- Simulation of a chain
 
 !!! tip "Learning Objectives"
 
-    - Define a state space and transition matrix.
-    - Calculate path and multi-step probabilities.
-    - Identify communicating classes.
-    - Calculate and interpret a stationary distribution.
+    - Define a state space and transition matrix, and draw the transition diagram.
+    - Calculate path probabilities and joint probabilities at several times.
+    - Calculate the distribution of \(X_n\) and \(n\)-step transition probabilities with matrix powers.
+    - Simulate a Markov chain and compare the simulated frequencies with the exact distribution.
 
 <hr/>
 
@@ -38,7 +38,6 @@ Review conditional probability and the law of total probability from [Session 1]
 - [ProbabilityCourse 11.2.1: discrete-time Markov chains](https://www.probabilitycourse.com/chapter11/11_2_1_introduction.php)
 - [State-transition matrix and diagram](https://www.probabilitycourse.com/chapter11/11_2_2_state_transition_matrix_and_diagram.php)
 - [State probability distributions](https://www.probabilitycourse.com/chapter11/11_2_3_probability_distributions.php)
-- [Classification of states](https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php)
 
 **Session material**
 
@@ -67,83 +66,41 @@ P=\left[\begin{array}{ccc}
         <li style> 1/12 </li>
     </ol>
 
-#### Exercise 2
+#### Exercise 2 — Distribution after n steps
 
-Consider the Markov chain in the figure below. There are two recurrent classes, \(R_1=\{1,2\}\), and \(R_2=\{5,6,7\}\).
+A chain on \(S=\{1,2,3\}\) has transition matrix and initial distribution
 
-<img src="src/Ex2_1.png">
+\[
+P=\begin{pmatrix}
+0.5&0.3&0.2\\
+0.2&0.6&0.2\\
+0.1&0.3&0.6
+\end{pmatrix},
+\qquad
+\pi^{(0)}=\begin{pmatrix}0.2&0.5&0.3\end{pmatrix}.
+\]
 
-1. Assuming \(X_0=3\), find the probability that the chain gets absorbed in \(R_1\).
-2. Find the expected time (number of steps) until the chain gets absorbed in \(R_1\) or \(R_2\). More specifically, let \(T\) be the absorption time, i.e., the first time the chain visits a state in \(R_1\) or \(R_2\), so find \(E\left[T \mid X_0=3\right]\)
+1. Find \(\pi^{(1)}\) and \(\pi^{(2)}\).
+2. Find \(P(X_3=1\mid X_1=3)\).
+3. Find \(P(X_0=2, X_2=2, X_3=3)\).
 
-???answer
-    1. \(a_3=\frac{5}{7}\)
-    2. \(t_3=\frac{12}{7}\)
+??? answer
 
-#### Exercise 3
+    \(\pi^{(1)}=(0.23,\,0.45,\,0.32)\) and \(\pi^{(2)}=(0.237,\,0.435,\,0.328)\). Part 2 is \(p^{(2)}_{31}=0.17\). Part 3 is \(\pi^{(0)}_2\,p^{(2)}_{22}\,p_{23}=0.2\cdot0.48\cdot0.2=0.048\).
 
-Consider the following Markov chain
-
-<img src="src/Ex3_1.png">
-
-1. Is this chain irreducible?
-2. Is this chain aperiodic?
-3. Find the stationary distribution for this chain.
-4. Is the stationary distribution a limiting distribution for the chain?
-
-???answer
-    1. yes
-    2. yes
-    3. \(\pi_1 \approx 0.457, \pi_2 \approx 0.257, \pi_3 \approx 0.286\)
-    4. yes
-
-#### Exercise 4
-
-Consider the following Markov chain
-
-<img src="src/Ex4_1.png">
-
-Assume \(X_0=1\), and let \(R\) be the first time that the chain returns to state 1 . Find \(E\left[R \mid X_0=1\right]\).
-
-???answer
-    \(\frac{8}{3}\)
-
-#### Exercise 5 — A two-state reliability chain
+#### Exercise 3 — A two-state reliability chain
 
 A component is either Working or Failed. During each hour, a working component fails with probability 0.02, while a failed component is repaired with probability 0.30.
 
 1. Construct the transition matrix and diagram.
 2. Starting in Working, find the probability of being Failed after 2 and 10 hours.
-3. Find the stationary distribution.
-4. Interpret the stationary failure probability operationally.
+3. Simulate 10,000 paths of 10 hours starting in Working and compare the fraction of paths that are Failed after 10 hours with part 2.
 
 ??? answer
 
-    With state order \((W,F)\), \(P=\begin{pmatrix}0.98&0.02\\0.30&0.70\end{pmatrix}\). The stationary distribution satisfies \(0.02\pi_W=0.30\pi_F\), giving \((\pi_W,\pi_F)=(15/16,1/16)\).
+    With state order \((W,F)\), \(P=\begin{pmatrix}0.98&0.02\\0.30&0.70\end{pmatrix}\). The probabilities of being Failed are \(p^{(2)}_{WF}=0.0336\) and \(p^{(10)}_{WF}\approx0.0612\).
 
-#### Exercise 6 — Classification of states
-
-Consider
-
-\[
-P=\begin{pmatrix}
-1&0&0&0\\
-0.2&0.5&0.3&0\\
-0&0&0.6&0.4\\
-0&0&0.1&0.9
-\end{pmatrix}.
-\]
-
-1. Draw the transition diagram.
-2. Identify the communicating classes.
-3. Classify states as transient or recurrent.
-4. Identify all closed classes and stationary distributions.
-
-??? answer
-
-    State 1 is an absorbing closed class. States 3 and 4 form another closed irreducible class. State 2 is transient because it can leave for either closed class and cannot be revisited from them. Each closed class supports a stationary distribution.
-
-#### Exercise 7 — Estimating a transition matrix
+#### Exercise 4 — Estimating a transition matrix
 
 An observed state sequence is
 
