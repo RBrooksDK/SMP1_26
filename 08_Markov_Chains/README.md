@@ -100,7 +100,23 @@ A component is either Working or Failed. During each hour, a working component f
 
     With state order \((W,F)\), \(P=\begin{pmatrix}0.98&0.02\\0.30&0.70\end{pmatrix}\). The probabilities of being Failed are \(p^{(2)}_{WF}=0.0336\) and \(p^{(10)}_{WF}\approx0.0612\).
 
-#### Exercise 4 — Estimating a transition matrix
+#### Exercise 4 — Reading a transition diagram
+
+Consider the Markov chain with state space \(S=\{1,2,3\}\) in the figure below.
+
+<img src="src/Ex4_1.png">
+
+1. Write down the transition matrix \(P\) and check that every row sums to 1.
+2. Find the probability that the chain is in state 3 two steps after being in state 1, i.e. \(p^{(2)}_{13}\). List the paths and add their probabilities.
+3. Assume \(\pi^{(0)}=(0.5,\,0.3,\,0.2)\). Find \(\pi^{(2)}\) and \(P(X_0=1,X_1=2,X_2=3)\).
+4. Verify part 2 with \(P^2\) in Python.
+
+???answer
+    1. \(P=\begin{pmatrix}0.5&0.3&0.2\\0.1&0.6&0.3\\0.2&0.4&0.4\end{pmatrix}\)
+    2. \(p^{(2)}_{13}=0.5\cdot0.2+0.3\cdot0.3+0.2\cdot0.4=0.27\)
+    3. \(\pi^{(2)}=(0.255,\,0.450,\,0.295)\) and \(P(X_0=1,X_1=2,X_2=3)=0.5\cdot0.3\cdot0.3=0.045\)
+
+#### Exercise 5 — Estimating a transition matrix
 
 An observed state sequence is
 
