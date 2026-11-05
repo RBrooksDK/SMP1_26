@@ -41,6 +41,9 @@ Review conditional probability and the law of total probability from [Session 1]
 
 **Session material**
 
+- [Recap and exercise notes](https://drive.google.com/file/d/1XqoPJC07pomhnX6SGIMFRv2tUq9HOlEv/view?usp=sharing)
+- [Session notes](https://drive.google.com/file/d/1Ci4_z5-ckuc5aEvsJpf3_UVYjhTFjWiH/view?usp=sharing)
+
 <hr/>
 
 ### Exercises
