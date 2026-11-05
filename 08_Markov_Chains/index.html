@@ -1068,22 +1068,22 @@
 <h1 align="center">Markov Chains</h1>
 
 <p>Markov chains model state-based systems in which the next state is conditionally independent of the earlier past given the current state. The Poisson process in Session 7 forgets its past completely; a Markov chain remembers exactly one thing, the current state. We connect conditional probability, matrices, stochastic processes, and simulation.</p>
-<p>A chain is specified by a state space and a transition matrix. Path probabilities multiply along a route; multi-step probabilities come from powers of the matrix. Communicating classes, transience, and recurrence organise the long-run picture, and a stationary distribution describes the equilibrium occupancy of an irreducible class.</p>
+<p>A chain is specified by a state space, a transition matrix, and an initial distribution. Path probabilities multiply along a route, and the distribution of the chain after several steps comes from powers of the matrix. Simulating the chain step by step makes the same distributions visible and checks every calculation.</p>
 <h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Markov property, state space, and transition matrix</li>
-<li>Path and multi-step probabilities</li>
-<li>Communicating classes, transience, and recurrence</li>
-<li>Stationary distributions</li>
-<li>Absorption in closed classes</li>
+<li>Markov property and time homogeneity</li>
+<li>State space, transition matrix, and transition diagram</li>
+<li>Path probabilities</li>
+<li>Distribution of <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(n\)</span>-step transition probabilities</li>
+<li>Simulation of a chain</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Learning Objectives</p>
 <ul>
-<li>Define a state space and transition matrix.</li>
-<li>Calculate path and multi-step probabilities.</li>
-<li>Identify communicating classes.</li>
-<li>Calculate and interpret a stationary distribution.</li>
+<li>Define a state space and transition matrix, and draw the transition diagram.</li>
+<li>Calculate path probabilities and joint probabilities at several times.</li>
+<li>Calculate the distribution of <span class="arithmatex">\(X_n\)</span> and <span class="arithmatex">\(n\)</span>-step transition probabilities with matrix powers.</li>
+<li>Simulate a Markov chain and compare the simulated frequencies with the exact distribution.</li>
 </ul>
 </div>
 <hr/>
@@ -1095,7 +1095,6 @@
 <li><a href="https://www.probabilitycourse.com/chapter11/11_2_1_introduction.php">ProbabilityCourse 11.2.1: discrete-time Markov chains</a></li>
 <li><a href="https://www.probabilitycourse.com/chapter11/11_2_2_state_transition_matrix_and_diagram.php">State-transition matrix and diagram</a></li>
 <li><a href="https://www.probabilitycourse.com/chapter11/11_2_3_probability_distributions.php">State probability distributions</a></li>
-<li><a href="https://www.probabilitycourse.com/chapter11/11_2_4_classification_of_states.php">Classification of states</a></li>
 </ul>
 <p><strong>Session material</strong></p>
 <hr/>
@@ -1121,79 +1120,38 @@ P=\left[\begin{array}{ccc}
     <li style> 1/12 </li>
 </ol></p>
 </details>
-<h4 id="exercise-2">Exercise 2<a class="headerlink" href="#exercise-2" title="Permanent link">&para;</a></h4>
-<p>Consider the Markov chain in the figure below. There are two recurrent classes, <span class="arithmatex">\(R_1=\{1,2\}\)</span>, and <span class="arithmatex">\(R_2=\{5,6,7\}\)</span>.</p>
-<p><img src="src/Ex2_1.png"></p>
+<h4 id="exercise-2-distribution-after-n-steps">Exercise 2 — Distribution after n steps<a class="headerlink" href="#exercise-2-distribution-after-n-steps" title="Permanent link">&para;</a></h4>
+<p>A chain on <span class="arithmatex">\(S=\{1,2,3\}\)</span> has transition matrix and initial distribution</p>
+<div class="arithmatex">\[
+P=\begin{pmatrix}
+0.5&amp;0.3&amp;0.2\\
+0.2&amp;0.6&amp;0.2\\
+0.1&amp;0.3&amp;0.6
+\end{pmatrix},
+\qquad
+\pi^{(0)}=\begin{pmatrix}0.2&amp;0.5&amp;0.3\end{pmatrix}.
+\]</div>
 <ol>
-<li>Assuming <span class="arithmatex">\(X_0=3\)</span>, find the probability that the chain gets absorbed in <span class="arithmatex">\(R_1\)</span>.</li>
-<li>Find the expected time (number of steps) until the chain gets absorbed in <span class="arithmatex">\(R_1\)</span> or <span class="arithmatex">\(R_2\)</span>. More specifically, let <span class="arithmatex">\(T\)</span> be the absorption time, i.e., the first time the chain visits a state in <span class="arithmatex">\(R_1\)</span> or <span class="arithmatex">\(R_2\)</span>, so find <span class="arithmatex">\(E\left[T \mid X_0=3\right]\)</span></li>
+<li>Find <span class="arithmatex">\(\pi^{(1)}\)</span> and <span class="arithmatex">\(\pi^{(2)}\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(X_3=1\mid X_1=3)\)</span>.</li>
+<li>Find <span class="arithmatex">\(P(X_0=2, X_2=2, X_3=3)\)</span>.</li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
-<ol>
-<li><span class="arithmatex">\(a_3=\frac{5}{7}\)</span></li>
-<li><span class="arithmatex">\(t_3=\frac{12}{7}\)</span></li>
-</ol>
+<p><span class="arithmatex">\(\pi^{(1)}=(0.23,\,0.45,\,0.32)\)</span> and <span class="arithmatex">\(\pi^{(2)}=(0.237,\,0.435,\,0.328)\)</span>. Part 2 is <span class="arithmatex">\(p^{(2)}_{31}=0.17\)</span>. Part 3 is <span class="arithmatex">\(\pi^{(0)}_2\,p^{(2)}_{22}\,p_{23}=0.2\cdot0.48\cdot0.2=0.048\)</span>.</p>
 </details>
-<h4 id="exercise-3">Exercise 3<a class="headerlink" href="#exercise-3" title="Permanent link">&para;</a></h4>
-<p>Consider the following Markov chain</p>
-<p><img src="src/Ex3_1.png"></p>
-<ol>
-<li>Is this chain irreducible?</li>
-<li>Is this chain aperiodic?</li>
-<li>Find the stationary distribution for this chain.</li>
-<li>Is the stationary distribution a limiting distribution for the chain?</li>
-</ol>
-<details class="answer">
-<summary>Answer</summary>
-<ol>
-<li>yes</li>
-<li>yes</li>
-<li><span class="arithmatex">\(\pi_1 \approx 0.457, \pi_2 \approx 0.257, \pi_3 \approx 0.286\)</span></li>
-<li>yes</li>
-</ol>
-</details>
-<h4 id="exercise-4">Exercise 4<a class="headerlink" href="#exercise-4" title="Permanent link">&para;</a></h4>
-<p>Consider the following Markov chain</p>
-<p><img src="src/Ex4_1.png"></p>
-<p>Assume <span class="arithmatex">\(X_0=1\)</span>, and let <span class="arithmatex">\(R\)</span> be the first time that the chain returns to state 1 . Find <span class="arithmatex">\(E\left[R \mid X_0=1\right]\)</span>.</p>
-<details class="answer">
-<summary>Answer</summary>
-<p><span class="arithmatex">\(\frac{8}{3}\)</span></p>
-</details>
-<h4 id="exercise-5-a-two-state-reliability-chain">Exercise 5 — A two-state reliability chain<a class="headerlink" href="#exercise-5-a-two-state-reliability-chain" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-3-a-two-state-reliability-chain">Exercise 3 — A two-state reliability chain<a class="headerlink" href="#exercise-3-a-two-state-reliability-chain" title="Permanent link">&para;</a></h4>
 <p>A component is either Working or Failed. During each hour, a working component fails with probability 0.02, while a failed component is repaired with probability 0.30.</p>
 <ol>
 <li>Construct the transition matrix and diagram.</li>
 <li>Starting in Working, find the probability of being Failed after 2 and 10 hours.</li>
-<li>Find the stationary distribution.</li>
-<li>Interpret the stationary failure probability operationally.</li>
+<li>Simulate 10,000 paths of 10 hours starting in Working and compare the fraction of paths that are Failed after 10 hours with part 2.</li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
-<p>With state order <span class="arithmatex">\((W,F)\)</span>, <span class="arithmatex">\(P=\begin{pmatrix}0.98&amp;0.02\\0.30&amp;0.70\end{pmatrix}\)</span>. The stationary distribution satisfies <span class="arithmatex">\(0.02\pi_W=0.30\pi_F\)</span>, giving <span class="arithmatex">\((\pi_W,\pi_F)=(15/16,1/16)\)</span>.</p>
+<p>With state order <span class="arithmatex">\((W,F)\)</span>, <span class="arithmatex">\(P=\begin{pmatrix}0.98&amp;0.02\\0.30&amp;0.70\end{pmatrix}\)</span>. The probabilities of being Failed are <span class="arithmatex">\(p^{(2)}_{WF}=0.0336\)</span> and <span class="arithmatex">\(p^{(10)}_{WF}\approx0.0612\)</span>.</p>
 </details>
-<h4 id="exercise-6-classification-of-states">Exercise 6 — Classification of states<a class="headerlink" href="#exercise-6-classification-of-states" title="Permanent link">&para;</a></h4>
-<p>Consider</p>
-<div class="arithmatex">\[
-P=\begin{pmatrix}
-1&amp;0&amp;0&amp;0\\
-0.2&amp;0.5&amp;0.3&amp;0\\
-0&amp;0&amp;0.6&amp;0.4\\
-0&amp;0&amp;0.1&amp;0.9
-\end{pmatrix}.
-\]</div>
-<ol>
-<li>Draw the transition diagram.</li>
-<li>Identify the communicating classes.</li>
-<li>Classify states as transient or recurrent.</li>
-<li>Identify all closed classes and stationary distributions.</li>
-</ol>
-<details class="answer">
-<summary>Answer</summary>
-<p>State 1 is an absorbing closed class. States 3 and 4 form another closed irreducible class. State 2 is transient because it can leave for either closed class and cannot be revisited from them. Each closed class supports a stationary distribution.</p>
-</details>
-<h4 id="exercise-7-estimating-a-transition-matrix">Exercise 7 — Estimating a transition matrix<a class="headerlink" href="#exercise-7-estimating-a-transition-matrix" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-4-estimating-a-transition-matrix">Exercise 4 — Estimating a transition matrix<a class="headerlink" href="#exercise-4-estimating-a-transition-matrix" title="Permanent link">&para;</a></h4>
 <p>An observed state sequence is</p>
 <div class="arithmatex">\[
 A,A,B,A,C,C,B,C,C,A,B,B,C,A,A.
