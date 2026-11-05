@@ -25,8 +25,8 @@ Preparation should be realistic: read the specified ProbabilityCourse sections, 
 | 05 | [Joint Distributions and Dependence](../05_Joint_Distributions_and_Dependence/README.md) | Joint and conditional distributions, independence, conditional expectation, covariance, correlation, and sums |
 | 06 | [Random Sampling, Monte Carlo, and Limit Theorems](../06_Random_Sampling_Monte_Carlo_and_Limit_Theorems/README.md) | Simulation, sampling distributions, LLN, CLT, and Monte Carlo error |
 | 07 | [Stochastic Processes and Poisson Processes](../07_Stochastic_Processes_and_Poisson_Processes/README.md) | Random processes, increments, counting processes, and arrival times |
-| 08 | [Markov Chains](../08_Markov_Chains/README.md) | Markov property, transition matrices, multi-step probabilities, and classes |
-| 09 | [Markov Chains: Long-Run Behaviour](../09_Markov_Chains_Long_Run_Behaviour/README.md) | Absorption, recursion, stationary and limiting distributions, and simulation |
+| 08 | [Markov Chains](../08_Markov_Chains/README.md) | Markov property, transition matrices, path and multi-step probabilities, and simulation |
+| 09 | [Markov Chains: Long-Run Behaviour](../09_Markov_Chains_Long_Run_Behaviour/README.md) | Classification of states, absorption, recursion, stationary and limiting distributions, and simulation |
 | 10 | [Time-Series Fundamentals](../10_Time_Series_Fundamentals/README.md) | Time dependence, stationarity, autocovariance, white noise, and random walks |
 | 11 | [Autoregressive Models, Forecasting, and Course Recap](../11_Autoregressive_Models_Forecasting_and_Course_Recap/README.md) | AR models, recursive forecasts, forecast uncertainty, and integration of the course models |
 
