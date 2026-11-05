@@ -76,7 +76,7 @@ Delspørgsmål skrives som almindelig nummereret Markdown (`1.`, `2.`, …). `st
 ## Lokalt og ikke publiceret
 
 - `tools/`, `output/`, `tmp/` og `media/` er git-ignoreret. `tools/`, `output/` og `tmp/` er også udelukket fra bygget.
-- `output/pdf/` rummer kun `.tex`-kilder, de færdige PDF'er og `figures/` til dem. De publicerede kopier ligger i sessionsmapperne, og ældre versioner, byggefiler og slides er ryddet væk. `tmp/` er til midlertidigt arbejde (p.t. kun patch-filer og to STA1-skabeloner) og kan tømmes.
+- `output/pdf/` rummer kun `.tex`-kilder, de færdige PDF'er og `figures/` til dem. De publicerede kopier ligger i sessionsmapperne, og ældre versioner, byggefiler og slides er ryddet væk. `tmp/` er til midlertidigt arbejde og er normalt tom. Mappen skal blive stående, fordi den står i `.gitignore` og `exclude_docs`.
 - `.ipynb_checkpoints/` og LaTeX-hjælpefiler (`*.aux`, `*.log`, `*.fls`, `*.fdb_latexmk`, `*.out`, `*.toc`, `*.synctex.gz`) er git-ignoreret.
 - `figures/` indeholder kun det, siderne bruger: `smp_intro_dark.mp4`, `smp_intro_light.mp4`, `vialogo.png` og `vialogo_white.png`. Tilføj kun filer, der refereres fra en side.
 - `manim/smp_intro.py` er tracket i git (modsat STA1_26, hvor `manim/` er privat).
