@@ -1164,12 +1164,11 @@
 <ol>
 <li>Describe the three classified counting processes.</li>
 <li>Find the probability of at least one critical incident in 30 minutes.</li>
-<li>Given that 10 incidents occurred in one hour, find the conditional distribution of the three class counts.</li>
-<li>Simulate the split processes and empirically check their pairwise independence without conditioning on the total.</li>
+<li>Simulate the split processes and empirically check their pairwise independence.</li>
 </ol>
 <details class="answer">
 <summary>Answer</summary>
-<p>Thinning gives independent Poisson processes with rates 6, 4.2, and 1.8 per hour. Part 2 is <span class="arithmatex">\(1-e^{-0.9}\)</span>. Conditional on a total of 10, the class counts are multinomial with probabilities <span class="arithmatex">\((0.50,0.35,0.15)\)</span>.</p>
+<p>Thinning gives independent Poisson processes with rates 6, 4.2, and 1.8 per hour. Part 2 is <span class="arithmatex">\(1-e^{-0.9}\)</span>. In part 3 the simulated class counts have correlations close to 0, and each count has mean and variance close to its rate.</p>
 </details>
 
 
