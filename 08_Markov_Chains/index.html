@@ -1151,7 +1151,24 @@ P=\begin{pmatrix}
 <summary>Answer</summary>
 <p>With state order <span class="arithmatex">\((W,F)\)</span>, <span class="arithmatex">\(P=\begin{pmatrix}0.98&amp;0.02\\0.30&amp;0.70\end{pmatrix}\)</span>. The probabilities of being Failed are <span class="arithmatex">\(p^{(2)}_{WF}=0.0336\)</span> and <span class="arithmatex">\(p^{(10)}_{WF}\approx0.0612\)</span>.</p>
 </details>
-<h4 id="exercise-4-estimating-a-transition-matrix">Exercise 4 — Estimating a transition matrix<a class="headerlink" href="#exercise-4-estimating-a-transition-matrix" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-4-reading-a-transition-diagram">Exercise 4 — Reading a transition diagram<a class="headerlink" href="#exercise-4-reading-a-transition-diagram" title="Permanent link">&para;</a></h4>
+<p>Consider the Markov chain with state space <span class="arithmatex">\(S=\{1,2,3\}\)</span> in the figure below.</p>
+<p><img src="src/Ex4_1.png"></p>
+<ol>
+<li>Write down the transition matrix <span class="arithmatex">\(P\)</span> and check that every row sums to 1.</li>
+<li>Find the probability that the chain is in state 3 two steps after being in state 1, i.e. <span class="arithmatex">\(p^{(2)}_{13}\)</span>. List the paths and add their probabilities.</li>
+<li>Assume <span class="arithmatex">\(\pi^{(0)}=(0.5,\,0.3,\,0.2)\)</span>. Find <span class="arithmatex">\(\pi^{(2)}\)</span> and <span class="arithmatex">\(P(X_0=1,X_1=2,X_2=3)\)</span>.</li>
+<li>Verify part 2 with <span class="arithmatex">\(P^2\)</span> in Python.</li>
+</ol>
+<details class="answer">
+<summary>Answer</summary>
+<ol>
+<li><span class="arithmatex">\(P=\begin{pmatrix}0.5&amp;0.3&amp;0.2\\0.1&amp;0.6&amp;0.3\\0.2&amp;0.4&amp;0.4\end{pmatrix}\)</span></li>
+<li><span class="arithmatex">\(p^{(2)}_{13}=0.5\cdot0.2+0.3\cdot0.3+0.2\cdot0.4=0.27\)</span></li>
+<li><span class="arithmatex">\(\pi^{(2)}=(0.255,\,0.450,\,0.295)\)</span> and <span class="arithmatex">\(P(X_0=1,X_1=2,X_2=3)=0.5\cdot0.3\cdot0.3=0.045\)</span></li>
+</ol>
+</details>
+<h4 id="exercise-5-estimating-a-transition-matrix">Exercise 5 — Estimating a transition matrix<a class="headerlink" href="#exercise-5-estimating-a-transition-matrix" title="Permanent link">&para;</a></h4>
 <p>An observed state sequence is</p>
 <div class="arithmatex">\[
 A,A,B,A,C,C,B,C,C,A,B,B,C,A,A.
