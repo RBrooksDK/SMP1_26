@@ -13,6 +13,18 @@ tools/
 # Manim render output
 media/
 
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.out
+*.toc
+*.synctex.gz
+
 # Python cache
 __pycache__/
 *.py[cod]

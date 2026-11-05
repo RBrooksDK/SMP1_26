@@ -46,24 +46,20 @@ Review conditional probability and the law of total probability from [Session 1]
 
 ### Exercises
 
-<style type="text/css">
-    ol { list-style-type: lower-alpha; }
-</style>
-
 #### Exercise 1 — Paths and transitions
 
-Consider the Markov chain with three states, $S=\{1,2,3\}$, that has the following transition matrix
+Consider the Markov chain with three states, \(S=\{1,2,3\}\), that has the following transition matrix
 
-$$
+\[
 P=\left[\begin{array}{ccc}
 \frac{1}{2} & \frac{1}{4} & \frac{1}{4} \\
 \frac{1}{3} & 0 & \frac{2}{3} \\
 \frac{1}{2} & \frac{1}{2} & 0
 \end{array}\right]
-$$
+\]
 
 1. Draw the state transition diagram for this chain.
-2. If we know $P\left(X_1=1\right)=P\left(X_1=2\right)=\frac{1}{4}$, find $P\left(X_1=3, X_2=2, X_3=1\right)$.
+2. If we know \(P\left(X_1=1\right)=P\left(X_1=2\right)=\frac{1}{4}\), find \(P\left(X_1=3, X_2=2, X_3=1\right)\).
 
 ???answer
     <ol start="2">
@@ -73,16 +69,16 @@ $$
 
 #### Exercise 2
 
-Consider the Markov chain in the figure below. There are two recurrent classes, $R_1=\{1,2\}$, and $R_2=\{5,6,7\}$.
+Consider the Markov chain in the figure below. There are two recurrent classes, \(R_1=\{1,2\}\), and \(R_2=\{5,6,7\}\).
 
 <img src="src/Ex2_1.png">
 
-1. Assuming $X_0=3$, find the probability that the chain gets absorbed in $R_1$.
-2. Find the expected time (number of steps) until the chain gets absorbed in $R_1$ or $R_2$. More specifically, let $T$ be the absorption time, i.e., the first time the chain visits a state in $R_1$ or $R_2$, so find $E\left[T \mid X_0=3\right]$
+1. Assuming \(X_0=3\), find the probability that the chain gets absorbed in \(R_1\).
+2. Find the expected time (number of steps) until the chain gets absorbed in \(R_1\) or \(R_2\). More specifically, let \(T\) be the absorption time, i.e., the first time the chain visits a state in \(R_1\) or \(R_2\), so find \(E\left[T \mid X_0=3\right]\)
 
 ???answer
-    1. $a_3=\frac{5}{7}$
-    2. $t_3=\frac{12}{7}$
+    1. \(a_3=\frac{5}{7}\)
+    2. \(t_3=\frac{12}{7}\)
 
 #### Exercise 3
 
@@ -98,7 +94,7 @@ Consider the following Markov chain
 ???answer
     1. yes
     2. yes
-    3. $\pi_1 \approx 0.457, \pi_2 \approx 0.257, \pi_3 \approx 0.286$
+    3. \(\pi_1 \approx 0.457, \pi_2 \approx 0.257, \pi_3 \approx 0.286\)
     4. yes
 
 #### Exercise 4
@@ -107,10 +103,10 @@ Consider the following Markov chain
 
 <img src="src/Ex4_1.png">
 
-Assume $X_0=1$, and let $R$ be the first time that the chain returns to state 1 . Find $E\left[R \mid X_0=1\right]$.
+Assume \(X_0=1\), and let \(R\) be the first time that the chain returns to state 1 . Find \(E\left[R \mid X_0=1\right]\).
 
 ???answer
-    $\frac{8}{3}$
+    \(\frac{8}{3}\)
 
 #### Exercise 5 — A two-state reliability chain
 
