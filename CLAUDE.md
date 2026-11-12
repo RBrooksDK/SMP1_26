@@ -47,7 +47,7 @@ Delspørgsmål skrives som almindelig nummereret Markdown (`1.`, `2.`, …). `st
 - Følg Pishro-Nik og de eksisterende sessioner. Indfør ikke ny notation uden at spørge.
 - Fordelinger skrives med `\operatorname{}`: `\operatorname{Poisson}(\lambda)`, `\operatorname{Binomial}(n,p)` og `\operatorname{Gamma}(k,\lambda)` med form og rate. Det samme gælder `\operatorname{Cov}(X,Y)`.
 - `E[X]`, `P(\cdot)`. Tælleproces `N(t)`, ankomsttider `T_n`, rate `\lambda` pr. tidsenhed. Markov-kæder: tilstandsrum `S`, overgangsmatrix `P`, overgangssandsynligheder `p_{ij}`, stationær fordeling `\pi`.
-- Matematik på sessionssider: `\(…\)` inline og `\[…\]` display. Brug ikke `$…$` eller `$$…$$`. Sessionerne 03, 04, 05 og 08 bruger stadig `$`, og de rettes ved lejlighed.
+- Matematik på sessionssider: `\(…\)` inline og `\[…\]` display. Brug ikke `$…$` eller `$$…$$`. Sessionerne 03, 04 og 05 bruger stadig `$`, og de rettes ved lejlighed.
 
 ## Sprog og stil
 

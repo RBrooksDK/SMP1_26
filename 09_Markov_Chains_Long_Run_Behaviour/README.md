@@ -42,6 +42,10 @@ Attempt the exercises from [Session 8](../08_Markov_Chains/README.md#exercises).
 
 **Session material**
 
+- [Recap and exercise notes](https://drive.google.com/file/d/1bGl8h25n_8aeQZIzMqmrjiQkFpi6Oa3K/view?usp=sharing)
+- [Session notes](https://drive.google.com/file/d/1fDCTmx3sXTX1_gIOJM7uk08tMHysa3Pb/view?usp=sharing)
+- [Examples notebook (.ipynb)](SMP1_26_session09_examples.ipynb){ download }
+
 <hr/>
 
 ### Exercises
@@ -66,7 +70,7 @@ P=\begin{pmatrix}
 
 ??? answer
 
-    State 1 is an absorbing closed class. States 3 and 4 form another closed irreducible class. State 2 is transient because it can leave for either closed class and cannot be revisited from them. Each closed class supports a stationary distribution.
+    State 1 is an absorbing closed class. States 3 and 4 form another closed irreducible class. State 2 is transient because it can leave for either closed class and cannot be revisited from them. The stationary distributions are \((1,0,0,0)\), \((0,0,0.2,0.8)\), and every mixture \(\alpha(1,0,0,0)+(1-\alpha)(0,0,0.2,0.8)\) with \(0\le\alpha\le1\). Because there are two closed classes, \(\pi\) is not unique.
 
 #### Exercise 2 — Absorption in recurrent classes
 
@@ -98,6 +102,12 @@ P=\begin{pmatrix}
 2. Starting in Review, find the probability of eventual release.
 3. Find the expected number of steps until absorption.
 4. Verify both results by simulation.
+
+??? answer
+
+    1. Review and Testing are transient; Released and Rejected are absorbing.
+    2. \(a_{\text{Review}}=\frac{24}{37}\approx0.649\)
+    3. \(t_{\text{Review}}=\frac{130}{37}\approx3.51\) steps
 
 #### Exercise 4 — Mean return time
 
@@ -145,8 +155,12 @@ A service is in state Normal, Degraded, or Down. Construct a plausible transitio
 
 1. Draw the transition diagram.
 2. Calculate the distribution after 5 steps from Normal.
-3. Find a stationary distribution.
+3. Starting from Down, find the expected number of steps until the service is Normal again, using first-step analysis.
 4. Simulate 10,000 steps and compare empirical state frequencies with the stationary distribution.
+
+??? answer
+
+    Part 3 with the reference matrix \(P=\begin{pmatrix}0.92&0.08&0\\0.50&0.40&0.10\\0&0.60&0.40\end{pmatrix}\) (order Normal, Degraded, Down), where failures and recoveries pass through Degraded: \(m_D=1+0.4m_D+0.1m_X\) and \(m_X=1+0.6m_D+0.4m_X\), so \(m_D=\frac{7}{3}\) and \(m_X=4\) steps.
 
 #### Exercise 8 — Long-run service availability
 
