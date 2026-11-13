@@ -42,7 +42,7 @@ Attempt the exercises from [Session 8](../08_Markov_Chains/README.md#exercises).
 
 **Session material**
 
-- [Recap and exercise notes](https://drive.google.com/file/d/1N1f0Q0l7HLCamAb_0HQOD8GwSB3qbo9p/view?usp=sharing)
+- [Recap and exercise notes](https://drive.google.com/file/d/1nzBj-CdTXaVcdefKXsJVQm96sGvexPlx/view?usp=sharing)
 - [Session notes](https://drive.google.com/file/d/1bU-i2EEGx7V9UscU77Z-4R6PeHJCyk0k/view?usp=sharing)
 - [Examples notebook (.ipynb)](SMP1_26_session09_examples.ipynb){ download }
 
