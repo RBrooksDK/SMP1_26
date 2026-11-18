@@ -5,6 +5,8 @@ _site/
 output/
 tmp/
 tools/
+# Exercise solutions are distributed via SharePoint, not the public site
+*_exercise_solutions.ipynb
 
 # Python virtual environment
 .venv/
