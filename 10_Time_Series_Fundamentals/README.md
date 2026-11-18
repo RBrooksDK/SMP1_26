@@ -9,24 +9,24 @@ tags:
 
 <h1 align="center">Time-Series Fundamentals</h1>
 
-A time series is one observed realisation of a discrete-time stochastic process. We study time dependence through lagged covariance and correlation and distinguish white noise, stationary processes, and random walks. The emphasis is probabilistic structure rather than a catalogue of statistical tests.
+A time series is one observed realisation of a discrete-time stochastic process. As with the Markov chains of the previous sessions, we ask how the process depends on its past, but now we summarise that dependence through the mean function and the autocovariance and autocorrelation across lags. Two basic models serve as contrasting examples: white noise and the random walk.
 
-Strict and weak stationarity describe whether the law of the process is stable in time. Autocovariance and autocorrelation summarise linear dependence across lags. White noise is uncorrelated; a random walk is not stationary. Plots and sample ACFs are useful, but they mix model properties with sampling variation.
+Weak stationarity requires a constant mean and an autocovariance that depends only on the lag. White noise is stationary; a random walk is not, because its variance grows with time. A plot or a sample ACF of a single realisation mixes model properties with sampling variation, so it should be read with care.
 
 #### Key Concepts
 
 - Realisation versus underlying process
-- Strict and weak stationarity
 - Mean function, autocovariance, and autocorrelation
+- Weak stationarity
 - White noise and random walks
 - Sample ACF and its limitations
 
 !!! tip "Learning Objectives"
 
-    - Define strict and weak stationarity.
-    - Calculate the mean function, autocovariance, and autocorrelation of a model.
-    - Recognise white noise and random-walk behaviour.
-    - Use plots and sample ACFs cautiously.
+    - Define weak stationarity and check it for a simple model.
+    - Calculate the mean function, autocovariance, and autocorrelation of a simple model.
+    - Recognise white-noise and random-walk behaviour.
+    - Calculate and interpret a sample ACF with caution.
 
 <hr/>
 
@@ -72,11 +72,7 @@ Let \(X_t=\varepsilon_t+\theta\varepsilon_{t-1}\).
 
 Simulate 300 observations of white noise and of a random walk. For each, plot the series, rolling mean, rolling variance, and sample ACF. Explain which visual patterns are model properties and which may simply be sampling variation.
 
-#### Exercise 4 — Dependence without trend
-
-Construct two stationary processes with the same marginal \(N(0,1)\) distribution but different serial dependence. Simulate both and explain why a histogram cannot distinguish them.
-
-#### Exercise 5 — Autocovariance from a short series
+#### Exercise 4 — Autocovariance from a short series
 
 For the observations \(x=(2,4,3,7,6,8)\):
 
@@ -85,28 +81,6 @@ For the observations \(x=(2,4,3,7,6,8)\):
 3. Convert the results to sample autocorrelations.
 4. Compare your manual values with a Python implementation and document the denominator convention used by the software.
 
-#### Exercise 6 — Random-phase sinusoid
-
-Let \(X_t=A\cos(\omega t+U)\), where \(U\sim\operatorname{Uniform}(0,2\pi)\).
-
-1. Find \(E[X_t]\).
-2. Show that \(\operatorname{Cov}(X_t,X_{t+h})\) depends only on \(h\).
-3. Determine whether the process is weakly stationary.
-4. Simulate several realisations by drawing a new phase for each realisation.
-
 ??? answer
 
-    Integration over the random phase gives \(E[X_t]=0\) and \(\gamma(h)=A^2\cos(\omega h)/2\). Hence the process is weakly stationary.
-
-#### Exercise 7 — Filtering white noise
-
-Let \(X_t=\varepsilon_t+0.6\varepsilon_{t-1}-0.2\varepsilon_{t-2}\), where \(\varepsilon_t\) is white noise with variance \(\sigma^2\).
-
-1. Find the mean and variance of \(X_t\).
-2. Find \(\gamma(1)\), \(\gamma(2)\), and \(\gamma(h)\) for \(|h|>2\).
-3. Plot the theoretical ACF.
-4. Simulate the process and compare its sample ACF with theory.
-
-??? answer
-
-    \(\gamma(0)=(1+0.6^2+0.2^2)\sigma^2=1.4\sigma^2\), \(\gamma(1)=(0.6-0.12)\sigma^2=0.48\sigma^2\), \(\gamma(2)=-0.2\sigma^2\), and later autocovariances are zero.
+    The sample mean is 5. With denominator \(n=6\), \(\hat\gamma(0)=28/6\approx4.667\), \(\hat\gamma(1)=6/6=1\), and \(\hat\gamma(2)=8/6\approx1.333\), so \(\hat\rho(1)=6/28\approx0.214\) and \(\hat\rho(2)=8/28\approx0.286\). `statsmodels.tsa.stattools.acf` uses denominator \(n\) and the overall mean; `pandas.Series.autocorr` computes a Pearson correlation on the overlapping pairs and therefore gives different values.
