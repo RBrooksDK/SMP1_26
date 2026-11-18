@@ -1067,23 +1067,23 @@
 
 <h1 align="center">Time-Series Fundamentals</h1>
 
-<p>A time series is one observed realisation of a discrete-time stochastic process. We study time dependence through lagged covariance and correlation and distinguish white noise, stationary processes, and random walks. The emphasis is probabilistic structure rather than a catalogue of statistical tests.</p>
-<p>Strict and weak stationarity describe whether the law of the process is stable in time. Autocovariance and autocorrelation summarise linear dependence across lags. White noise is uncorrelated; a random walk is not stationary. Plots and sample ACFs are useful, but they mix model properties with sampling variation.</p>
+<p>A time series is one observed realisation of a discrete-time stochastic process. As with the Markov chains of the previous sessions, we ask how the process depends on its past, but now we summarise that dependence through the mean function and the autocovariance and autocorrelation across lags. Two basic models serve as contrasting examples: white noise and the random walk.</p>
+<p>Weak stationarity requires a constant mean and an autocovariance that depends only on the lag. White noise is stationary; a random walk is not, because its variance grows with time. A plot or a sample ACF of a single realisation mixes model properties with sampling variation, so it should be read with care.</p>
 <h4 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Realisation versus underlying process</li>
-<li>Strict and weak stationarity</li>
 <li>Mean function, autocovariance, and autocorrelation</li>
+<li>Weak stationarity</li>
 <li>White noise and random walks</li>
 <li>Sample ACF and its limitations</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Learning Objectives</p>
 <ul>
-<li>Define strict and weak stationarity.</li>
-<li>Calculate the mean function, autocovariance, and autocorrelation of a model.</li>
-<li>Recognise white noise and random-walk behaviour.</li>
-<li>Use plots and sample ACFs cautiously.</li>
+<li>Define weak stationarity and check it for a simple model.</li>
+<li>Calculate the mean function, autocovariance, and autocorrelation of a simple model.</li>
+<li>Recognise white-noise and random-walk behaviour.</li>
+<li>Calculate and interpret a sample ACF with caution.</li>
 </ul>
 </div>
 <hr/>
@@ -1123,9 +1123,7 @@
 </details>
 <h4 id="exercise-3-realisation-versus-model">Exercise 3 — Realisation versus model<a class="headerlink" href="#exercise-3-realisation-versus-model" title="Permanent link">&para;</a></h4>
 <p>Simulate 300 observations of white noise and of a random walk. For each, plot the series, rolling mean, rolling variance, and sample ACF. Explain which visual patterns are model properties and which may simply be sampling variation.</p>
-<h4 id="exercise-4-dependence-without-trend">Exercise 4 — Dependence without trend<a class="headerlink" href="#exercise-4-dependence-without-trend" title="Permanent link">&para;</a></h4>
-<p>Construct two stationary processes with the same marginal <span class="arithmatex">\(N(0,1)\)</span> distribution but different serial dependence. Simulate both and explain why a histogram cannot distinguish them.</p>
-<h4 id="exercise-5-autocovariance-from-a-short-series">Exercise 5 — Autocovariance from a short series<a class="headerlink" href="#exercise-5-autocovariance-from-a-short-series" title="Permanent link">&para;</a></h4>
+<h4 id="exercise-4-autocovariance-from-a-short-series">Exercise 4 — Autocovariance from a short series<a class="headerlink" href="#exercise-4-autocovariance-from-a-short-series" title="Permanent link">&para;</a></h4>
 <p>For the observations <span class="arithmatex">\(x=(2,4,3,7,6,8)\)</span>:</p>
 <ol>
 <li>Calculate the sample mean.</li>
@@ -1133,29 +1131,9 @@
 <li>Convert the results to sample autocorrelations.</li>
 <li>Compare your manual values with a Python implementation and document the denominator convention used by the software.</li>
 </ol>
-<h4 id="exercise-6-random-phase-sinusoid">Exercise 6 — Random-phase sinusoid<a class="headerlink" href="#exercise-6-random-phase-sinusoid" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X_t=A\cos(\omega t+U)\)</span>, where <span class="arithmatex">\(U\sim\operatorname{Uniform}(0,2\pi)\)</span>.</p>
-<ol>
-<li>Find <span class="arithmatex">\(E[X_t]\)</span>.</li>
-<li>Show that <span class="arithmatex">\(\operatorname{Cov}(X_t,X_{t+h})\)</span> depends only on <span class="arithmatex">\(h\)</span>.</li>
-<li>Determine whether the process is weakly stationary.</li>
-<li>Simulate several realisations by drawing a new phase for each realisation.</li>
-</ol>
 <details class="answer">
 <summary>Answer</summary>
-<p>Integration over the random phase gives <span class="arithmatex">\(E[X_t]=0\)</span> and <span class="arithmatex">\(\gamma(h)=A^2\cos(\omega h)/2\)</span>. Hence the process is weakly stationary.</p>
-</details>
-<h4 id="exercise-7-filtering-white-noise">Exercise 7 — Filtering white noise<a class="headerlink" href="#exercise-7-filtering-white-noise" title="Permanent link">&para;</a></h4>
-<p>Let <span class="arithmatex">\(X_t=\varepsilon_t+0.6\varepsilon_{t-1}-0.2\varepsilon_{t-2}\)</span>, where <span class="arithmatex">\(\varepsilon_t\)</span> is white noise with variance <span class="arithmatex">\(\sigma^2\)</span>.</p>
-<ol>
-<li>Find the mean and variance of <span class="arithmatex">\(X_t\)</span>.</li>
-<li>Find <span class="arithmatex">\(\gamma(1)\)</span>, <span class="arithmatex">\(\gamma(2)\)</span>, and <span class="arithmatex">\(\gamma(h)\)</span> for <span class="arithmatex">\(|h|&gt;2\)</span>.</li>
-<li>Plot the theoretical ACF.</li>
-<li>Simulate the process and compare its sample ACF with theory.</li>
-</ol>
-<details class="answer">
-<summary>Answer</summary>
-<p><span class="arithmatex">\(\gamma(0)=(1+0.6^2+0.2^2)\sigma^2=1.4\sigma^2\)</span>, <span class="arithmatex">\(\gamma(1)=(0.6-0.12)\sigma^2=0.48\sigma^2\)</span>, <span class="arithmatex">\(\gamma(2)=-0.2\sigma^2\)</span>, and later autocovariances are zero.</p>
+<p>The sample mean is 5. With denominator <span class="arithmatex">\(n=6\)</span>, <span class="arithmatex">\(\hat\gamma(0)=28/6\approx4.667\)</span>, <span class="arithmatex">\(\hat\gamma(1)=6/6=1\)</span>, and <span class="arithmatex">\(\hat\gamma(2)=8/6\approx1.333\)</span>, so <span class="arithmatex">\(\hat\rho(1)=6/28\approx0.214\)</span> and <span class="arithmatex">\(\hat\rho(2)=8/28\approx0.286\)</span>. <code>statsmodels.tsa.stattools.acf</code> uses denominator <span class="arithmatex">\(n\)</span> and the overall mean; <code>pandas.Series.autocorr</code> computes a Pearson correlation on the overlapping pairs and therefore gives different values.</p>
 </details>
 
 
