@@ -40,6 +40,12 @@ Review covariance and correlation from [Session 5](../05_Joint_Distributions_and
 - [ProbabilityCourse 10.1.2: mean and correlation functions](https://www.probabilitycourse.com/chapter10/10_1_2_mean_and_correlation_functions.php)
 - [ProbabilityCourse 10.1.4: stationary processes](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php), through weak-sense stationarity
 
+**Session material**
+
+- [Recap and exercise notes](https://drive.google.com/file/d/1D0ZoGbiyQzCzjzPEo19ook4lHBKvnBAm/view?usp=sharing)
+- [Session notes](https://drive.google.com/file/d/1BqZV7giXKCaKU8s4uPUn_ujCj3CigXVA/view?usp=sharing)
+- [Recap of Session 9: exercises in Python (.ipynb)](SMP1_26_session10_recap09.ipynb){ download }
+
 <hr/>
 
 ### Exercises
