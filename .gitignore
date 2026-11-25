@@ -5,6 +5,8 @@ _site/
 output/
 tmp/
 tools/
+# Exam material: local only, never pushed
+Exam/
 # Exercise solutions are distributed via SharePoint, not the public site
 *_exercise_solutions.ipynb
 

@@ -52,7 +52,7 @@
     The grading scale for the course is the 7-point grading scale.
 
 ??? question "How is the final grade calculated?"
-    The final grade is calculated based on the exam. The exam has two parts: a Flowlock exam in Wiseflow and a Wiseflow exam without Flowlock. Part 1 weighs 75% and Part 2 weighs 25% in the final grade. Please see the "Exam" section in the menu to the left for more information.
+    The final grade is based on an overall assessment of the two parts of the exam: a Flowlock exam in Wiseflow (Part 1) and a Wiseflow exam without Flowlock (Part 2). Please see the "Exam" section in the menu to the left for more information.
 
 ??? question "What is the re-exam procedure?"
     Re-exams may be oral. Please see the "Exam" section in the menu to the left for more information.
@@ -64,7 +64,7 @@
     If you fail the re-exam, you will have to wait until the course is held again to retake the exam. In special cases, we may be able to offer you an oral re-exam. Please see the "Exam" section in the menu to the left for more information.
 
 ??? question "How many percentage points do I need to pass the exam?"
-    The exam is graded on a 7-point grading scale. To pass the exam, you need a grade of 02 or higher. In order to obtain a 02, you need to score at least 50% of the total points on the exam. This score may vary from year to year, but is never higher than 50%.
+    The exam is graded on a 7-point grading scale. To pass the exam, you need a grade of 02 or higher. The share of the total points required for 02 varies from year to year, but it is never higher than 50%.
 
 ---
 
