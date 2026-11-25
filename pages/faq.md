@@ -6,7 +6,7 @@
     Yes, you are looking at it! This FAQ is designed to answer some of the most common questions about the course. If you have a question that is not answered here, please feel free to contact the course responsible, [Richard Brooks](mailto: rib@via.dk)
 
 ??? question "What is the course about?"
-    The course develops probability theory and stochastic modelling, including joint distributions, simulation, stochastic processes, time series, and Markov chains. An in-depth description can be found in the [course description](https://www.via.dk/TMH/Courses/stochastic-modelling-and-processes) or on the individual session pages.
+    The course develops probability theory and stochastic modelling, including joint distributions, simulation, stochastic processes, time series, and Markov chains. An in-depth description can be found in the [course description](https://my.via.dk/media/mitvia/semesteroverblik/kursusbeskrivelser/software-engineering/6.-og-7.-semester/it-smp1-4-0) or on the individual session pages.
 
 ??? question "How is the course related to the study program?"
     The course provides a foundation for modelling uncertainty and time-dependent systems in engineering, software systems, data science, and machine learning. Traditional statistical inference is covered in STA rather than SMP.
