@@ -42,6 +42,10 @@ Attempt the core exercises from [Session 10](../10_Time_Series_Fundamentals/READ
 - [Chapter 11: Autoregressive Models and Forecasting (PDF)](SMP1_26_chapter11_ar_forecasting.pdf){ download }, the main text for the session, with worked examples for the exercises
 - [ProbabilityCourse: stationary processes](https://www.probabilitycourse.com/chapter10/10_1_4_stationary_processes.php) as the probability foundation
 
+**Session material**
+
+- [Session notes](https://drive.google.com/file/d/1aNZSZGHmXI4Lgzg4exfJ_z3D0t4FXcNa/view?usp=sharing)
+
 <hr/>
 
 ### Exercises
